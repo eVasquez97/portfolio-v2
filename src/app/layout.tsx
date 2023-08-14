@@ -1,8 +1,7 @@
+import { Footer } from "@/components/molecules";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
-
-const inter = Fira_Code({ subsets: ["latin"], weight: "400" });
+import { fira } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -16,7 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={
+          fira.className +
+          "flex min-h-screen bg-primary-light dark:bg-primary-dark"
+        }
+      >
+        <div className="flex flex-col items-center mx-auto max-w-[1024px]">
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
