@@ -1,7 +1,7 @@
-import { Footer } from "@/components/molecules";
+import { Footer, Header } from "@/components/molecules";
 import "./globals.css";
 import type { Metadata } from "next";
-import { fira } from "./fonts";
+import { montserrat } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -16,15 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={
-          fira.className +
-          "flex min-h-screen bg-primary-light dark:bg-primary-dark"
-        }
+        className={`${montserrat.className} flex min-h-screen bg-primary-light dark:bg-primary-dark`}
       >
-        <div className="flex flex-col items-center mx-auto max-w-[1024px]">
+        <main className="flex flex-col items-center mx-auto max-w-[1024px] w-full p-2">
+          <Header />
           {children}
           <Footer />
-        </div>
+        </main>
       </body>
     </html>
   );
