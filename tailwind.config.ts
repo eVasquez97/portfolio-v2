@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     colors: {
       primary: {
-        light: "#e6e6e6",
-        dark: "#1c1c1c",
+        light: "#f2f2f2",
+        dark: "#202124",
       },
       secondary: {
-        light: "#f4f4f5",
-        dark: "#242726",
+        light: "#fafafa",
+        dark: "#171717",
       },
-      highlight: "#65a30d",
+      highlight: "#0078d4",
       text: {
         light: "#000000",
         dark: "#fbfbfb",
