@@ -243,5 +243,33 @@
       "url": "https://twitter.com/EBladimirVL",
       "icon": "TfiTwitter"
     }
+  ],
+  "services": [
+    {
+      "service": "Software Analysis",
+      "description": "Several years in the industry have provided me with enough experience to provide this service.",
+      "benefits": ["Ideal for new projects.", "Aid in scaling projects."],
+      "logo": "/img/analysis.svg"
+    },
+    {
+      "service": "Software Development",
+      "description": "My main work and also what I love to do. Paired with experience in software analysis, I tend to provide the most efficient solutions for any project.",
+      "benefits": [
+        "Desgin scalable systems.",
+        "Develop and test solutions.",
+        "Document and maintain systems.",
+        "Aid in the entire development life cycle."
+      ],
+      "logo": "/img/software.svg"
+    },
+    {
+      "service": "Hardware maintenance",
+      "description": "Owner of a small business that provides hardware related services for other companies.",
+      "benefits": [
+        "Experience in new office setups.",
+        "Aid in improving network capacities."
+      ],
+      "logo": "/img/hardware.svg"
+    }
   ]
 }
