@@ -13,7 +13,7 @@ export default function Courses() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full justify-start items-center">
         <div>
-          <Title text="Education" size="xl" />
+          <Title text="Education" size="2xl" />
           <Timeline>
             {education.map((ed) => {
               return (
@@ -40,7 +40,7 @@ export default function Courses() {
         </div>
       </div>
 
-      <Title text="Courses / Certifications" size="xl" styles="mb-8 mt-11" />
+      <Title text="Courses" size="2xl" styles="mb-8 mt-11" />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
         {courses.map((course) => {
           return (

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import data from "../utils/projects.json";
+import { ubuntu } from "./fonts";
 
 export default function Home() {
   function mockProject(item: { name: any; platform?: string }) {
@@ -13,7 +14,9 @@ export default function Home() {
           height={100}
         />
         <div className="absolute inset-x-[15%] bottom-5 py-5 text-center block bg-secondary-light dark:bg-secondary-dark opacity-90">
-          <p className="text-base text-text-light dark:text-text-dark">
+          <p
+            className={`${ubuntu.className} text-text-light dark:text-text-dark`}
+          >
             {item.name}
           </p>
           <span className="text-xs opacity-60">{item.platform}</span>

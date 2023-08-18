@@ -1,7 +1,7 @@
 import { Title } from "@/components/atoms";
 import { Skill } from "@/components/molecules";
 import data from "../../utils/data.json";
-import { Banner } from "@/components/organisms";
+import { Banner, Quote } from "@/components/organisms";
 import Image from "next/image";
 
 export default function Skills() {
@@ -13,10 +13,13 @@ export default function Skills() {
     frameworks,
     techStacks,
   } = data;
+  const gridStyle =
+    "grid grid-cols-1 md:grid-cols-3 min-w-full mb-10 mt-3 p-1 gap-3";
+  const titleStyle = "mb-6 mt-4";
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark">
-      <Title text="Most used Tech stacks" size="xl" styles="mb-3" />
+      <Title text="Most used Tech stacks" size="2xl" styles={titleStyle} />
       <Banner background="bg-secondary-light dark:bg-secondary-dark">
         <div className="mx-auto max-w-[1024px] p-5">
           <div className="grid grid-cols-2 md:grid-cols-4 min-w-full m-3 p-1 gap-2">
@@ -33,7 +36,9 @@ export default function Skills() {
                     <Title text={ts.name} size="xl" styles="mr-2 font-700" />
                     <Title text={ts.experience} size="xl" styles="opacity-50" />
                   </div>
-                  <Title text={ts.description} size="xs" styles="text-center" />
+                  <p className="text-xs text-center text-text-light dark:text-text-dark">
+                    {ts.description}
+                  </p>
                 </div>
               );
             })}
@@ -41,8 +46,8 @@ export default function Skills() {
         </div>
       </Banner>
 
-      <Title text="Programming languages" size="xl" />
-      <div className="grid grid-cols-1 md:grid-cols-3 min-w-full mb-10 mt-3 p-1 gap-3">
+      <Title text="Programming languages" size="2xl" styles={titleStyle} />
+      <div className={gridStyle}>
         {programmingLanguages.map((lang) => {
           return (
             <Skill
@@ -56,8 +61,8 @@ export default function Skills() {
         })}
       </div>
 
-      <Title text="Frameworks" size="xl" />
-      <div className="grid grid-cols-1 md:grid-cols-3 min-w-full mb-10 mt-3 p-1 gap-3">
+      <Title text="Frameworks" size="2xl" styles={titleStyle} />
+      <div className={gridStyle}>
         {frameworks.map((fr) => {
           return (
             <Skill
@@ -71,8 +76,8 @@ export default function Skills() {
         })}
       </div>
 
-      <Title text="Databases" size="xl" />
-      <div className="grid grid-cols-1 md:grid-cols-3 min-w-full mb-10 mt-3 p-1 gap-3">
+      <Title text="Databases" size="2xl" styles={titleStyle} />
+      <div className={gridStyle}>
         {dbTech.map((db) => {
           return (
             <Skill
@@ -86,8 +91,8 @@ export default function Skills() {
         })}
       </div>
 
-      <Title text="Cloud Services" size="xl" />
-      <div className="grid grid-cols-1 md:grid-cols-3 min-w-full mb-10 mt-3 p-1 gap-3">
+      <Title text="Cloud Services" size="2xl" styles={titleStyle} />
+      <div className={gridStyle}>
         {cloudServices.map((cloud) => {
           return (
             <Skill
@@ -101,8 +106,8 @@ export default function Skills() {
         })}
       </div>
 
-      <Title text="Other skills" size="xl" />
-      <div className="grid grid-cols-1 md:grid-cols-3 min-w-full mb-10 mt-3 p-1 gap-3">
+      <Title text="Other skills" size="2xl" styles={titleStyle} />
+      <div className={gridStyle}>
         {otherTech.map((other) => {
           return (
             <Skill
@@ -115,6 +120,8 @@ export default function Skills() {
           );
         })}
       </div>
+
+      <Quote quote="Always in motion the future is. - Yoda" />
     </div>
   );
 }

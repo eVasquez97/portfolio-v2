@@ -25,9 +25,9 @@ export default function Card({ ...props }: CardProps) {
             height={200}
           />
         </div>
-        <div className="p-3">
-          <Title text={props.name} size="sm" />
-          <p className="text-xs text-highlight opacity-90">
+        <div className="p-4">
+          <Title text={props.name} size="lg" />
+          <p className="text-xs text-highlight opacity-80">
             <strong className="text-text-light dark:text-text-dark">
               {props.company}
               {"  -  "}

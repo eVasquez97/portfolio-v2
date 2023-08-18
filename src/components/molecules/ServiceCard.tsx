@@ -28,7 +28,11 @@ export default function ServiceCard({
         height={160}
         className="mx-auto object-cover font"
       />
-      <Title text={service} size="xl" styles="text-center font-bold mt-3" />
+      <Title
+        text={service}
+        size="xl"
+        styles="text-center font-bold mt-3 text-2xl"
+      />
       <p className={`font-extralight mt-4 mb-4 ${adaptableText}`}>
         {description}
       </p>

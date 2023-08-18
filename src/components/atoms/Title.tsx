@@ -11,7 +11,7 @@ export default function Title({ text, size = "sm", styles }: Title) {
   const textSize = getTextSize(size);
   return (
     <p
-      className={`${ubuntu.className} ${textSize} ${styles} dark:text-text-dark text-text-light mt-2 text`}
+      className={`${ubuntu.className} font-[400] ${textSize} ${styles} dark:text-text-dark text-text-light mt-2 text`}
     >
       {text}
     </p>

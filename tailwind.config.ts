@@ -26,7 +26,12 @@ const config: Config = {
         dark: "#e2e8f0",
       },
     },
-    extend: {},
+    extend: {
+      animation: {
+        typing: "typing 3.5s steps(30, end)",
+        "blink-caret": "blink-carret .5s step-end infinite",
+      },
+    },
   },
   plugins: [],
 };

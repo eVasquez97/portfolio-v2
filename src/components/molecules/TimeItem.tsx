@@ -23,9 +23,11 @@ export default function TimeItem({
           <div className="-ml-[9px] mt-2 mr-3 flex h-4 w-4 items-center justify-center rounded-full bg-highlight"></div>
           <Title text={title} size="xl" />
         </div>
-        <div className="mb-6 ml-6 pb-6">
-          <span className="text-sm text-highlight">{time}</span>
-          <Title text={description} size="sm" />
+        <div className="mb-6 ml-6 pb-6 opacity-80">
+          <span className="text-xs text-highlight">{time}</span>
+          <p className="text-sm text-text-light dark:text-text-dark">
+            {description}
+          </p>
         </div>
       </a>
     </li>

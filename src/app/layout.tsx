@@ -1,7 +1,7 @@
 import { Footer, Header, NavTabs } from "@/components/molecules";
 import "./globals.css";
 import type { Metadata } from "next";
-import { sans } from "./fonts";
+import { roboto } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sans.className} flex min-h-screen bg-primary-light dark:bg-primary-dark`}
+        className={`${roboto.className} flex min-h-screen bg-primary-light dark:bg-primary-dark`}
       >
         <main className="flex flex-col items-center mx-auto max-w-7xl w-full p-2">
           <Header />

@@ -25,12 +25,12 @@ export default function Projects() {
           })}
         </div>
       </Banner>
-      <Quote quote="“If no mistake you have made, yet losing you are…a different game you should play.” - Yoda" />
+      <Quote quote="If no mistake you have made, yet losing you are…a different game you should play. - Yoda" />
 
       <div className="w-full mb-12 mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 min-w-full mb-10 p-1 gap-4 items-center justify-center">
           <div>
-            <Title text="Contact Me" size="xl" styles="text-center" />
+            <Title text="Contact Me" size="2xl" styles="text-center" />
             <ContacForm />
           </div>
           <Image

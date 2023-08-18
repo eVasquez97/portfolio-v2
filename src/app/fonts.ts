@@ -1,15 +1,16 @@
-import { Open_Sans, Ubuntu } from "next/font/google";
+import { Roboto, Ubuntu } from "next/font/google";
 
-export const sans = Open_Sans({
+export const roboto = Roboto({
   subsets: ["latin"],
-  weight: "400",
+  weight: "300",
   display: "swap",
-  variable: "--sans-font",
+  adjustFontFallback: true,
+  variable: "--roboto-font",
 });
 
 export const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400"],
   display: "swap",
   variable: "--ubuntu-font",
 });

@@ -1,3 +1,5 @@
+import { ubuntu } from "@/app/fonts";
+
 type QuoteProps = {
   quote: string;
   style?: string;
@@ -6,7 +8,7 @@ type QuoteProps = {
 export default function Quote({ quote, style }: QuoteProps) {
   return (
     <div
-      className={`${style} max-w-4xl p-4 text-text-light dark:text-text-dark bg-secondary-light dark:bg-secondary-dark 
+      className={`${ubuntu.className} font-[300] ${style} max-w-4xl p-4 text-text-light dark:text-text-dark bg-secondary-light dark:bg-secondary-dark 
           shadow-sm mx-auto m-4 mb-6`}
     >
       <div className="mb-2">

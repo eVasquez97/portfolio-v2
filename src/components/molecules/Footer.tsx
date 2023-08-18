@@ -1,4 +1,4 @@
-import { ubuntu } from "@/app/fonts";
+import { roboto } from "@/app/fonts";
 import data from "../../utils/data.json";
 import SocialButton from "./SocialButton";
 
@@ -19,7 +19,7 @@ export default function Footer() {
         })}
       </div>
       <p
-        className={`${ubuntu.className} text-sm opacity-60 text-secondary-dark dark:text-secondary-light`}
+        className={`${roboto.className} text-sm opacity-60 text-secondary-dark dark:text-secondary-light`}
       >
         Eduardo Vásquez | 2023
       </p>
