@@ -5,5 +5,15 @@ import Timeline from "./Timeline";
 import TimeItem from "./TimeItem";
 import Card from "./Card";
 import ServiceCard from "./ServiceCard";
+import NavTabs from "./NavTabs";
 
-export { Footer, Header, Skill, Timeline, TimeItem, Card, ServiceCard };
+export {
+  Footer,
+  Header,
+  Skill,
+  Timeline,
+  TimeItem,
+  Card,
+  ServiceCard,
+  NavTabs,
+};

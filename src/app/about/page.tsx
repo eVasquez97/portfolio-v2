@@ -1,11 +1,14 @@
 import { Title } from "@/components/atoms";
 import data from "../../utils/data.json";
 import { TimeItem, Timeline } from "@/components/molecules";
+import { Quote } from "@/components/organisms";
 
 export default function Courses() {
-  const { education, courses } = data;
+  const { education, courses, cover } = data;
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full p-4">
+      <Quote quote={cover} />
+
       <Title text="Education" size="xl" />
       <Timeline>
         {education.map((ed) => {

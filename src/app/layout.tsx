@@ -1,7 +1,7 @@
-import { Footer, Header } from "@/components/molecules";
+import { Footer, Header, NavTabs } from "@/components/molecules";
 import "./globals.css";
 import type { Metadata } from "next";
-import { montserrat } from "./fonts";
+import { sans } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -16,10 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} flex min-h-screen bg-primary-light dark:bg-primary-dark overflow-visible`}
+        className={`${sans.className} flex min-h-screen bg-primary-light dark:bg-primary-dark`}
       >
-        <main className="flex flex-col items-center mx-auto max-w-[1024px] w-full p-2 overflow-visible">
+        <main className="flex flex-col items-center mx-auto max-w-7xl w-full p-2">
           <Header />
+          <NavTabs />
           {children}
           <Footer />
         </main>

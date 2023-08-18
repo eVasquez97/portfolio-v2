@@ -1,15 +1,15 @@
-import { Montserrat, Cardo } from "next/font/google";
+import { Open_Sans, Ubuntu } from "next/font/google";
 
-export const montserrat = Montserrat({
+export const sans = Open_Sans({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
-  variable: "--montserrat-font",
+  variable: "--sans-font",
 });
 
-export const cardo = Cardo({
+export const ubuntu = Ubuntu({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
-  variable: "--cardo-font",
+  variable: "--ubuntu-font",
 });

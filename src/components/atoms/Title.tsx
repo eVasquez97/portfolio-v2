@@ -1,9 +1,9 @@
+import { ubuntu } from "@/app/fonts";
 import { getTextSize } from "@/utils/constants";
-import { HTMLAttributes } from "react";
 
 type Title = {
   text: string;
-  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl";
+  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
   styles?: string;
 };
 
@@ -11,7 +11,7 @@ export default function Title({ text, size = "sm", styles }: Title) {
   const textSize = getTextSize(size);
   return (
     <p
-      className={`${textSize} ${styles} dark:text-text-dark text-text-light mt-2 text`}
+      className={`${ubuntu.className} ${textSize} ${styles} dark:text-text-dark text-text-light mt-2 text`}
     >
       {text}
     </p>

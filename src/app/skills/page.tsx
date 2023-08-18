@@ -15,9 +15,9 @@ export default function Skills() {
   } = data;
 
   return (
-    <div className="bg-primary-light dark:bg-primary-dark min-w-full p-4">
+    <div className="bg-primary-light dark:bg-primary-dark">
       <Title text="Most used Tech stacks" size="xl" styles="mb-3" />
-      <Banner>
+      <Banner background="bg-secondary-light dark:bg-secondary-dark">
         <div className="mx-auto max-w-[1024px] p-5">
           <div className="grid grid-cols-2 md:grid-cols-4 min-w-full m-3 p-1 gap-2">
             {techStacks.map((ts) => {
