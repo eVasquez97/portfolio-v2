@@ -13,7 +13,7 @@ export default function Header() {
             styles={`${ubuntu.className} text-5xl`}
           />
         </Link>
-        <Title text="lorem ipsum" size="xs" styles="text-highlight" />
+        <Title text="A ver qué pongo acá" size="xs" styles="text-highlight" />
       </div>
     </div>
   );

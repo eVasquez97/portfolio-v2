@@ -17,7 +17,7 @@ export default function TimeItem({
   url,
 }: TimeLinePeriod) {
   return (
-    <li className="">
+    <li className="transition duration-300 ease-in-out hover:scale-95">
       <a href={url} target="_blank">
         <div className="flex-start flex items-center">
           <div className="-ml-[9px] mt-2 mr-3 flex h-4 w-4 items-center justify-center rounded-full bg-highlight"></div>

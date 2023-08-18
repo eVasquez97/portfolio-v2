@@ -18,7 +18,7 @@ export default function NavTabs() {
               isActive
                 ? "text-highlight font-bold"
                 : "text-text-light dark:text-text-dark"
-            } mr-4 last:mr-0"
+            } mr-4 last:mr-0 hover:scale-105"
               `}
           >
             {route.name}

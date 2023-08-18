@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <div className="block max-w-md p-6 mt-1">
+    <div className="block w-full p-6 mt-1">
       <form>
         <div className="relative mb-6" data-te-input-wrapper-init>
           <input
@@ -31,7 +31,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="bg-highlight text-text-dark w-full shadow-md p-2"
+          className="bg-highlight text-text-dark w-full mx-auto shadow-md p-2"
           data-te-ripple-init
           data-te-ripple-color="light"
         >

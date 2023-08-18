@@ -18,13 +18,49 @@
   ],
   "courses": [
     {
+      "name": "The Complete GitHub Actions & Workflows Guide",
+      "time": "Issued on Aug. 2023",
+      "certificationID": "UC-94b14b4f-23a1-4202-b3ec-7f7a693ef62d",
+      "headerColor": "transparent",
+      "url": "https://www.udemy.com/certificate/UC-94b14b4f-23a1-4202-b3ec-7f7a693ef62d/",
+      "company": "Udemy",
+      "img": "/img/git-actions.jpg"
+    },
+    {
+      "name": "React testing con jest y enzyme",
+      "time": "Issued on Sept. 2022",
+      "certificationID": "UC-3fdd9e8c-5660-4332-bfdd-e9e28cbc29c1",
+      "headerColor": "transparent",
+      "url": "https://www.udemy.com/certificate/UC-3fdd9e8c-5660-4332-bfdd-e9e28cbc29c1/",
+      "company": "Udemy",
+      "img": "/img/jest.jpg"
+    },
+    {
+      "name": "Python sin fronteras",
+      "time": "Issued on June. 2022",
+      "certificationID": "UC-b7551b50-2e5d-41df-a956-b2ba4ffc1ad3",
+      "headerColor": "transparent",
+      "url": "https://www.udemy.com/certificate/UC-b7551b50-2e5d-41df-a956-b2ba4ffc1ad3/",
+      "company": "Udemy",
+      "img": "/img/python.jpg"
+    },
+    {
+      "name": "SwiftUI Masterclass 2022 - iOS 15 & Swift 5",
+      "time": "Issued on Jan. 2022",
+      "certificationID": "UC-a9370e6b-3732-4d8a-b8d1-f60f3ddb5be4",
+      "headerColor": "transparent",
+      "url": "https://www.udemy.com/certificate/UC-a9370e6b-3732-4d8a-b8d1-f60f3ddb5be4/",
+      "company": "Udemy",
+      "img": "/img/swift.jpg"
+    },
+    {
       "name": "CCNA (Level 200)",
       "time": "Issued on Oct. 4, 2020",
       "certificationID": "a5961b75-3832-4326-99e4-f508598440fb",
       "headerColor": "transparent",
       "url": "https://www.credly.com/badges/a5961b75-3832-4326-99e4-f508598440fb?source=linked_in_profile",
       "company": "Cisco",
-      "img": "http://www.mercadoit.com/blog/wp-content/uploads/2019/11/cisco-lan-wan-qos.jpg"
+      "img": "/img/ccna.png"
     },
     {
       "name": "Python3",
@@ -33,16 +69,7 @@
       "headerColor": "transparent",
       "url": "https://www.sololearn.com/Certificate/1073-8851434/pdf/",
       "company": "SoloLearn",
-      "img": "https://i.blogs.es/1d8a5b/python1/1366_2000.jpg"
-    },
-    {
-      "name": "Querying with Transact-SQL",
-      "time": "Issued on 2016",
-      "certificationID": "DAT201-x",
-      "headerColor": "transparent",
-      "url": "https://learning.edx.org/course/course-v1:Microsoft+DAT201x+3T2017/home",
-      "company": "EDx",
-      "img": "https://milesbreedsolutions.com/wp-content/uploads/2018/04/Microsoft-Course-20761-Querying-Data-with-Transact-SQL.jpg"
+      "img": "/img/python3.png"
     },
     {
       "name": "Comandos básicos para terminal",
@@ -51,7 +78,16 @@
       "headerColor": "transparent",
       "url": "https://codigofacilito.com/videos/como-iniciar-comandos-basicos-5c82bb9f-2997-4ffa-9b15-da67488cf05a",
       "company": "Código Facilito",
-      "img": "https://codigofacilito.com/thumb.jpg"
+      "img": "/img/terminal.png"
+    },
+    {
+      "name": "Querying with Transact-SQL",
+      "time": "Issued on 2016",
+      "certificationID": "DAT201-x",
+      "headerColor": "transparent",
+      "url": "https://learning.edx.org/course/course-v1:Microsoft+DAT201x+3T2017/home",
+      "company": "EDx",
+      "img": "/img/sql.jpg"
     }
   ],
   "programmingLanguages": [
@@ -226,22 +262,22 @@
     {
       "name": "LinkedIn",
       "url": "https://www.linkedin.com/in/eduardo-v%C3%A1squez-lavaire-aba5bb1a0/",
-      "icon": "TfiLinkedin"
+      "icon": "https://cdn.worldvectorlogo.com/logos/linkedin-icon.svg"
     },
     {
       "name": "Facebook",
       "url": "https://www.facebook.com/eduardo.b.vasquez.1/",
-      "icon": "TfiFacebook"
+      "icon": "https://cdn.worldvectorlogo.com/logos/facebook-3-2.svg"
     },
     {
       "name": "Instagram",
       "url": "https://www.instagram.com/eduardovasquez97/?hl=es-la",
-      "icon": "TfiInstagram"
+      "icon": "https://cdn.worldvectorlogo.com/logos/instagram-2016-5.svg"
     },
     {
       "name": "Twitter",
       "url": "https://twitter.com/EBladimirVL",
-      "icon": "TfiTwitter"
+      "icon": "https://cdn.worldvectorlogo.com/logos/twitter-3.svg"
     }
   ],
   "services": [
