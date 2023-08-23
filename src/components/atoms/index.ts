@@ -1,3 +1,4 @@
 import Title from "./Title";
+import Badge from "./Badge";
 
-export { Title };
+export { Title, Badge };

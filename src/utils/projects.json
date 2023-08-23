@@ -1,9 +1,168 @@
 [
-  { "name": "iMitig8", "platform": "mobile" },
-  { "name": "Iron24", "platform": "mobile" },
-  { "name": "Valhallan", "platform": "mobile" },
-  { "name": "Math Reactor", "platform": "mobile" },
-  { "name": "The Saver", "platform": "web" },
-  { "name": "The Saver", "platform": "mobile" },
-  { "name": "Clink", "platform": "web" }
+  {
+    "id": "imitig8_app",
+    "name": "iMitig8 Risk Global",
+    "platform": "mobile",
+    "intro": "Application in the insurance industry built for risk engineers.",
+    "techStack": ["React Native", "MongoDB", "Swift", "Java"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Puzzle",
+    "location": "Remote",
+    "role": "Full Stack Software Developer",
+    "time": "Oct. 2022 - present",
+    "responsibilities": [
+      "Refactoring and fixing major security breaches on the mobile app",
+      "Assist in the creation of new endpoints on the C# backend",
+      "Improve and develop new features for the web portal",
+      "Develop new modules on the mobile app",
+      "Update and migrate modules on the mobile app to comply with new business standards"
+    ],
+    "img": ""
+  },
+  {
+    "id": "iron24_app",
+    "name": "Iron24",
+    "platform": "mobile",
+    "intro": "Need a gym? This is the app if you're in the US.",
+    "techStack": ["React Native", "SQL Server", "Azure", "Google Cloud"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Believe Solutions",
+    "location": "Remote",
+    "role": "Full Stack Software & Mobile Developer",
+    "time": "March 2022 - Oct. 2022",
+    "responsibilities": [
+      "Develop the React Native front-end for the entire application.",
+      "Optimize existing APIs to enhance performance and streamline calls.",
+      "Oversee the complete project life cycle, from inception to delivery.",
+      "Conduct bug fixing and testing, including both end-to-end and unit testing.",
+      "Integrate with external services such as Azure, Google Maps API, Geolocation services, OpenPath, and Stripe API for payment processing."
+    ],
+    "img": ""
+  },
+  {
+    "id": "saver_app",
+    "name": "The Saver",
+    "platform": "mobile",
+    "intro": "Mobile app for college students in the Ohio area.",
+    "techStack": ["React Native", "GraphQL", "AWS"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Code Éxitos",
+    "location": "San Pedro Sula, Honduras",
+    "role": "Full Stack Software Developer",
+    "time": "March 2021 - March 2022",
+    "responsibilities": [
+      "Develop the entire React front-end for the application.",
+      "Modify the existing backend to accommodate new features.",
+      "Oversee the complete project life cycle, from inception to delivery.",
+      "Conduct bug fixing and testing, including both end-to-end and unit testing."
+    ],
+    "img": ""
+  },
+  {
+    "id": "saver_site",
+    "name": "The Saver",
+    "platform": "web",
+    "intro": "Don't like printed magazines? Visit this site...",
+    "techStack": ["React JS", "GraphQL", "AWS"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Code Éxitos",
+    "location": "San Pedro Sula, Honduras",
+    "role": "Full Stack Software Developer",
+    "time": "March 2021 - March 2022",
+    "responsibilities": [
+      "Develop the entire React front-end for the application.",
+      "Modify the existing backend to accommodate new features.",
+      "Oversee the complete project life cycle, from inception to delivery.",
+      "Conduct bug fixing and testing, including both end-to-end and unit testing."
+    ],
+    "img": ""
+  },
+  {
+    "id": "clink_app",
+    "name": "Clink",
+    "platform": "web",
+    "intro": "New era of meeting polls has just arrived.",
+    "techStack": ["React JS", "GraphQL", "AWS"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Code Éxitos",
+    "location": "San Pedro Sula, Honduras",
+    "role": "Full Stack Software Developer",
+    "time": "March 2021 - March 2022",
+    "responsibilities": [
+      "Design and develop the entire user interface for the application.",
+      "Create and implement a GraphQL database to support the application’s data needs.",
+      "Integrate Cognito and Syncfusion (spreadsheets) into the application’s architecture.",
+      "Conduct testing, deployment, documentation, and ongoing maintenance to ensure the application’s continued success."
+    ],
+    "img": ""
+  },
+  {
+    "id": "doctor7_site",
+    "name": "Doctor 7 Clinic",
+    "platform": "web",
+    "intro": "If you're a modern doctor, you better check this site...",
+    "techStack": ["React JS", "MongoDB"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Experenta",
+    "location": "San Pedro Sula, Honduras",
+    "role": "Full Stack Software Developer",
+    "time": "Dec. 2019 - March 2021",
+    "responsibilities": [
+      "Develop the entire front-end for the website and mobile application, including user interface design and implementation.",
+      "Design and implement both the user interface and backend services for the application and website.",
+      "Build and maintain a robust backend to support the application’s functionality.",
+      "Conduct thorough testing and deploy the application to hosting services, the Google Play Store, and the Apple App Store.",
+      "Provide ongoing maintenance and support.",
+      "Designing and developing a version 2.0 of the mobile application."
+    ],
+    "img": "/img/doctor7.jpg"
+  },
+  {
+    "id": "doctor7_app",
+    "name": "Doctor 7",
+    "platform": "mobile",
+    "intro": "New era of medical appointments has just arrived.",
+    "techStack": ["React Native", "MongoDB", "Google Cloud", "Stripe API"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Experenta",
+    "location": "San Pedro Sula, Honduras",
+    "role": "Full Stack Software Developer",
+    "time": "Dec. 2019 - March 2021",
+    "responsibilities": [
+      "Develop the entire front-end for the website and mobile application, including user interface design and implementation.",
+      "Design and implement both the user interface and backend services for the application and website.",
+      "Build and maintain a robust backend to support the application’s functionality.",
+      "Conduct thorough testing and deploy the application to hosting services, the Google Play Store, and the Apple App Store.",
+      "Provide ongoing maintenance and support.",
+      "Designing and developing a version 2.0 of the mobile application."
+    ],
+    "img": "/img/doctor7.jpg"
+  },
+  {
+    "id": "dnaCenter_site",
+    "name": "Cisco DNA Center",
+    "platform": "web",
+    "intro": "Salesforce but oriented for datacenters and networking.",
+    "techStack": ["React Js", "Python3", "MongoDB", "Heroku"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Experenta",
+    "location": "San Pedro Sula, Honduras",
+    "role": "Full Stack Software Developer",
+    "time": "Dec. 2019 - March 2021",
+    "responsibilities": [
+      "Develop a React-based front-end to support the application’s user interface.",
+      "Design and implement a Python-based backend to support the application’s functionality.",
+      "Configure and customize the Salesforce Org to meet the application’s requirements.",
+      "Integrate the various components of the project through Heroku, including the creation of necessary webhooks to facilitate communication between systems."
+    ],
+    "img": ""
+  }
 ]
