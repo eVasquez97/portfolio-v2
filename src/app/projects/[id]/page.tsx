@@ -16,18 +16,18 @@ export default function ProjectInfo() {
   const id = params.get("id");
   const project = getProjectData(id || "1");
 
-  return (
+  return project ? (
     <div className="w-full h-full">
       <Banner>
         <Image
           src={project?.img || "/img/banner1.jpg"}
           alt={project?.id || "img"}
-          width={100}
-          height={100}
+          width={1000}
+          height={1000}
           className="w-full h-[200px] object-cover"
         />
       </Banner>
-      <p className="flex flex-row -mt-4">
+      <div className="flex flex-row -mt-4">
         <Title
           text={project.name}
           size="3xl"
@@ -38,8 +38,8 @@ export default function ProjectInfo() {
         >
           {project.platform}
         </span>
-      </p>
+      </div>
       <Badge text={project?.status} />
     </div>
-  );
+  ) : null;
 }

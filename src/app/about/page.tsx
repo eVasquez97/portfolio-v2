@@ -33,8 +33,8 @@ export default function Courses() {
           <Image
             src="/img/banner1.jpg"
             alt="Eduardo"
-            width={200}
-            height={200}
+            width={1000}
+            height={1000}
             className="w-full transition duration-300 ease-in-out hover:scale-110 mb-6"
           />
         </div>

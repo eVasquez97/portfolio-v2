@@ -22,11 +22,11 @@ export default function Skill({ name, experience, description, logo }: Skill) {
         >
           {name}
           {experience && (
-            <p
+            <span
               className={`${ubuntu.className} ${variableText} opacity-40 font-light ml-2`}
             >
               {experience}
-            </p>
+            </span>
           )}
         </p>
         {description && (

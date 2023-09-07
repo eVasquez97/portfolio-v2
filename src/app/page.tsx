@@ -13,7 +13,6 @@ export default function Home() {
               name={pro.name}
               platform={pro.platform}
               intro={pro.intro}
-              status={pro.status}
               techStack={pro.techStack}
               company={pro.company}
               jobType={pro.jobType}

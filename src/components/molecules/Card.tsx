@@ -21,8 +21,8 @@ export default function Card({ ...props }: CardProps) {
             className="w-full object-cover transition duration-300 ease-in-out hover:scale-110"
             src={image}
             alt=""
-            width={200}
-            height={200}
+            width={1000}
+            height={1000}
           />
         </div>
         <div className="p-4">

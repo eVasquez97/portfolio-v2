@@ -36,8 +36,8 @@ export default function ProjectCard({
           className="h-96 w-full md:max-w-[32%] object-cover md:h-auto"
           src={img || "/img/banner1.jpg"}
           alt=""
-          width={100}
-          height={96}
+          width={1000}
+          height={1000}
         />
         <div className="flex flex-col justify-start p-6 min-w-[50%]">
           <p className="flex flex-row">

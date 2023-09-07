@@ -36,8 +36,8 @@ export default function Projects() {
           <Image
             alt="banner1"
             src="/img/banner1.jpg"
-            width={300}
-            height={300}
+            width={1000}
+            height={1000}
             className="w-full"
           />
         </div>
