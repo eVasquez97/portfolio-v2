@@ -22,8 +22,8 @@ export default function ProjectInfo() {
         <Image
           src={project?.img || "/img/banner1.jpg"}
           alt={project?.id || "img"}
-          width={1000}
-          height={1000}
+          width={2000}
+          height={2000}
           className="w-full h-[200px] object-cover"
         />
       </Banner>

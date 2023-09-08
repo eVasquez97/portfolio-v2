@@ -1,5 +1,22 @@
 [
   {
+    "id": "mock_shop",
+    "name": "Mock Shop",
+    "platform": "web",
+    "intro": "Small eCommerce example using MERN stack.",
+    "techStack": ["React Js", "MongoDB", "Node JS", "Express JS"],
+    "status": "live",
+    "jobType": "project",
+    "company": "Puzzle",
+    "location": "Remote",
+    "role": "Full Stack Software Developer",
+    "time": "Oct. 2022 - present",
+    "responsibilities": [
+      "Short exercise to evaluate candidates for a Full stack role using MERN."
+    ],
+    "img": "/img/mock-shop.jpg"
+  },
+  {
     "id": "imitig8_app",
     "name": "iMitig8 Risk Global",
     "platform": "mobile",
@@ -18,7 +35,7 @@
       "Develop new modules on the mobile app",
       "Update and migrate modules on the mobile app to comply with new business standards"
     ],
-    "img": ""
+    "img": "/img/mitig8.jpg"
   },
   {
     "id": "iron24_app",
@@ -39,7 +56,7 @@
       "Conduct bug fixing and testing, including both end-to-end and unit testing.",
       "Integrate with external services such as Azure, Google Maps API, Geolocation services, OpenPath, and Stripe API for payment processing."
     ],
-    "img": ""
+    "img": "/img/iron24.jpg"
   },
   {
     "id": "saver_app",
@@ -59,7 +76,7 @@
       "Oversee the complete project life cycle, from inception to delivery.",
       "Conduct bug fixing and testing, including both end-to-end and unit testing."
     ],
-    "img": ""
+    "img": "/img/saver2.jpg"
   },
   {
     "id": "saver_site",
@@ -79,7 +96,7 @@
       "Oversee the complete project life cycle, from inception to delivery.",
       "Conduct bug fixing and testing, including both end-to-end and unit testing."
     ],
-    "img": ""
+    "img": "/img/saver-web.jpg"
   },
   {
     "id": "clink_app",
@@ -99,7 +116,7 @@
       "Integrate Cognito and Syncfusion (spreadsheets) into the application’s architecture.",
       "Conduct testing, deployment, documentation, and ongoing maintenance to ensure the application’s continued success."
     ],
-    "img": ""
+    "img": "/img/clink.jpg"
   },
   {
     "id": "doctor7_site",
@@ -121,7 +138,7 @@
       "Provide ongoing maintenance and support.",
       "Designing and developing a version 2.0 of the mobile application."
     ],
-    "img": "/img/doctor7.jpg"
+    "img": "/img/doctor7-web.jpg"
   },
   {
     "id": "doctor7_app",
@@ -143,7 +160,7 @@
       "Provide ongoing maintenance and support.",
       "Designing and developing a version 2.0 of the mobile application."
     ],
-    "img": "/img/doctor7.jpg"
+    "img": "/img/doctor7-app.jpg"
   },
   {
     "id": "dnaCenter_site",
@@ -163,6 +180,6 @@
       "Configure and customize the Salesforce Org to meet the application’s requirements.",
       "Integrate the various components of the project through Heroku, including the creation of necessary webhooks to facilitate communication between systems."
     ],
-    "img": ""
+    "img": "/img/cisco.jpg"
   }
 ]
