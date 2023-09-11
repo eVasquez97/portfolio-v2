@@ -2,6 +2,7 @@ import { Footer, Header, NavTabs } from "@/components/molecules";
 import "./globals.css";
 import type { Metadata } from "next";
 import { roboto } from "./fonts";
+import { ContactMe } from "@/components/atoms";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -16,9 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} flex min-h-screen bg-primary-light dark:bg-primary-dark`}
+        className={`${roboto.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full`}
       >
-        <main className="flex flex-col items-center mx-auto max-w-7xl w-full p-2">
+        <ContactMe />
+        <main className="flex flex-col items-center mx-auto max-w-7xl w-full p-2 mt-11 md:mt-0">
           <Header />
           <NavTabs />
           {children}

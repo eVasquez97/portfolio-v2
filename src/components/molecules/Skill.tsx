@@ -30,7 +30,7 @@ export default function Skill({ name, experience, description, logo }: Skill) {
           )}
         </p>
         {description && (
-          <p className={`${variableText} opacity-90 text-xs`}>{description}</p>
+          <p className={`${variableText} opacity-90 text-sm`}>{description}</p>
         )}
       </div>
     </div>

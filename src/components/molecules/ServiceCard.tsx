@@ -24,21 +24,19 @@ export default function ServiceCard({
       <Image
         alt={service}
         src={logo}
-        width={144}
-        height={160}
-        className="mx-auto object-cover font"
+        width={1000}
+        height={1000}
+        className="mx-auto object-cover font w-60"
       />
       <Title
         text={service}
         size="xl"
         styles="text-center font-bold mt-3 text-2xl"
       />
-      <p className={`font-extralight mt-4 mb-4 ${adaptableText}`}>
-        {description}
-      </p>
+      <p className={`mt-6 mb-6 ${adaptableText} text-lg`}>{description}</p>
       {benefits?.map((b) => {
         return (
-          <p className={`list-item opacity-75 ${adaptableText}`} key={b}>
+          <p className={`list-item ${adaptableText} mb-2 text-base`} key={b}>
             {b}
           </p>
         );

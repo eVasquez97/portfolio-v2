@@ -17,9 +17,9 @@ export default function NavTabs() {
             key={route.name}
             className={`${
               isActive
-                ? "text-highlight font-bold"
+                ? "text-highlight font-semibold"
                 : "text-text-light dark:text-text-dark"
-            } ${ubuntu.className} mr-4 last:mr-0 hover:scale-105"
+            } ${ubuntu.className} mr-6 last:mr-0 hover:scale-105 text-lg"
               `}
           >
             {route.name}

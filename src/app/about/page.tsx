@@ -3,9 +3,10 @@ import data from "../../utils/data.json";
 import { Card, TimeItem, Timeline } from "@/components/molecules";
 import { Quote } from "@/components/organisms";
 import Image from "next/image";
+import SocialButton from "@/components/molecules/SocialButton";
 
 export default function Courses() {
-  const { education, courses, cover, volunteering } = data;
+  const { education, courses, cover, volunteering, socialMedia } = data;
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full p-4">
@@ -17,6 +18,18 @@ export default function Courses() {
           height={1000}
           className="w-96 transition duration-300 ease-in-out hover:scale-105 mb-4 rounded-full"
         />
+      </div>
+      <div className="flex flex-row w-full mx-auto items-center justify-center mb-4">
+        {socialMedia.map((sm) => {
+          return (
+            <SocialButton
+              key={sm.name}
+              icon={sm.icon}
+              name={sm.name}
+              url={sm.url}
+            />
+          );
+        })}
       </div>
       <Quote quote={cover} />
 
@@ -50,20 +63,20 @@ export default function Courses() {
           <p className="text-xl text-highlight mb-4 font-bold">
             {volunteering.role}
           </p>
-          <p className="text-sm text-text-light dark:text-text-dark">
+          <p className="text-md text-text-light dark:text-text-dark">
             {volunteering.company}
           </p>
           <p className="text-sm text-highlight mb-4">
             Since: {volunteering.start}
           </p>
-          <p className="text-sm text-text-light dark:text-text-dark">
+          <p className="text-md text-text-light dark:text-text-dark">
             {volunteering.description}
           </p>
         </div>
       </div>
 
       <Title text="Courses" size="2xl" styles="mb-8 mt-11" />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {courses.map((course) => {
           return (
             <Card

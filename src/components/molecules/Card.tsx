@@ -14,7 +14,7 @@ type CardProps = {
 export default function Card({ ...props }: CardProps) {
   const image = props.img ?? "/img/banner1.jpg";
   return (
-    <div className="block md:max-w-[18rem] w-full rounded-sm bg-secondary-light dark:bg-secondary-dark shadow-sm m-2">
+    <div className="block md:max-w-lg w-full rounded-sm bg-secondary-light dark:bg-secondary-dark shadow-sm m-2">
       <a href={props.url} target="_blank">
         <div className="relative overflow-hidden bg-cover bg-no-repeat h-40">
           <Image
@@ -26,8 +26,8 @@ export default function Card({ ...props }: CardProps) {
           />
         </div>
         <div className="p-4">
-          <Title text={props.name} size="lg" />
-          <p className="text-xs text-highlight opacity-80">
+          <Title text={props.name} size="xl" />
+          <p className="text-sm text-highlight opacity-80">
             <strong className="text-text-light dark:text-text-dark">
               {props.company}
               {"  -  "}

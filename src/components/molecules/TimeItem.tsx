@@ -24,8 +24,8 @@ export default function TimeItem({
           <Title text={title} size="xl" />
         </div>
         <div className="mb-6 ml-6 pb-6 opacity-80">
-          <span className="text-xs text-highlight">{time}</span>
-          <p className="text-sm text-text-light dark:text-text-dark">
+          <span className="text-sm text-highlight">{time}</span>
+          <p className="text-md text-text-light dark:text-text-dark">
             {description}
           </p>
         </div>

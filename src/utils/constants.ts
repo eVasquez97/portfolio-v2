@@ -2,8 +2,7 @@ export const variableText = "dark:text-primary-light text-primary-dark";
 
 export const routes = [
   { name: "Projects", url: "/" },
-  { name: "Services", url: "/services" },
-  { name: "Skills", url: "/skills" },
+  { name: "Experience", url: "/services" },
   { name: "About me", url: "/about" },
 ];
 
