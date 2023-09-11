@@ -49,7 +49,7 @@ export default function ProjectCard({
             </span>
           </p>
           <p
-            className={`${variableText} text-xs opacity-80 capitalize mb-2 -mt-2`}
+            className={`${variableText} text-xs opacity-80 capitalize mb-4 -mt-2`}
           >
             {jobType} - {company}
           </p>
