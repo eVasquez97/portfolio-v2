@@ -138,7 +138,7 @@
       "Provide ongoing maintenance and support.",
       "Designing and developing a version 2.0 of the mobile application."
     ],
-    "img": "/img/doctor7-web.jpg"
+    "img": "/img/banners/doctor7-web.png"
   },
   {
     "id": "doctor7_app",
@@ -160,7 +160,7 @@
       "Provide ongoing maintenance and support.",
       "Designing and developing a version 2.0 of the mobile application."
     ],
-    "img": "/img/doctor7-app.jpg"
+    "img": "/img/banners/doctor7-app.png"
   },
   {
     "id": "dnaCenter_site",
@@ -180,6 +180,6 @@
       "Configure and customize the Salesforce Org to meet the application’s requirements.",
       "Integrate the various components of the project through Heroku, including the creation of necessary webhooks to facilitate communication between systems."
     ],
-    "img": "/img/cisco.jpg"
+    "img": "/img/banners/cisco.png"
   }
 ]

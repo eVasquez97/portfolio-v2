@@ -5,13 +5,22 @@ import { Quote } from "@/components/organisms";
 import Image from "next/image";
 
 export default function Courses() {
-  const { education, courses, cover } = data;
+  const { education, courses, cover, volunteering } = data;
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full p-4">
+      <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-full flex items-center justify-center">
+        <Image
+          src="/profile.jpg"
+          alt="Eduardo"
+          width={1000}
+          height={1000}
+          className="w-96 transition duration-300 ease-in-out hover:scale-105 mb-4 rounded-full"
+        />
+      </div>
       <Quote quote={cover} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full justify-start items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full justify-start items-center mb-14 mt-16">
         <div>
           <Title text="Education" size="2xl" />
           <Timeline>
@@ -29,14 +38,27 @@ export default function Courses() {
             })}
           </Timeline>
         </div>
-        <div className="relative overflow-hidden bg-cover bg-no-repeat">
+        <div className="-mt-4">
+          <Title text="Volunteer work" size="2xl" />
           <Image
-            src="/img/banner1.jpg"
-            alt="Eduardo"
+            src="/church.png"
+            alt="Episcopal Church"
             width={1000}
             height={1000}
-            className="w-full transition duration-300 ease-in-out hover:scale-110 mb-6"
+            className="w-80 transition duration-300 ease-in-out hover:scale-110 mb-4 mt-6"
           />
+          <p className="text-xl text-highlight mb-4 font-bold">
+            {volunteering.role}
+          </p>
+          <p className="text-sm text-text-light dark:text-text-dark">
+            {volunteering.company}
+          </p>
+          <p className="text-sm text-highlight mb-4">
+            Since: {volunteering.start}
+          </p>
+          <p className="text-sm text-text-light dark:text-text-dark">
+            {volunteering.description}
+          </p>
         </div>
       </div>
 

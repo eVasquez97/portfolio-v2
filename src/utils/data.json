@@ -316,5 +316,11 @@
       ],
       "logo": "/img/hardware.svg"
     }
-  ]
+  ],
+  "volunteering": {
+    "role": "Interpreter",
+    "company": "The Episcopal Church",
+    "start": "June 2007",
+    "description": "I´ve been volunteering as a translator/interpreter for medical and construction groups from several states from around United States that come anually to Honduras to help."
+  }
 }
