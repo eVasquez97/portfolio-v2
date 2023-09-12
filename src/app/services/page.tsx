@@ -41,11 +41,11 @@ export default function Projects() {
         <Title text="Most used Tech stacks" size="xl" styles={titleStyle} />
         <Banner background="bg-secondary-light dark:bg-secondary-dark">
           <div className="mx-auto max-w-[1024px] p-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 min-w-full m-2 p-1 gap-1">
+            <div className="grid grid-cols-1 md:grid-cols-4 min-w-full m-2 md:p-1 p-3 gap-2">
               {techStacks.map((ts) => {
                 return (
                   <div
-                    className="flex flex-col items-center justify-center h-auto"
+                    className="flex flex-col items-center justify-center h-auto mb-11 md:mb-0"
                     key={ts.name}
                   >
                     <div className="w-[90px] h-[90px] justify-center items-center flex object-cover">

@@ -10,8 +10,8 @@ export default function Header() {
           <Link href="/">
             <Title
               text="Eduardo Vásquez"
-              size="5xl"
-              styles={`${ubuntu.className} w-max text-5xl`}
+              size="3xl"
+              styles={`${ubuntu.className} w-max md:text-5xl`}
             />
           </Link>
         </div>

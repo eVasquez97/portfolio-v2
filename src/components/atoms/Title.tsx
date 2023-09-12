@@ -7,7 +7,7 @@ type Title = {
   styles?: string;
 };
 
-export default function Title({ text, size = "sm", styles }: Title) {
+export default function Title({ text, size = "xl", styles }: Title) {
   const textSize = getTextSize(size);
   return (
     <p

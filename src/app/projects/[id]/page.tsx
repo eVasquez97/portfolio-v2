@@ -29,7 +29,7 @@ export default function ProjectInfo() {
         />
       </Banner>
 
-      <div className="flex flex-col md:flex-row w-full items-center justify-between">
+      <div className="flex flex-col md:flex-row w-full items-center justify-between md:p-2 p-3">
         <div className="w-full">
           <div className="flex flex-row -mt-4">
             <Title
@@ -43,14 +43,14 @@ export default function ProjectInfo() {
               {project?.platform}
             </span>
           </div>
-          <p className="text-xl text-highlight font-semibold">
+          <p className="text-xl text-highlight font-semibold mb-1">
             {project?.role}
           </p>
-          <p className={`${variableText} text-base`}>
+          <p className={`${variableText} text-base mb-1`}>
             {project?.company} - {project?.time}
           </p>
           <p
-            className={`${variableText} text-base italic capitalize opacity-60`}
+            className={`${variableText} text-base italic capitalize opacity-60 mb-2`}
           >
             {project?.jobType} - {project?.location}
           </p>
@@ -61,10 +61,13 @@ export default function ProjectInfo() {
             size="xl"
             styles={`${variableText} ${ubuntu.className}`}
           />
-          <div className="flex flex-row mb-3">
+          <div className="flex flex-row mb-3 flex-wrap">
             {project?.techStack.map((ts) => {
               return (
-                <p key={ts} className={`${variableText} text-base m-2`}>
+                <p
+                  key={ts}
+                  className={`${variableText} text-base m-5 md:m-3 min-w-[90px]`}
+                >
                   {ts}
                 </p>
               );
@@ -74,28 +77,30 @@ export default function ProjectInfo() {
             <Link
               href={project?.url}
               target="_blank"
-              className="text-primary-light rounded-sm text-center bg-highlight p-2 min-w-[120px] mt-2"
+              className="text-primary-light rounded-sm text-center bg-highlight p-2 w-40 mt-2"
             >
               View project
             </Link>
           ) : (
-            <p className={`${variableText} text-base italic opacity-50`}>
+            <p
+              className={`${variableText} text-base italic opacity-50 text-center`}
+            >
               No live preview available.
             </p>
           )}
         </div>
       </div>
-      <div className="mt-11 mb-11">
+      <div className="mt-11 mb-11 md:p-2 p-3">
         <p className={`${variableText} text-lg`}>{project?.intro}</p>
       </div>
 
-      <div className="mt-11 mb-11">
+      <div className="mt-11 mb-11 md:p-2 p-3">
         <Title
           text="Main responsibilities"
           size="xl"
           styles={`${variableText} ${ubuntu.className}`}
         />
-        <div className="p-5">
+        <div className="p-6">
           {project?.responsibilities.map((res) => {
             return (
               <p
