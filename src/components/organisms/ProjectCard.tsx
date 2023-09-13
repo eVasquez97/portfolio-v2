@@ -7,8 +7,6 @@ export type ProjectProps = {
   id: string;
   name: string;
   platform?: string;
-  intro: string;
-  techStack: string[];
   jobType: string;
   company: string;
   img: string;
@@ -18,12 +16,13 @@ export default function ProjectCard({
   name,
   id,
   platform,
-  intro,
-  techStack,
   jobType,
   company,
   img,
 }: ProjectProps) {
+  const col = "flex flex-col";
+  const detailText = "capitalize opacity-60";
+
   return (
     <Link
       href={{
@@ -31,34 +30,30 @@ export default function ProjectCard({
         query: { id: id },
       }}
     >
-      <div className="flex flex-col bg-secondary-light dark:bg-secondary-dark shadow-sm md:max-w-xl md:flex-row min-h-[220px] h-full">
+      <div
+        className={`${col} bg-secondary-light dark:bg-secondary-dark shadow-sm md:max-w-xl min-h-[164px] h-full rounded-md relative justify-center hover:scale-105`}
+      >
         <Image
-          className="h-96 w-full md:max-w-[32%] object-cover md:h-auto"
+          className="w-full object-cover h-[164px] rounded-md"
           src={img || "/img/banner1.jpg"}
           alt=""
           width={1000}
           height={1000}
         />
-        <div className="flex flex-col justify-start p-6 min-w-[50%]">
-          <p className="flex flex-row">
-            <Title text={name} size="xl" styles="mb-3" />
+        <div
+          className={`${col} self-center text-center p-2 absolute bg-primary-light dark:bg-primary-dark w-4/5 mx-auto rounded-md shadow-sm`}
+        >
+          <div className="flex flex-row justify-center ">
+            <Title text={name} size="2xl" styles="mb-3 text-center" />
             <span
-              className={`${variableText} text-[10px] opacity-60 ml-2 mt-2 capitalize`}
+              className={`${variableText} ${detailText} text-[10px] ml-2 mt-2`}
             >
               {platform}
             </span>
-          </p>
-          <p
-            className={`${variableText} text-xs opacity-80 capitalize mb-4 -mt-2`}
-          >
+          </div>
+          <p className={`${variableText} ${detailText} text-xs mb-4 -mt-2`}>
             {jobType} - {company}
           </p>
-          <p className={`${variableText} mb-4 text-sm`}>{intro}</p>
-          <div className="flex flex-row flex-wrap">
-            {techStack.map((ts) => {
-              return <Badge key={ts} text={ts} styles="m-1" />;
-            })}
-          </div>
         </div>
       </div>
     </Link>

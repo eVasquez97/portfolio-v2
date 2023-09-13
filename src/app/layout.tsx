@@ -1,9 +1,11 @@
-import { Footer, Header, NavTabs } from "@/components/molecules";
-import "./globals.css";
-import type { Metadata } from "next";
-import { roboto } from "./fonts";
+import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
+import { Footer, Header, NavTabs } from "@/components/molecules";
+import { roboto } from "./fonts";
 import { ContactMe } from "@/components/atoms";
+import Loading from "./loading";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -24,8 +26,10 @@ export default function RootLayout({
         <main className="flex flex-col items-center mx-auto max-w-7xl w-full p-2 mt-11 md:mt-0">
           <Header />
           <NavTabs />
-          {children}
-          <Footer />
+          <Suspense fallback={<Loading />}>
+            {children}
+            <Footer />
+          </Suspense>
           <Analytics />
         </main>
       </body>
