@@ -2,6 +2,7 @@ import { Footer, Header, NavTabs } from "@/components/molecules";
 import "./globals.css";
 import type { Metadata } from "next";
 import { roboto } from "./fonts";
+import { Analytics } from "@vercel/analytics/react";
 import { ContactMe } from "@/components/atoms";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
           <NavTabs />
           {children}
           <Footer />
+          <Analytics />
         </main>
       </body>
     </html>
