@@ -10,28 +10,32 @@ export default function Courses() {
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full p-4">
-      <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-full flex items-center justify-center">
-        <Image
-          src="/profile.jpg"
-          alt="Eduardo"
-          width={1000}
-          height={1000}
-          className="w-96 transition duration-300 ease-in-out hover:scale-105 mb-4 rounded-full"
-        />
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 justify-center items-center mt-4">
+        <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-md flex items-center justify-center">
+          <Image
+            src="/profile.jpg"
+            alt="Eduardo"
+            width={1000}
+            height={1000}
+            className="w-96 transition duration-300 ease-in-out hover:scale-105 mb-4 rounded-md"
+          />
+        </div>
+        <div className="flex flex-col w-full ">
+          <div className="flex flex-row w-full mx-auto items-center justify-center">
+            {socialMedia.map((sm) => {
+              return (
+                <SocialButton
+                  key={sm.name}
+                  icon={sm.icon}
+                  name={sm.name}
+                  url={sm.url}
+                />
+              );
+            })}
+          </div>
+          <Quote quote={cover} />
+        </div>
       </div>
-      <div className="flex flex-row w-full mx-auto items-center justify-center mb-4">
-        {socialMedia.map((sm) => {
-          return (
-            <SocialButton
-              key={sm.name}
-              icon={sm.icon}
-              name={sm.name}
-              url={sm.url}
-            />
-          );
-        })}
-      </div>
-      <Quote quote={cover} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full justify-start items-center mb-14 mt-16">
         <div>

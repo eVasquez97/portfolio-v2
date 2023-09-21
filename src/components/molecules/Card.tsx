@@ -18,7 +18,7 @@ export default function Card({ ...props }: CardProps) {
       <a href={props.url} target="_blank">
         <div className="relative overflow-hidden bg-cover bg-no-repeat h-40">
           <Image
-            className="w-full object-cover transition duration-300 ease-in-out hover:scale-110"
+            className="w-full object-cover transition duration-300 ease-in-out hover:scale-105"
             src={image}
             alt=""
             width={1000}
@@ -26,7 +26,7 @@ export default function Card({ ...props }: CardProps) {
           />
         </div>
         <div className="p-4">
-          <Title text={props.name} size="xl" />
+          <Title text={props.name} size="base" />
           <p className="text-sm text-highlight opacity-80">
             <strong className="text-text-light dark:text-text-dark">
               {props.company}

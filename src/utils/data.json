@@ -102,21 +102,21 @@
   "programmingLanguages": [
     {
       "name": "JavaScript",
-      "experience": "5+ years",
+      "experience": "6+ years",
       "description": "Experience with web and mobile applications.",
       "logo": "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg"
-    },
-    {
-      "name": "TypeScript",
-      "experience": "2+ years",
-      "description": "Recently started using it again.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
     },
     {
       "name": "Python",
       "experience": "3.5 years",
       "description": "Backend and AI experience.",
       "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+    },
+    {
+      "name": "TypeScript",
+      "experience": "2+ years",
+      "description": "Recently started using it again.",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
     },
     {
       "name": "C#",
@@ -133,8 +133,14 @@
   ],
   "frameworks": [
     {
+      "name": "Node JS",
+      "experience": "6+ years",
+      "description": "Main backend tech.",
+      "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-1.svg"
+    },
+    {
       "name": "React JS",
-      "experience": "5 years",
+      "experience": "5+ years",
       "description": "Experience with TypeScript and Next JS.",
       "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
     },
@@ -146,47 +152,35 @@
     },
     {
       "name": "Next JS",
-      "experience": "",
+      "experience": "2.5+ years",
       "description": "Used for this portfolio.",
       "logo": "https://cdn.worldvectorlogo.com/logos/next-js.svg"
-    },
-    {
-      "name": "Node JS",
-      "experience": "4+ years",
-      "description": "Main backend tech.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-1.svg"
     },
     {
       "name": "Django",
       "experience": "2.5 years",
       "description": "Preferred backend tech.",
       "logo": "https://cdn.worldvectorlogo.com/logos/django.svg"
-    },
-    {
-      "name": "Flask",
-      "experience": "",
-      "description": "Tried a couple of times.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/flask.svg"
     }
   ],
   "dbTech": [
-    {
-      "name": "MongoDB",
-      "experience": "5 years",
-      "description": "Go to for databases in the recent years.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg"
-    },
-    {
-      "name": "PostgreSQL",
-      "experience": "5+ years",
-      "description": "Main relational database used.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
-    },
     {
       "name": "SQL Server",
       "experience": "7+ years",
       "description": "It all started here.",
       "logo": "https://cdn.worldvectorlogo.com/logos/microsoft-sql-server-1.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "experience": "6+ years",
+      "description": "Main relational database used.",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    },
+    {
+      "name": "MongoDB",
+      "experience": "5+ years",
+      "description": "Go to for databases in the recent years.",
+      "logo": "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg"
     },
     {
       "name": "GraphQL",
@@ -196,12 +190,6 @@
     }
   ],
   "cloudServices": [
-    {
-      "name": "Heroku",
-      "experience": "1+ years",
-      "description": "Hosting 2 apps since 2019.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/heroku-4.svg"
-    },
     {
       "name": "Azure",
       "experience": "3 years",
@@ -213,52 +201,64 @@
       "experience": "3 years",
       "description": "Used for hosting web projects.",
       "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+    },
+    {
+      "name": "Heroku",
+      "experience": "1+ years",
+      "description": "Hosting 2 apps since 2019.",
+      "logo": "https://cdn.worldvectorlogo.com/logos/heroku-4.svg"
     }
   ],
   "otherTech": [
     {
       "name": "Xamarin",
-      "experience": "2 years",
+      "experience": "2+ years",
       "description": "How I started working with mobile apps.",
       "logo": "https://cdn.worldvectorlogo.com/logos/xamarin.svg"
     },
     {
-      "name": "Arduino",
-      "experience": "",
-      "description": "Just for fun!",
-      "logo": "https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
+      "name": "Java Android",
+      "experience": "2+ years",
+      "description": "For mobile development when needed",
+      "logo": "https://cdn.worldvectorlogo.com/logos/java.svg"
+    },
+    {
+      "name": "Flask",
+      "experience": "~ 2 years",
+      "description": "Tried a couple of times.",
+      "logo": "https://cdn.worldvectorlogo.com/logos/flask.svg"
     },
     {
       "name": "Swift",
-      "experience": "",
+      "experience": "~ 1.5 years",
       "description": "For mobile development when needed",
       "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg"
     },
     {
-      "name": "Java Android",
-      "experience": "",
-      "description": "For mobile development when needed",
-      "logo": "https://cdn.worldvectorlogo.com/logos/java.svg"
+      "name": "Arduino",
+      "experience": "~ 1 year",
+      "description": "Just for fun!",
+      "logo": "https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
     }
   ],
   "techStacks": [
     {
       "name": "Web - MERN",
-      "experience": "4.5+ years",
+      "experience": "5+ years",
       "description": "MongoDB + Express + React + Node",
       "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+    },
+    {
+      "name": "Mobile",
+      "experience": "4.5 years",
+      "description": "React Native + C# + MongoDB",
+      "logo": "https://cdn.worldvectorlogo.com/logos/android.svg"
     },
     {
       "name": "Web",
       "experience": "2+ years",
       "description": "TypeScript + Python + MongoDB",
       "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
-    },
-    {
-      "name": "Mobile",
-      "experience": "4 years",
-      "description": "React Native + C# + MongoDB",
-      "logo": "https://cdn.worldvectorlogo.com/logos/android.svg"
     },
     {
       "name": "Mobile",

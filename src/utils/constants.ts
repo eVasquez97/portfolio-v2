@@ -1,4 +1,5 @@
 export const variableText = "dark:text-primary-light text-primary-dark";
+export const variableBg = "bg-secondary-light dark:bg-secondary-dark ";
 
 export const routes = [
   { name: "Projects", url: "/" },
