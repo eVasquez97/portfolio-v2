@@ -80,7 +80,7 @@ export default function Courses() {
       </div>
 
       <Title text="Courses" size="2xl" styles="mb-8 mt-11" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {courses.map((course) => {
           return (
             <Card

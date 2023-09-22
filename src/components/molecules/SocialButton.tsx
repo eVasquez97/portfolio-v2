@@ -12,7 +12,7 @@ export default function SocialButton({ name, url, icon }: MediaButton) {
       href={url}
       target="_blank"
       aria-label={name}
-      className={` ${variableText} m-2 p-2 object-contain hover:scale-105 bg-secondary-light dark:bg-secondary-dark shadow-sm rounded-sm`}
+      className={` ${variableText} m-2 p-2 object-contain hover:scale-105`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
