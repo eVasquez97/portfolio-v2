@@ -1,10 +1,12 @@
 export const variableText = "dark:text-primary-light text-primary-dark";
 export const variableBg = "bg-secondary-light dark:bg-secondary-dark ";
+export const variableBorder =
+  "border border-opacity-1 border-secondaryText-light dark:border-secondaryText-dark";
 
 export const routes = [
-  { name: "Projects", url: "/" },
-  { name: "Experience", url: "/services" },
-  { name: "About me", url: "/about" },
+  { name: "home", url: "/" },
+  { name: "experience", url: "/services" },
+  { name: "about", url: "/about" },
 ];
 
 export function getTextSize(size: string) {

@@ -25,7 +25,7 @@ export default function DetailedBadge({
       </div>
       <div>
         <p
-          className={`${ubuntu.className} font-[400] text-highlight text-base flex flex-row`}
+          className={`${ubuntu.className} font-[400] text-highlight flex flex-row`}
         >
           {name}
           <span

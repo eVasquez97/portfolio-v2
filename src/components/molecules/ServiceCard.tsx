@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Title } from "../atoms";
+import { variableText } from "@/utils/constants";
 
 type Service = {
   service: string;
@@ -14,29 +13,13 @@ export default function ServiceCard({
   benefits,
   logo,
 }: Service) {
-  const adaptableText = "text-sm text-primary-dark dark:text-primary-light";
-
   return (
-    <div
-      className="w-full min-h-40 bg-secondary-light dark:bg-secondary-dark shadow-sm rounded-sm self-center 
-      mb-4 p-4 mx-auto space-x-4 hover:scale-105 duration-300"
-    >
-      <Image
-        alt={service}
-        src={logo}
-        width={1000}
-        height={1000}
-        className="mx-auto object-cover font w-60"
-      />
-      <Title
-        text={service}
-        size="xl"
-        styles="text-center font-bold mt-3 text-2xl"
-      />
-      <p className={`mt-6 mb-6 ${adaptableText} text-lg`}>{description}</p>
+    <div className="w-full mb-11">
+      <p className={`${variableText} font-semibold mt-3`}>{service}</p>
+      <p className={`mt-1 mb-2 ${variableText}`}>{description}</p>
       {benefits?.map((b) => {
         return (
-          <p className={`list-item ${adaptableText} mb-2 text-base`} key={b}>
+          <p className={`list-item ${variableText} mb-2 ml-6`} key={b}>
             {b}
           </p>
         );

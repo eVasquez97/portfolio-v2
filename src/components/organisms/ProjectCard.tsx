@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Badge, Title } from "../atoms";
-import { variableText } from "@/utils/constants";
+import { variableBg, variableBorder, variableText } from "@/utils/constants";
 
 export type ProjectProps = {
   id: string;
@@ -10,6 +10,8 @@ export type ProjectProps = {
   jobType: string;
   company: string;
   img: string;
+  techStack?: string[];
+  intro?: string;
 };
 
 export default function ProjectCard({
@@ -19,9 +21,10 @@ export default function ProjectCard({
   jobType,
   company,
   img,
+  techStack,
+  intro,
 }: ProjectProps) {
-  const col = "flex flex-col";
-  const detailText = "capitalize opacity-60";
+  const detailText = "capitalize";
 
   return (
     <Link
@@ -31,29 +34,51 @@ export default function ProjectCard({
       }}
     >
       <div
-        className={`${col} bg-secondary-light dark:bg-secondary-dark shadow-sm md:max-w-xl min-h-[164px] h-full rounded-md relative justify-center hover:scale-105`}
+        className={`${variableBg} ${variableBorder} rounded md:w-full min-h-[80px] relative justify-start p-3 m-3`}
       >
-        <Image
-          className="w-full object-cover h-[164px] rounded-md"
-          src={img || "/img/banner1.jpg"}
-          alt=""
-          width={1000}
-          height={1000}
-        />
-        <div
-          className={`${col} self-center text-center p-2 absolute bg-primary-light dark:bg-primary-dark w-4/5 mx-auto rounded-md shadow-sm`}
-        >
-          <div className="flex flex-row justify-center ">
-            <Title text={name} size="2xl" styles="mb-3 text-center" />
-            <span
-              className={`${variableText} ${detailText} text-[10px] ml-2 mt-2`}
-            >
-              {platform}
-            </span>
+        <div className="flex flex-row items-center">
+          <div className="flex rounded-full">
+            <Image
+              className="w-6 h-6 rounded-full mr-3 object-cover object-right"
+              src={img || "/img/banner1.jpg"}
+              alt=""
+              width={1000}
+              height={1000}
+            />
           </div>
-          <p className={`${variableText} ${detailText} text-xs mb-4 -mt-2`}>
-            {jobType} - {company}
-          </p>
+          <div className="flex flex-row">
+            <Title
+              text={name}
+              size="xl"
+              styles="mr-2"
+              textColor="text-highlight"
+            />
+            <p className={`${variableText} capitalize text-xs`}>{platform}</p>
+          </div>
+        </div>
+
+        <div className="mt-3">
+          <div className="flex flex-row ">
+            <p className={`${variableText} ${detailText} text-sm`}>
+              {company} - {jobType}
+            </p>
+          </div>
+          {intro && <p className={`${variableText} mt-3`}>{intro}</p>}
+          {techStack && (
+            <div className="flex flex-row flex-wrap w-full mt-5">
+              {techStack.map((ts) => {
+                return (
+                  <Badge
+                    key={ts}
+                    text={ts}
+                    styles={`${variableBorder} m-1`}
+                    background="transparent"
+                    textColor={variableText}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </Link>

@@ -1,4 +1,5 @@
 import { ubuntu } from "@/app/fonts";
+import { variableBg, variableBorder } from "@/utils/constants";
 import Image from "next/image";
 
 type Skill = {
@@ -12,7 +13,9 @@ export default function Skill({ name, experience, description, logo }: Skill) {
   const variableText = "dark:text-primary-light text-primary-dark";
 
   return (
-    <div className="p-4 min-w-[140px] max-w-sm w-full min-h-[80px] mx-auto bg-secondary-light dark:bg-secondary-dark rounded-sm shadow-sm flex items-center space-x-4 hover:scale-105 duration-300">
+    <div
+      className={`${variableBorder} ${variableBg} p-4 min-w-[140px] max-w-sm w-full min-h-[80px] mx-auto rounded flex items-center space-x-4 hover:scale-105 duration-300`}
+    >
       <div className="shrink-0">
         {logo && <Image src={logo} alt={name} width={44} height={44} />}
       </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Title } from "../atoms";
+import { variableBg, variableBorder } from "@/utils/constants";
 
 type CardProps = {
   name: string;
@@ -14,7 +15,9 @@ type CardProps = {
 export default function Card({ ...props }: CardProps) {
   const image = props.img ?? "/img/banner1.jpg";
   return (
-    <div className="block md:max-w-lg w-full rounded-sm bg-secondary-light dark:bg-secondary-dark shadow-sm m-2">
+    <div
+      className={`${variableBg} ${variableBorder} block md:max-w-lg w-full rounded-sm shadow-sm m-2`}
+    >
       <a href={props.url} target="_blank">
         <div className="relative overflow-hidden bg-cover bg-no-repeat h-40">
           <Image

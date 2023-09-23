@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     colors: {
       primary: {
-        light: "#f2f2f2",
-        dark: "#202124",
+        light: "#ffffff",
+        dark: "#000000",
       },
       secondary: {
         light: "#fafafa",
-        dark: "#171717",
+        dark: "#262626",
       },
       highlight: "#0078d4",
       text: {
@@ -22,8 +22,8 @@ const config: Config = {
         dark: "#fbfbfb",
       },
       secondaryText: {
-        light: "#94a3b8",
-        dark: "#e2e8f0",
+        light: "#E5E5E5",
+        dark: "#404040",
       },
     },
     extend: {

@@ -1,4 +1,5 @@
-import { ubuntu } from "@/app/fonts";
+import { roboto, ubuntu } from "@/app/fonts";
+import { variableBorder, variableText } from "@/utils/constants";
 
 type QuoteProps = {
   quote: string;
@@ -8,12 +9,11 @@ type QuoteProps = {
 export default function Quote({ quote, style }: QuoteProps) {
   return (
     <div
-      className={`${ubuntu.className} font-[300] ${style} max-w-4xl p-4 text-text-light dark:text-text-dark bg-secondary-light dark:bg-secondary-dark 
-          shadow-sm mx-auto m-4 mb-6`}
+      className={`${ubuntu.className} ${variableText} ${variableBorder} bg-secondary-light dark:bg-secondary-dark rounded flex p-4 w-full`}
     >
-      <div className="mb-2">
+      <div className="mb-2 w-full">
         <div className="h-3 text-3xl text-left">“</div>
-        <p className="px-4 text-lg text-justify">{quote}</p>
+        <p className={`${roboto.className} px-5 text-justify`}>{quote}</p>
         <div className="h-3 text-3xl text-right">”</div>
       </div>
     </div>

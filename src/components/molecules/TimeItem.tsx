@@ -21,11 +21,11 @@ export default function TimeItem({
       <a href={url} target="_blank">
         <div className="flex-start flex items-center">
           <div className="-ml-[9px] mt-2 mr-3 flex h-4 w-4 items-center justify-center rounded-full bg-highlight"></div>
-          <Title text={title} size="xl" />
+          <Title text={title} size="lg" />
         </div>
-        <div className="mb-6 ml-6 pb-6 opacity-80">
+        <div className="mb-6 ml-6 pb-6 opacity-90">
           <span className="text-sm text-highlight">{time}</span>
-          <p className="text-md text-text-light dark:text-text-dark">
+          <p className="text-sm text-text-light dark:text-text-dark">
             {description}
           </p>
         </div>

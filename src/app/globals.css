@@ -6,8 +6,6 @@
   overflow: hidden;
   border-right: .15em solid #0078d4;
   white-space: nowrap;
-  letter-spacing: .2rem;
-  margin: 0 auto;
   animation:
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
