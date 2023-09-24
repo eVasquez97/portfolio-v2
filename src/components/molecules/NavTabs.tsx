@@ -14,7 +14,7 @@ export default function NavTabs() {
         <button
           type="button"
           onClick={() => router.back()}
-          className={`${variableText} mr-4 opacity-90`}
+          className={`${variableText} mr-4 opacity-60`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export default function NavTabs() {
             key={route.name}
             className={`${
               isActive
-                ? "font-medium text-highlight"
+                ? "font-medium text-highlight opacity-1"
                 : `${variableText} opacity-60`
             } ${ubuntu.className} mr-6 last:mr-0 hover:scale-105 text-xs"
               `}

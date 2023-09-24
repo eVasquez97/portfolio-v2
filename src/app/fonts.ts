@@ -2,9 +2,8 @@ import { Roboto, Ubuntu } from "next/font/google";
 
 export const roboto = Roboto({
   subsets: ["latin"],
-  weight: "300",
+  weight: ["300"],
   display: "swap",
-  adjustFontFallback: true,
   variable: "--roboto-font",
 });
 

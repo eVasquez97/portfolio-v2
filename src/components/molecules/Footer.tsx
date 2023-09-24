@@ -7,8 +7,8 @@ export default function Footer() {
   const { socialMedia } = data;
 
   return (
-    <footer className="p-5 mt-7 mb-6 w-full inset-x-0 bottom-0 min-w-full text-center opacity-90">
-      <div className="flex flex-row w-full mx-auto items-center justify-center mb-2">
+    <footer className="p-5 mt-11 mb-6 w-full inset-x-0 bottom-0 min-w-full text-center opacity-90">
+      <div className="flex flex-row w-full mx-auto items-center justify-center mb-3">
         {socialMedia.map((sm) => {
           return (
             <SocialButton

@@ -13,8 +13,7 @@ export default function Badge({
 }: BadgeProps) {
   return (
     <span
-      className={`${styles} ${background} ${textColor} whitespace-nowrap rounded-xl px-2 p-2 text-center text-xs 
-      leading-none  max-w-[120px] capitalize`}
+      className={`${styles} ${background} ${textColor} whitespace-nowrap rounded-xl px-2 p-2 text-center text-xs leading-none capitalize`}
     >
       {text}
     </span>

@@ -20,6 +20,8 @@ export default function Projects() {
               img={pro.img}
               techStack={pro.techStack}
               intro={pro.intro}
+              comapanyLogo={pro.companyLogo}
+              style="mb-6"
             />
           );
         })}

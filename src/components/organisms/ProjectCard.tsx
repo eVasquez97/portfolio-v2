@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Badge, Title } from "../atoms";
-import { variableBg, variableBorder, variableText } from "@/utils/constants";
+import { variableBg, variableText } from "@/utils/constants";
 
 export type ProjectProps = {
   id: string;
@@ -12,6 +12,8 @@ export type ProjectProps = {
   img: string;
   techStack?: string[];
   intro?: string;
+  style?: string;
+  comapanyLogo?: string;
 };
 
 export default function ProjectCard({
@@ -23,6 +25,8 @@ export default function ProjectCard({
   img,
   techStack,
   intro,
+  style,
+  comapanyLogo,
 }: ProjectProps) {
   const detailText = "capitalize";
 
@@ -34,13 +38,13 @@ export default function ProjectCard({
       }}
     >
       <div
-        className={`${variableBg} ${variableBorder} rounded md:w-full min-h-[80px] relative justify-start p-3 m-3`}
+        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full min-h-[120px] relative justify-start p-3 hover:scale-105 ease-in-out transition duration-300`}
       >
         <div className="flex flex-row items-center">
           <div className="flex rounded-full">
             <Image
-              className="w-6 h-6 rounded-full mr-3 object-cover object-right"
-              src={img || "/img/banner1.jpg"}
+              className="border border-secondaryText-light dark:border-secondaryText-dark w-8 h-8 rounded-full mr-3 object-cover object-right"
+              src={comapanyLogo || img || "/img/banner1.jpg"}
               alt=""
               width={1000}
               height={1000}
@@ -71,9 +75,9 @@ export default function ProjectCard({
                   <Badge
                     key={ts}
                     text={ts}
-                    styles={`${variableBorder} m-1`}
-                    background="transparent"
-                    textColor={variableText}
+                    styles="border border-secondaryText-light dark:border-secondaryText-dark m-1"
+                    background={intro ? `bg-highlight` : `transparent`}
+                    textColor={intro ? `text-primary-light` : `${variableText}`}
                   />
                 );
               })}

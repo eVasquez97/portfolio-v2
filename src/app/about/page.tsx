@@ -1,17 +1,41 @@
 import { Title } from "@/components/atoms";
 import data from "../../utils/data.json";
-import { Card, Header, TimeItem, Timeline } from "@/components/molecules";
+import { Card, TimeItem, Timeline } from "@/components/molecules";
 import Image from "next/image";
 import { variableText } from "@/utils/constants";
 
 export default function Courses() {
-  const { education, courses, cover, volunteering } = data;
+  const { education, courses, volunteering } = data;
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full">
-      <Header />
-      <div className="flex w-full">
-        <p className={`${variableText}`}>{cover}</p>
+      <div className="flex flex-col w-full">
+        <p className={`${variableText}`}>
+          I&apos;m a{" "}
+          <span className="font-semibold text-highlight">
+            full stack developer
+          </span>{" "}
+          from Honduras ☕. I have over five years of experience in creating web
+          and mobile applications and enjoy tackling challenging problems and
+          delivering high quality products that meet the needs of users and
+          clients.
+        </p>
+        <Image
+          src="/img/banners/portfolio.png"
+          width={2000}
+          height={2000}
+          alt="Eduardo Vasquez"
+          className="w-full h-[200px] object-cover rounded my-5 hover:opacity-90"
+        />
+        <p className={`${variableText} mt-5`}>
+          I am proficient in various programming languages and frameworks, such
+          as{" "}
+          <span className="font-semibold">
+            JavaScript, React, Node.js, Python, Django, and MongoDB
+          </span>
+          . I am always eager to learn new skills and technologies to enhance my
+          professional growth and development. 🚀
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-center mb-14 mt-16">
@@ -39,7 +63,7 @@ export default function Courses() {
             alt="Episcopal Church"
             width={1000}
             height={1000}
-            className="w-80 transition duration-300 ease-in-out hover:scale-110 mb-4 mt-6"
+            className="w-48 transition duration-300 ease-in-out hover:scale-105 mb-4 mt-6"
           />
           <p className="text-lg text-highlight mb-1 font-bold">
             {volunteering.role}

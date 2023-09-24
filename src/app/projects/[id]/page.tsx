@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Badge, Title } from "@/components/atoms";
 import { useSearchParams } from "next/navigation";
 import data from "../../../utils/projects.json";
-import { variableBg, variableBorder, variableText } from "@/utils/constants";
+import { variableBg, variableText } from "@/utils/constants";
 
 function getProjectData(id: string) {
   return data.find((x) => x.id === id);
@@ -75,7 +75,7 @@ export default function ProjectInfo() {
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 items-start justify-center">
         <div className="flex flex-col w-full items-center justify-between mt-5 md:mt-0">
           <div
-            className={`${variableBg} ${variableBorder} w-full p-6 rounded -mt-6 md:-mt-0`}
+            className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark w-full p-6 rounded -mt-6 md:-mt-0`}
           >
             <div className="flex flex-row -mt-4">
               <Title

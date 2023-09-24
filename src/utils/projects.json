@@ -17,27 +17,8 @@
       "Maintain and update portfolio."
     ],
     "img": "/img/banners/portfolio.png",
-    "url": "/"
-  },
-  {
-    "id": "mock_shop",
-    "name": "Mock Shop",
-    "platform": "web",
-    "intro": "Small eCommerce example using MERN stack.",
-    "techStack": ["React JS", "MongoDB", "Node JS", "Express JS"],
-    "status": "off",
-    "jobType": "personal project",
-    "company": "Puzzle",
-    "location": "Remote",
-    "role": "Full Stack Software Developer",
-    "time": "Oct. 2022 - present",
-    "responsibilities": [
-      "Short exercise to evaluate candidates for a Full stack role using MERN.",
-      "Develop and evaluate assessment for all candidates.",
-      "Conduct technical interviews."
-    ],
-    "img": "/img/banners/mock-shop.png",
-    "url": ""
+    "url": "/",
+    "companyLogo": ""
   },
   {
     "id": "imitig8_app",
@@ -59,7 +40,29 @@
       "Update and migrate modules on the mobile app to comply with new business standards"
     ],
     "img": "/img/banners/imitig8.png",
-    "url": "https://apps.apple.com/bo/app/imitig8-risk-global/id1532921468"
+    "url": "https://apps.apple.com/bo/app/imitig8-risk-global/id1532921468",
+    "companyLogo": "/img/companies/puzzle.jpeg"
+  },
+  {
+    "id": "mock_shop",
+    "name": "Mock Shop",
+    "platform": "web",
+    "intro": "Small eCommerce example using MERN stack.",
+    "techStack": ["React JS", "MongoDB", "Node JS", "Express JS"],
+    "status": "off",
+    "jobType": "technical assessment",
+    "company": "Puzzle",
+    "location": "Remote",
+    "role": "Full Stack Software Developer",
+    "time": "Oct. 2022 - present",
+    "responsibilities": [
+      "Short exercise to evaluate candidates for a Full stack role using MERN.",
+      "Develop and evaluate assessment for all candidates.",
+      "Conduct technical interviews."
+    ],
+    "img": "/img/banners/mock-shop.png",
+    "url": "",
+    "companyLogo": "/img/companies/puzzle.jpeg"
   },
   {
     "id": "iron24_app",
@@ -81,7 +84,8 @@
       "Integrate with external services such as Azure, Google Maps API, Geolocation services, OpenPath, and Stripe API for payment processing."
     ],
     "img": "/img/banners/iron24.png",
-    "url": "https://play.google.com/store/apps/details?id=com.franchiczar.iron"
+    "url": "https://play.google.com/store/apps/details?id=com.franchiczar.iron",
+    "companyLogo": "/img/companies/believe.jpeg"
   },
   {
     "id": "saver_app",
@@ -102,7 +106,8 @@
       "Conduct bug fixing and testing, including both end-to-end and unit testing."
     ],
     "img": "/img/banners/saver-app.png",
-    "url": "https://play.google.com/store/apps/details?id=com.saverapp"
+    "url": "https://play.google.com/store/apps/details?id=com.saverapp",
+    "companyLogo": "/img/companies/cex.jpeg"
   },
   {
     "id": "saver_site",
@@ -123,7 +128,8 @@
       "Conduct bug fixing and testing, including both end-to-end and unit testing."
     ],
     "img": "/img/banners/saver-web.png",
-    "url": "https://www.thesaver.com/"
+    "url": "https://www.thesaver.com/",
+    "companyLogo": "/img/companies/cex.jpeg"
   },
   {
     "id": "clink_app",
@@ -144,7 +150,8 @@
       "Conduct testing, deployment, documentation, and ongoing maintenance to ensure the application’s continued success."
     ],
     "img": "/img/banners/clink.png",
-    "url": "https://staging.d15tnny0cb32sc.amplifyapp.com/"
+    "url": "https://staging.d15tnny0cb32sc.amplifyapp.com/",
+    "companyLogo": "/img/companies/cex.jpeg"
   },
   {
     "id": "doctor7_site",
@@ -167,7 +174,8 @@
       "Designing and developing a version 2.0 of the mobile application."
     ],
     "img": "/img/banners/doctor7-web.png",
-    "url": "https://www.doctor7.clinic/login"
+    "url": "https://www.doctor7.clinic/login",
+    "companyLogo": "/img/companies/experenta.jpeg"
   },
   {
     "id": "doctor7_app",
@@ -190,7 +198,8 @@
       "Designing and developing a version 2.0 of the mobile application."
     ],
     "img": "/img/banners/doctor7-app.png",
-    "url": "https://play.google.com/store/apps/details?id=com.doctor7&hl=en_US&gl=US"
+    "url": "https://play.google.com/store/apps/details?id=com.doctor7&hl=en_US&gl=US",
+    "companyLogo": "/img/companies/experenta.jpeg"
   },
   {
     "id": "dnaCenter_site",
@@ -211,6 +220,7 @@
       "Integrate the various components of the project through Heroku, including the creation of necessary webhooks to facilitate communication between systems."
     ],
     "img": "/img/banners/cisco.png",
-    "url": ""
+    "url": "",
+    "companyLogo": "/img/companies/experenta.jpeg"
   }
 ]

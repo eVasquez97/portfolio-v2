@@ -5,7 +5,7 @@ export default function ContactMe() {
   return (
     <Link
       href="mailto:ed100blade@hotmail.com?&subject=Mail from Portfolio"
-      className={`${variableText} mt-3 absolute top-0 right-0 mr-4 mb-5 opacity-90`}
+      className={`${variableText} mt-3 absolute top-0 right-0 mr-4 mb-5`}
     >
       <p className="mb-4 flex items-center hover:scale-105">
         <svg

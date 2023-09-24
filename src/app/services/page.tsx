@@ -3,7 +3,12 @@ import data from "../../utils/data.json";
 import { ServiceCard, Skill } from "@/components/molecules";
 import { Title } from "@/components/atoms";
 import DetailedBadge from "@/components/molecules/DetailedBadge";
-import { variableBg, variableBorder, variableText } from "@/utils/constants";
+import {
+  statContainer,
+  statDetail,
+  variableBg,
+  variableText,
+} from "@/utils/constants";
 
 export default function Projects() {
   const {
@@ -18,9 +23,6 @@ export default function Projects() {
   const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-5";
   const internalSection = "flex flex-col w-full";
   const titleStyle = "mb-6 mt-4";
-  const statTitle = "display-5 mb-4 text-4xl font-bold text-highlight";
-  const statDetail = `${variableText} mb-4 font-medium`;
-  const statContainer = "mb-12 md:mb-0";
 
   type Skill = {
     name: string;
@@ -32,7 +34,7 @@ export default function Projects() {
   function itemsSection(items: any[], title: string) {
     return (
       <div
-        className={`${variableBg} ${variableBorder} rounded w-full p-4 h-full`}
+        className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded w-full p-4 h-full`}
       >
         <Title text={title} size="base" styles="mb-4" />
         <div className={internalSection}>
@@ -56,21 +58,27 @@ export default function Projects() {
     <div className="w-full flex flex-col">
       <Banner background="transparent">
         <section
-          className={` ${variableBorder} ${variableBg} rounded mb-11 text-center p-10`}
+          className={` border border-secondaryText-light dark:border-secondaryText-dark ${variableBg} rounded mb-11 text-center p-10`}
         >
           <div className="grid gap-x-6 md:grid-cols-3">
             <div className={statContainer}>
-              <h2 className={statTitle}>5 +</h2>
+              <h2 className="display-5 mb-4 text-4xl font-bold text-highlight">
+                5 +
+              </h2>
               <h5 className={statDetail}>years of experience</h5>
             </div>
 
             <div className={statContainer}>
-              <h2 className={statTitle}>95% +</h2>
+              <h2 className="display-5 mb-4 text-4xl font-bold text-highlight">
+                95% +
+              </h2>
               <h5 className={statDetail}>US Clients</h5>
             </div>
 
             <div className={statContainer}>
-              <h2 className={statTitle}>10 +</h2>
+              <h2 className="display-5 mb-4 text-4xl font-bold text-highlight">
+                10 +
+              </h2>
               <h5 className={statDetail}>Live Projects</h5>
             </div>
           </div>
