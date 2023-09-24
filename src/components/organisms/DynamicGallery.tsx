@@ -30,7 +30,7 @@ export default function DynamicGallery() {
             <Image
               alt="gallery"
               className={imgBlock}
-              src="/img/gallery/trip.jpg"
+              src="/img/gallery/trip.JPG"
               width={1000}
               height={1000}
             />
