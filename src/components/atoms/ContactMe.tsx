@@ -7,12 +7,12 @@ export default function ContactMe() {
       href="mailto:ed100blade@hotmail.com?&subject=Mail from Portfolio"
       className={`${variableText} mt-3 absolute top-0 right-0 mr-4 mb-5`}
     >
-      <p className="mb-4 flex items-center hover:scale-105">
+      <p className="flex items-center hover:scale-105">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
           className="w-5 h-5 mr-2"
         >

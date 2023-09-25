@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <div className="flex flex-col w-full">
       <Title text="Projects and contributions" size="xl" styles="mb-6" />
-      <div className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {data.map((pro) => {
           return (
             <ProjectCard
@@ -21,7 +21,7 @@ export default function Projects() {
               techStack={pro.techStack}
               intro={pro.intro}
               comapanyLogo={pro.companyLogo}
-              style="mb-6"
+              style="mb-2"
             />
           );
         })}

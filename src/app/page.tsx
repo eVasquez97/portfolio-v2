@@ -3,20 +3,21 @@ import { DynamicGallery, ProjectCard } from "@/components/organisms";
 import { variableText } from "@/utils/constants";
 
 export default function Home() {
-  const showCase = projects?.slice(0, 2);
+  const showCase = projects?.slice(0, 4);
+  const minimalLink =
+    "border border-secondaryText-light dark:border-secondaryText-dark px-2 rounded text-highlight font-semibold animate-pulse";
 
   return (
     <div className="flex flex-col w-full">
-      <p className={`${variableText} mb-4`}>
+      <p className={`${variableText} my-5`}>
         I&apos;m a{" "}
         <strong className="font-semibold text-highlight">
           full stack developer 💻
         </strong>{" "}
-        with over five years of experience in creating web and mobile
-        applications. I enjoy tackling challenging problems and delivering high
-        quality products. My most recent projects include:
+        who enjoys tackling challenging problems and delivering high quality
+        products. My most recent projects include:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
         {showCase.map((pro) => {
           return (
             <ProjectCard
@@ -29,48 +30,34 @@ export default function Home() {
               img={pro.img}
               techStack={pro.techStack}
               comapanyLogo={pro.companyLogo}
-              style="mb-3"
+              style="mb-2"
             />
           );
         })}
       </div>
-      <p className={`${variableText} mt-5`}>
-        And there&apos;s a lot more that can be seen 👉🏼{" "}
-        <a
-          className="border border-secondaryText-light dark:border-secondaryText-dark px-2 rounded text-highlight font-semibold underline animate-pulse"
-          href="/projects"
-        >
-          here.{" "}
-        </a>
-      </p>
-      <p className={`${variableText} mt-5 mb-11`}>
-        I&apos;m always trying to keep up to date with current tech and also
-        continue learning to improve my skills. I consider myself a React master
-        and a Python enthusiast. On my free time I enjoy cooking, reading,
-        exercising, and programming cause{" "}
-        <span className="font-semibold italic">This is the way 🚀.</span>
+      <p className={`${variableText} my-11`}>
+        And that&apos;s not all, you may check 👉🏼{" "}
+        <a className={minimalLink} href="/projects">
+          all projects{" "}
+        </a>{" "}
+        and contributions. I&apos;m always trying to keep up to date with
+        current tech and also continue learning to improve my skills. On my free
+        time I enjoy cooking, reading, exercising, and programming cause{" "}
+        <span className="font-medium text-highlight">this is the way 🚀.</span>
       </p>
 
       <DynamicGallery />
 
-      <p className={`${variableText} mt-11`}>
+      <p className={`${variableText} my-11`}>
         I also provide various{" "}
-        <a
-          className="border border-secondaryText-light dark:border-secondaryText-dark px-2 rounded text-highlight font-semibold underline animate-pulse"
-          href="/services"
-        >
+        <a className={minimalLink} href="/services">
           services{" "}
         </a>
-        👈🏼 ranging from hardware maintenance all the way to code/project audits,
-        mentoring and software development; but if you wanna know more about me,
-        just click 👉🏼{" "}
-        <a
-          className="border border-secondaryText-light dark:border-secondaryText-dark px-2 rounded text-highlight font-semibold underline animate-pulse"
-          href="/about"
-        >
-          here{" "}
+        🌐 on the IT sector; but if you wanna know more{" "}
+        <a className={minimalLink} href="/about">
+          about me{" "}
         </a>
-        , or reach out to me via any of the links below. 👇🏼
+        , check the page or reach out via any of the links below. 👇🏼
       </p>
     </div>
   );
