@@ -4,6 +4,9 @@ export const statDetail = `${variableText} mb-4 font-medium`;
 export const statContainer = "mb-12 md:mb-0";
 
 export const routes = [
+  { name: "...", url: "#" },
+  { name: "home", url: "/" },
+  { name: "projects", url: "/projects" },
   { name: "experience", url: "/services" },
   { name: "about", url: "/about" },
 ];

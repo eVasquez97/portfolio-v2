@@ -9,7 +9,7 @@
     "jobType": "personal project",
     "company": "Independent",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "Sept. 2023",
     "responsibilities": [
       "Design frontend to be used and develop reusable components.",
@@ -18,7 +18,8 @@
     ],
     "img": "/img/banners/portfolio.png",
     "url": "/",
-    "companyLogo": ""
+    "companyLogo": "/img/banners/portfolio.png",
+    "fullDesc": "This is the third version of my professional portfolio. I decided to go with Next.js 13 and Typescript with Tailwind CSS to practice and to 'play' with the newest version of Next.js. It has been and will continue to be a proyect with improvements. Hopefully this captures how organized, detailed, creative, and honest I am as a person and as a developer. PD: it is fully responsive and supports both light and dark themes."
   },
   {
     "id": "mock_shop",
@@ -30,7 +31,7 @@
     "jobType": "technical assessment",
     "company": "Puzzle",
     "location": "Remote",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "Oct. 2022 - present",
     "responsibilities": [
       "Short exercise to evaluate candidates for a Full stack role using MERN.",
@@ -39,7 +40,8 @@
     ],
     "img": "/img/banners/mock-shop.png",
     "url": "",
-    "companyLogo": "/img/companies/puzzle.jpeg"
+    "companyLogo": "/img/companies/puzzle.jpeg",
+    "fullDesc": "This project is an exercise I did as part of my technical interviewer services at Puzzle. I was told to create a simple exercise for candidates to a MERN Developer role that was open at the time. The porject is simple, a maintenance app for mock products, the application should list all products (coming from a fake API) and users should be able to add, edit, cancel, and pay their orders. The most complex part was calculating the total with a given tax and to be able to convert o various currencies."
   },
   {
     "id": "imitig8_app",
@@ -51,7 +53,7 @@
     "jobType": "full time",
     "company": "Puzzle",
     "location": "Remote",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "Oct. 2022 - present",
     "responsibilities": [
       "Refactoring and fixing major security breaches on the mobile app",
@@ -62,7 +64,8 @@
     ],
     "img": "/img/banners/imitig8.png",
     "url": "https://apps.apple.com/bo/app/imitig8-risk-global/id1532921468",
-    "companyLogo": "/img/companies/puzzle.jpeg"
+    "companyLogo": "/img/companies/puzzle.jpeg",
+    "fullDesc": "This was inherited code and as usual, it came with a lot of problems inherited. Initally I was hired as a mobile developer but after the first weeks, I started working as a full stack developer creating new modules on the mobile app, the website, and refactring backend endpoints. This project was improved drastically and I also solved several security breaches that came along with the project."
   },
   {
     "id": "iron24_app",
@@ -74,7 +77,7 @@
     "jobType": "full time",
     "company": "Believe Solutions",
     "location": "Remote",
-    "role": "Full Stack Software & Mobile Developer",
+    "role": "Full Stack & Mobile Developer",
     "time": "March 2022 - Oct. 2022",
     "responsibilities": [
       "Develop the React Native front-end for the entire application.",
@@ -85,7 +88,8 @@
     ],
     "img": "/img/banners/iron24.png",
     "url": "https://play.google.com/store/apps/details?id=com.franchiczar.iron",
-    "companyLogo": "/img/companies/believe.jpeg"
+    "companyLogo": "/img/companies/believe.jpeg",
+    "fullDesc": "One of the four franchises owned by our client, Iron24 is a chain of gyms in the US. We developed a white ladeling app and we started with Iron24. My main contributions were the Google Maps API integration, the Stripe API integration as well as the creation and maintenance of several app modules including: Facility Selection, Checkout screen, Payment Method screen, Profile Screen, to name a few."
   },
   {
     "id": "saver_app",
@@ -97,7 +101,7 @@
     "jobType": "full time",
     "company": "Code Éxitos",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "March 2021 - March 2022",
     "responsibilities": [
       "Develop the entire React front-end for the application.",
@@ -107,7 +111,8 @@
     ],
     "img": "/img/banners/saver-app.png",
     "url": "https://play.google.com/store/apps/details?id=com.saverapp",
-    "companyLogo": "/img/companies/cex.jpeg"
+    "companyLogo": "/img/companies/cex.jpeg",
+    "fullDesc": "An already started project, I came to help with the maintenance and also creating and improving features, UI, and efficiency. "
   },
   {
     "id": "saver_site",
@@ -119,7 +124,7 @@
     "jobType": "full time",
     "company": "Code Éxitos",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "March 2021 - March 2022",
     "responsibilities": [
       "Develop the entire React front-end for the application.",
@@ -129,7 +134,8 @@
     ],
     "img": "/img/banners/saver-web.png",
     "url": "https://www.thesaver.com/",
-    "companyLogo": "/img/companies/cex.jpeg"
+    "companyLogo": "/img/companies/cex.jpeg",
+    "fullDesc": "Leading this project was quiet a challenge - there are some things that I cannot mention here - but it as a fun challenge. I got to lead the project and mentor a junior developer who became a great team member. This website is mainly static screens fetching data from a CMS. I was in charge of creating the virtual magazine screen, the integration with Google Maps and Cognito to manage sessions."
   },
   {
     "id": "clink_app",
@@ -141,7 +147,7 @@
     "jobType": "full time",
     "company": "Code Éxitos",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "March 2021 - March 2022",
     "responsibilities": [
       "Design and develop the entire user interface for the application.",
@@ -151,7 +157,8 @@
     ],
     "img": "/img/banners/clink.png",
     "url": "https://staging.d15tnny0cb32sc.amplifyapp.com/",
-    "companyLogo": "/img/companies/cex.jpeg"
+    "companyLogo": "/img/companies/cex.jpeg",
+    "fullDesc": "My first project at Code Exitos, this was a very interesting project with - so far - the coolest clients I've worked with. The main purpose of this project was helpig with polls, basically all members would log in into the system and they will receive a custom diagram/template. Users would drg and drop their 'object' to the section they wanted which would determine their vote. After all votes were submitted, we would generate a summary of the voting process and present results in spreadsheets that could be downoaded. Templates/diagrams could be customized as needed, no limits."
   },
   {
     "id": "doctor7_site",
@@ -163,7 +170,7 @@
     "jobType": "full time",
     "company": "Experenta",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "Dec. 2019 - March 2021",
     "responsibilities": [
       "Develop the entire front-end for the website and mobile application, including user interface design and implementation.",
@@ -175,7 +182,8 @@
     ],
     "img": "/img/banners/doctor7-web.png",
     "url": "https://www.doctor7.clinic/login",
-    "companyLogo": "/img/companies/experenta.jpeg"
+    "companyLogo": "/img/companies/experenta.jpeg",
+    "fullDesc": "This web app would include and extend the features that the mobile application had. The idea is providing doctors with the same (and some extras) experience as the mobile app - which was our first project. Doctor7 is a 100% Honduran Startup born in the context of the COVID-19 pandemic, founded by Dr. José Salgado, Eng. Jorge Lanza and Eduardo Salgado to provide the Honduran population with medical care from the comfort of their home."
   },
   {
     "id": "doctor7_app",
@@ -187,7 +195,7 @@
     "jobType": "full time",
     "company": "Experenta",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "Dec. 2019 - March 2021",
     "responsibilities": [
       "Develop the entire front-end for the website and mobile application, including user interface design and implementation.",
@@ -199,7 +207,8 @@
     ],
     "img": "/img/banners/doctor7-app.png",
     "url": "https://play.google.com/store/apps/details?id=com.doctor7&hl=en_US&gl=US",
-    "companyLogo": "/img/companies/experenta.jpeg"
+    "companyLogo": "/img/companies/experenta.jpeg",
+    "fullDesc": "The project you'll hear me talking about frequently... Doctor7 is a 100% Honduran Startup born in the context of the COVID-19 pandemic, founded by Dr. José Salgado, Eng. Jorge Lanza and Eduardo Salgado to provide the Honduran population with medical care from the comfort of their home. We developed an application that would facilitate creating and attending medical appointments during the pandemic, from creating in person appointments to videocalls with patients, this application is still live and growing, expanding to more countries in Central America."
   },
   {
     "id": "dnaCenter_site",
@@ -211,7 +220,7 @@
     "jobType": "full time",
     "company": "Experenta",
     "location": "San Pedro Sula, Honduras",
-    "role": "Full Stack Software Developer",
+    "role": "Full Stack Developer",
     "time": "Dec. 2019 - March 2021",
     "responsibilities": [
       "Develop a React-based front-end to support the application’s user interface.",
@@ -221,6 +230,7 @@
     ],
     "img": "/img/banners/cisco.png",
     "url": "",
-    "companyLogo": "/img/companies/experenta.jpeg"
+    "companyLogo": "/img/companies/experenta.jpeg",
+    "fullDesc": "First professional experience writting Python code to manage a Cisco networking system: I created webhooks on Cisco DNA Center and Meraki systems, connect those webhooks to a Node.js backend so I could parse data and send to a Salesforce Org and a React.js frontend for a local drinks company in Honduras and El Salvador. The system was used to create network alerts if the contact center, offices, or even drivers experimented or had issues with the network."
   }
 ]

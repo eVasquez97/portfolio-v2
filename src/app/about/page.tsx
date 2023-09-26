@@ -1,6 +1,6 @@
 import { Title } from "@/components/atoms";
 import data from "../../utils/data.json";
-import { Card, TimeItem, Timeline } from "@/components/molecules";
+import { Card, Header, TimeItem, Timeline } from "@/components/molecules";
 import Image from "next/image";
 import { variableText } from "@/utils/constants";
 
@@ -9,6 +9,7 @@ export default function Courses() {
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full">
+      <Header />
       <div className="flex flex-col w-full">
         <p className={`${variableText}`}>
           I&apos;m a{" "}

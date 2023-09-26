@@ -25,6 +25,8 @@ const config: Config = {
         light: "#E5E5E5",
         dark: "#404040",
       },
+      saberBase: "#BFC9CA",
+      saberTop: "#F5B041",
     },
     extend: {
       animation: {

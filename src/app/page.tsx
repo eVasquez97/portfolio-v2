@@ -1,3 +1,4 @@
+import { Header } from "@/components/molecules";
 import projects from "../utils/projects.json";
 import { DynamicGallery, ProjectCard } from "@/components/organisms";
 import { variableText } from "@/utils/constants";
@@ -9,6 +10,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full">
+      <Header />
       <p className={`${variableText} my-5`}>
         I&apos;m a{" "}
         <strong className="font-semibold text-highlight">
@@ -48,7 +50,7 @@ export default function Home() {
 
       <DynamicGallery />
 
-      <p className={`${variableText} my-11`}>
+      <p className={`${variableText} mt-11`}>
         I also provide various{" "}
         <a className={minimalLink} href="/services">
           services{" "}

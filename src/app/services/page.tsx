@@ -1,14 +1,9 @@
-import { Banner, Quote } from "@/components/organisms";
+import { Quote } from "@/components/organisms";
 import data from "../../utils/data.json";
 import { ServiceCard, Skill } from "@/components/molecules";
 import { Title } from "@/components/atoms";
 import DetailedBadge from "@/components/molecules/DetailedBadge";
-import {
-  statContainer,
-  statDetail,
-  variableBg,
-  variableText,
-} from "@/utils/constants";
+import { variableText } from "@/utils/constants";
 
 export default function Projects() {
   const {
@@ -21,8 +16,8 @@ export default function Projects() {
     services,
   } = data;
   const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-5";
-  const internalSection = "flex flex-col w-full";
-  const titleStyle = "mb-6 mt-4";
+  const internalSection = "flex flex-row flex-wrap w-full";
+  const titleStyle = "my-4";
 
   type Skill = {
     name: string;
@@ -33,9 +28,7 @@ export default function Projects() {
 
   function itemsSection(items: any[], title: string) {
     return (
-      <div
-        className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded w-full p-4 h-full`}
-      >
+      <div className="w-full h-full my-2">
         <Title text={title} size="base" styles="mb-4" />
         <div className={internalSection}>
           {items.map((item: Skill) => {
@@ -56,38 +49,25 @@ export default function Projects() {
 
   return (
     <div className="w-full flex flex-col">
-      <Banner background="transparent">
-        <section
-          className={` border border-secondaryText-light dark:border-secondaryText-dark ${variableBg} rounded mb-11 text-center p-10`}
-        >
-          <div className="grid gap-x-6 md:grid-cols-3">
-            <div className={statContainer}>
-              <h2 className="display-5 mb-4 text-4xl font-bold text-highlight">
-                5 +
-              </h2>
-              <h5 className={statDetail}>years of experience</h5>
-            </div>
-
-            <div className={statContainer}>
-              <h2 className="display-5 mb-4 text-4xl font-bold text-highlight">
-                95% +
-              </h2>
-              <h5 className={statDetail}>US Clients</h5>
-            </div>
-
-            <div className={statContainer}>
-              <h2 className="display-5 mb-4 text-4xl font-bold text-highlight">
-                10 +
-              </h2>
-              <h5 className={statDetail}>Live Projects</h5>
-            </div>
-          </div>
-        </section>
-
+      <Title text="Most used Tech stacks" size="base" styles={titleStyle} />
+      <div className={`${gridStyle} mb-11`}>
+        {techStacks.map((ts) => {
+          return (
+            <Skill
+              key={ts.name}
+              name={ts.name}
+              experience={ts.experience}
+              logo={ts.logo}
+              description={ts.description}
+            />
+          );
+        })}
+      </div>
+      <div>
         <p className={`${variableText}`}>
           Some of the main services I provide are:
         </p>
-        <div className="min-w-full mb-11 mt-5">
+        <div className="min-w-full my-6">
           {services?.map((sr) => {
             return (
               <ServiceCard
@@ -100,35 +80,24 @@ export default function Projects() {
             );
           })}
         </div>
-      </Banner>
-      <Quote quote="If no mistake you have made, yet losing you are…a different game you should play. - Yoda" />
+      </div>
 
-      <div className="bg-primary-light dark:bg-primary-dark mt-16">
-        <Title text="Most used Tech stacks" size="base" styles={titleStyle} />
-        <div className={`${gridStyle} mb-14`}>
-          {techStacks.map((ts) => {
-            return (
-              <Skill
-                key={ts.name}
-                name={ts.name}
-                experience={ts.experience}
-                logo={ts.logo}
-                description={ts.description}
-              />
-            );
-          })}
-        </div>
+      <Quote quote="Always in motion the future is. - Yoda" />
 
-        <Title text="Technical expertise" size="base" styles={titleStyle} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 min-w-full mb-11">
+      <div className="bg-primary-light dark:bg-primary-dark mt-8">
+        <p className={variableText}>
+          Throughout these years working on the IT sector, I have performed
+          several roles and provided a lot of services, but when it comes to
+          programming effective solutions ⭐, these are the main technologies
+          that I have used:
+        </p>
+        <div className="w-full flex flex-col flex-wrap my-6">
           {itemsSection(programmingLanguages, "Programming languages")}
           {itemsSection(frameworks, "Frameworks")}
           {itemsSection(dbTech, "Databases")}
           {itemsSection(cloudServices, "Cloud services")}
           {itemsSection(otherTech, "Other skills")}
         </div>
-
-        <Quote quote="Always in motion the future is. - Yoda" />
       </div>
     </div>
   );

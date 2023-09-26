@@ -1,5 +1,5 @@
 import { ubuntu } from "@/app/fonts";
-import { variableText } from "@/utils/constants";
+import { variableBg, variableText } from "@/utils/constants";
 import Image from "next/image";
 
 type BadgeDetail = {
@@ -17,15 +17,22 @@ export default function DetailedBadge({
 }: BadgeDetail) {
   return (
     <div
-      className="min-w-[144px] m-3 flex items-center space-x-4 hover:scale-105 duration-300"
+      className={`${variableBg} m-2 flex items-center px-2 p-1 hover:scale-105 duration-300 rounded
+      border border-secondaryText-light dark:border-secondaryText-dark`}
       title={description}
     >
       <div>
-        <Image src={logo} alt={name} width={24} height={24} />
+        <Image
+          src={logo}
+          alt={name}
+          width={24}
+          height={24}
+          className="mr-2 h-5 w-5"
+        />
       </div>
       <div>
         <p
-          className={`${ubuntu.className} font-[400] text-highlight flex flex-row`}
+          className={`${ubuntu.className} text-sm font-[400] text-highlight flex flex-row`}
         >
           {name}
           <span
