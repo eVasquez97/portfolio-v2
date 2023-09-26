@@ -301,8 +301,8 @@
   ],
   "services": [
     {
-      "service": "Software Analyst",
-      "description": "Several years in the industry have provided me with enough experience to provide this service. I help entrepeneurs and stablished companies to scale and improve their existing or new solutions 🔍.",
+      "service": "🔍 Software Analyst",
+      "description": "Several years in the industry have provided me with enough experience to provide this service. I help entrepeneurs and stablished companies to scale and improve their existing or new solutions.",
       "benefits": [
         "Ideal for starting new projects.",
         "Aid in scaling existing projects and complete documentation.",
@@ -311,8 +311,8 @@
       "logo": "/img/analysis.svg"
     },
     {
-      "service": "Software Developer",
-      "description": "My main work and also what I love to do. 💻 Paired with experience in software analysis, I tend to provide the most efficient solutions for any project.",
+      "service": "💻 Software Developer",
+      "description": "My main work and also what I love to do. Paired with experience in software analysis, I tend to provide the most efficient solutions for any project.",
       "benefits": [
         "Desgin scalable systems that are 'bug-proof'.",
         "Develop and test solutions before delivering to end users.",
@@ -322,8 +322,8 @@
       "logo": "/img/software.svg"
     },
     {
-      "service": "Hardware maintenance",
-      "description": "Owner of a small business that provides hardware related services for other companies 🔦. We also do design, but I have been working independently before graduating from college.",
+      "service": "🔦 Hardware maintenance",
+      "description": "Owner of a small business that provides hardware related services for other companies. We also do design, but I have been working independently before graduating from college.",
       "benefits": [
         "Analysis and aid in setting up new office spaces.",
         "Aid in improving network capacities and range.",
@@ -333,7 +333,7 @@
       "logo": "/img/hardware.svg"
     },
     {
-      "service": "Technical Interviewer",
+      "service": "🗓️ Technical Interviewer",
       "description": "Due to several years of experience with a couple of tech stacks, I sometimes help out as a technical interviewer.",
       "benefits": [
         "I produce effective and understandable ways to evaluate possible candidates, testing both, their soft and technical skills.",

@@ -3,9 +3,41 @@ import data from "../../utils/data.json";
 import { Card, Header, TimeItem, Timeline } from "@/components/molecules";
 import Image from "next/image";
 import { variableText } from "@/utils/constants";
+import Link from "next/link";
+import { EducationType } from "./EducationType";
 
 export default function Courses() {
   const { education, courses, volunteering } = data;
+
+  function getEducationInfo(ed: EducationType) {
+    return (
+      <Link key={ed.title} href={ed.url} className="hover:scale-105">
+        <div
+          className="flex border border-secondaryText-light dark:border-secondaryText-dark px-2 mx-1 rounded w-full"
+          key={ed.title}
+        >
+          <div className="p-2 flex flex-col w-full items-center">
+            <div className="flex rounded-full">
+              <Image
+                className="border border-secondaryText-light dark:border-secondaryText-dark w-16 h-16 rounded-full mr-2 object-cover mb-3"
+                src={ed.image || "/img/banner1.jpg"}
+                alt=""
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div className="text-center flex-wrap">
+              <p className="font-semibold mb-2">{ed.title}</p>
+              <p className="font-normal text-xs flex-wrap mb-2">
+                {ed.institute}
+              </p>
+              <p className="font-normal italic text-xs opacity-60">{ed.time}</p>
+            </div>
+          </div>
+        </div>
+      </Link>
+    );
+  }
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full">
@@ -36,26 +68,17 @@ export default function Courses() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full items-center mb-14 mt-16">
+      <div className="flex flex-col w-full my-10">
         <div>
-          <Title text="Education" size="base" />
-          <Timeline>
+          <Title text="Education" size="base" styles="font-semibold" />
+          <div className="grid md:grid-cols-2 gap-5 my-6">
             {education.map((ed) => {
-              return (
-                <TimeItem
-                  key={ed.title}
-                  time={ed.time}
-                  title={ed.title}
-                  description={ed.institute}
-                  image={ed.image}
-                  url={ed.url}
-                />
-              );
+              return getEducationInfo(ed);
             })}
-          </Timeline>
+          </div>
         </div>
-        <div className="-mt-4">
-          <Title text="Volunteer work" size="base" />
+        <div>
+          <Title text="Volunteer work" size="base" styles="font-semibold" />
           <Image
             src="/church.png"
             alt="Episcopal Church"
@@ -63,7 +86,7 @@ export default function Courses() {
             height={1000}
             className="w-48 transition duration-300 ease-in-out hover:scale-105 mb-4 mt-6"
           />
-          <p className="text-lg mb-1 font-semibold">
+          <p className="text-base mb-1 font-semibold">
             {volunteering.role} - {volunteering.company}
           </p>
           <p className="text-sm mb-4 opacity-80">Since: {volunteering.start}</p>
@@ -71,8 +94,8 @@ export default function Courses() {
         </div>
       </div>
 
-      <Title text="Courses" size="base" styles="mb-8 mt-11" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <Title text="Courses" size="base" styles="mb-8 mt-11 font-semibold" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
         {courses.map((course) => {
           return (
             <Card

@@ -1,15 +1,13 @@
-import { ubuntu } from "@/app/fonts";
 import { variableBg } from "@/utils/constants";
 import Image from "next/image";
+import { SkillType } from "./moleculeTypes";
 
-type Skill = {
-  name: string;
-  experience?: string;
-  description?: string;
-  logo?: string;
-};
-
-export default function Skill({ name, experience, description, logo }: Skill) {
+export default function Skill({
+  name,
+  experience,
+  description,
+  logo,
+}: SkillType) {
   const variableText = "dark:text-primary-light text-primary-dark";
 
   return (
@@ -20,20 +18,16 @@ export default function Skill({ name, experience, description, logo }: Skill) {
         {logo && <Image src={logo} alt={name} width={44} height={44} />}
       </div>
       <div>
-        <p
-          className={`${ubuntu.className} ${variableText} font-[400] text-base flex flex-row`}
-        >
+        <p className={` ${variableText} text-base font-semibold flex flex-row`}>
           {name}
           {experience && (
-            <span
-              className={`${ubuntu.className} ${variableText} opacity-80 font-light ml-2`}
-            >
+            <span className={`${variableText} font-normal opacity-60 ml-2`}>
               {experience}
             </span>
           )}
         </p>
         {description && (
-          <p className={`${variableText} opacity-90 text-sm`}>{description}</p>
+          <p className={`${variableText} opacity-60 text-xs`}>{description}</p>
         )}
       </div>
     </div>

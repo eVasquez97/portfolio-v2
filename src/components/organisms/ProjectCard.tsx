@@ -2,19 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge, Title } from "../atoms";
 import { variableBg, variableText } from "@/utils/constants";
-
-export type ProjectProps = {
-  id: string;
-  name: string;
-  platform?: string;
-  jobType: string;
-  company: string;
-  img: string;
-  techStack?: string[];
-  intro?: string;
-  style?: string;
-  comapanyLogo?: string;
-};
+import { ProjectProps } from "./orgamismTypes";
 
 export default function ProjectCard({
   name,
@@ -55,7 +43,7 @@ export default function ProjectCard({
               <Title
                 text={name}
                 size="base"
-                styles="mr-1 text-base font-medium"
+                styles="mr-1 text-base font-semibold"
               />
               <p className={`${variableText} capitalize text-xs opacity-80`}>
                 {platform}
@@ -87,7 +75,7 @@ export default function ProjectCard({
 
         {intro && (
           <div className="mt-3">
-            <p className={`${variableText} text-sm my-5 opacity-80 `}>
+            <p className={`${variableText} text-sm ml-2 my-5 opacity-80 `}>
               {intro}
             </p>
 

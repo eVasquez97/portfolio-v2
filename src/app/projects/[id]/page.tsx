@@ -1,5 +1,4 @@
 "use client";
-import { ubuntu } from "@/app/fonts";
 import Link from "next/link";
 import Image from "next/image";
 import { Badge, Title } from "@/components/atoms";
@@ -53,7 +52,7 @@ export default function ProjectInfo() {
           <Title
             text={project?.name}
             size="2xl"
-            styles={`${variableText} ${ubuntu.className} mt-2 capitalize text-2xl`}
+            styles={`${variableText} font-semibold mt-2 capitalize text-2xl`}
           />
           <span
             className={`${variableText} text-sm opacity-60 ml-2 mt-2 capitalize mb-6`}
@@ -72,11 +71,11 @@ export default function ProjectInfo() {
         className="w-full h-[180px] object-cover object-center rounded mb-5"
       />
 
-      <div className="my-5">
+      <div className="my-8">
         <Title
           text="Description"
           size="base"
-          styles={`${variableText} ${ubuntu.className}`}
+          styles={`${variableText} font-semibold`}
         />
         <p className={`${variableText} my-5`}>
           {project?.intro} {project?.fullDesc}
@@ -117,7 +116,7 @@ export default function ProjectInfo() {
               <Title
                 text="Tech stack"
                 size="base"
-                styles={`${variableText} ${ubuntu.className}`}
+                styles={`${variableText} font-semibold`}
               />
               <div className="flex flex-row flex-wrap my-2">
                 {project?.techStack.map((ts) => {
@@ -136,7 +135,7 @@ export default function ProjectInfo() {
             <Title
               text="Main responsibilities"
               size="base"
-              styles={`${variableText} ${ubuntu.className}`}
+              styles={`${variableText} font-semibold`}
             />
             <div className="p-6">
               {project?.responsibilities.map((res) => {

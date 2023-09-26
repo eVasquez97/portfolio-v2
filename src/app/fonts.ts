@@ -1,15 +1,8 @@
-import { Roboto, Ubuntu } from "next/font/google";
+import { Inter } from "next/font/google";
 
-export const roboto = Roboto({
+export const inter = Inter({
   subsets: ["latin"],
-  weight: ["300"],
+  weight: ["100", "200", "300"],
   display: "swap",
-  variable: "--roboto-font",
-});
-
-export const ubuntu = Ubuntu({
-  subsets: ["latin"],
-  weight: ["300", "400"],
-  display: "swap",
-  variable: "--ubuntu-font",
+  variable: "--inter-font",
 });

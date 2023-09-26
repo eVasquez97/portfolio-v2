@@ -4,8 +4,9 @@ import { ServiceCard, Skill } from "@/components/molecules";
 import { Title } from "@/components/atoms";
 import DetailedBadge from "@/components/molecules/DetailedBadge";
 import { variableText } from "@/utils/constants";
+import { DetailedBadgeType } from "./DetailedBadgeType";
 
-export default function Projects() {
+export default function Services() {
   const {
     programmingLanguages,
     dbTech,
@@ -17,21 +18,14 @@ export default function Projects() {
   } = data;
   const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-5";
   const internalSection = "flex flex-row flex-wrap w-full";
-  const titleStyle = "my-4";
-
-  type Skill = {
-    name: string;
-    experience: string;
-    logo: string;
-    description: string;
-  };
+  const titleStyle = "my-5 font-semibold";
 
   function itemsSection(items: any[], title: string) {
     return (
       <div className="w-full h-full my-2">
         <Title text={title} size="base" styles={titleStyle} />
         <div className={internalSection}>
-          {items.map((item: Skill) => {
+          {items.map((item: DetailedBadgeType) => {
             return (
               <DetailedBadge
                 key={item.name}
@@ -49,7 +43,7 @@ export default function Projects() {
 
   return (
     <div className="w-full flex flex-col">
-      <Title text="Most used Tech stacks" size="base" styles={titleStyle} />
+      <Title text="Most used tech stacks" size="base" styles={titleStyle} />
       <div className={`${gridStyle} mb-11`}>
         {techStacks.map((ts) => {
           return (

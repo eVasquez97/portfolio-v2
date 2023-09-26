@@ -13,11 +13,11 @@ export default function Home() {
       <Header />
       <p className={`${variableText} my-5`}>
         I&apos;m a{" "}
-        <strong className="font-semibold">full stack developer 💻</strong> who
+        <strong className="font-semibold">full stack developer </strong> who
         enjoys tackling challenging problems and delivering high quality
         products. My most recent projects include:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5 mt-4">
         {showCase.map((pro) => {
           return (
             <ProjectCard
@@ -35,14 +35,14 @@ export default function Home() {
         })}
       </div>
       <p className={`${variableText} my-11`}>
-        And that&apos;s not all, you may check 👉🏼{" "}
+        And that&apos;s not all, you may check{" "}
         <a className={`${minimalLink} ${variableBg}`} href="/projects">
-          all projects{" "}
+          👉🏼 all projects{" "}
         </a>{" "}
         and contributions. I&apos;m always trying to keep up to date with
         current tech and also continue learning to improve my skills. On my free
         time I enjoy cooking, reading, exercising, and programming cause{" "}
-        <span className="font-medium">this is the way 🚀.</span>
+        <span className="italic">this is the way 🚀.</span>
       </p>
 
       <DynamicGallery />

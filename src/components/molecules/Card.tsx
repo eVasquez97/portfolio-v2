@@ -29,7 +29,11 @@ export default function Card({ ...props }: CardProps) {
           />
         </div>
         <div className="p-4">
-          <Title text={props.name} size="base" />
+          <Title
+            text={props.name}
+            size="base"
+            styles="font-semibold truncate mb-1"
+          />
           <p className="text-sm opacity-80">
             <strong className="text-text-light dark:text-text-dark font-semibold">
               {props.company}

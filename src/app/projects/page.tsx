@@ -6,7 +6,11 @@ import { ProjectCard } from "@/components/organisms";
 export default function Projects() {
   return (
     <div className="flex flex-col w-full">
-      <Title text="Projects and contributions" size="xl" styles="mb-6" />
+      <Title
+        text="Projects and contributions"
+        size="xl"
+        styles="my-8 font-semibold"
+      />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {data.map((pro) => {
           return (

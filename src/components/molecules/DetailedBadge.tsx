@@ -1,19 +1,13 @@
+import { DetailedBadgeType } from "@/app/services/DetailedBadgeType";
 import { variableBg, variableText } from "@/utils/constants";
 import Image from "next/image";
-
-type BadgeDetail = {
-  name: string;
-  experience: string;
-  description?: string;
-  logo: string;
-};
 
 export default function DetailedBadge({
   name,
   experience,
   description,
   logo,
-}: BadgeDetail) {
+}: DetailedBadgeType) {
   return (
     <div
       className={`${variableBg} m-2 flex items-center px-2 p-1 hover:scale-105 duration-300 rounded

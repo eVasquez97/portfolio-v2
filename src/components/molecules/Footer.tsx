@@ -1,4 +1,3 @@
-import { roboto } from "@/app/fonts";
 import SocialButton from "./SocialButton";
 import data from "../../utils/data.json";
 import { variableText } from "@/utils/constants";
@@ -20,9 +19,7 @@ export default function Footer() {
           );
         })}
       </div>
-      <p className={`${roboto.className} ${variableText} text-lg `}>
-        Eduardo Vásquez | Sept. 2023
-      </p>
+      <p className={`${variableText} text-lg `}>Eduardo Vásquez | Sept. 2023</p>
     </footer>
   );
 }
