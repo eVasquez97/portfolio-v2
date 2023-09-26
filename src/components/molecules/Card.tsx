@@ -19,9 +19,9 @@ export default function Card({ ...props }: CardProps) {
       className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark block md:max-w-lg w-full rounded shadow-sm m-2`}
     >
       <a href={props.url} target="_blank">
-        <div className="relative overflow-hidden bg-cover bg-no-repeat h-32">
+        <div className="relative overflow-hidden bg-no-repeat">
           <Image
-            className="w-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            className="w-full h-32 object-cover transition duration-300 ease-in-out hover:scale-105 object-top"
             src={image}
             alt=""
             width={1000}
@@ -30,8 +30,8 @@ export default function Card({ ...props }: CardProps) {
         </div>
         <div className="p-4">
           <Title text={props.name} size="base" />
-          <p className="text-sm text-highlight opacity-80">
-            <strong className="text-text-light dark:text-text-dark">
+          <p className="text-sm opacity-80">
+            <strong className="text-text-light dark:text-text-dark font-semibold">
               {props.company}
               {"  -  "}
             </strong>

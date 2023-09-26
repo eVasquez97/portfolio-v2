@@ -29,7 +29,7 @@ export default function Projects() {
   function itemsSection(items: any[], title: string) {
     return (
       <div className="w-full h-full my-2">
-        <Title text={title} size="base" styles="mb-4" />
+        <Title text={title} size="base" styles={titleStyle} />
         <div className={internalSection}>
           {items.map((item: Skill) => {
             return (

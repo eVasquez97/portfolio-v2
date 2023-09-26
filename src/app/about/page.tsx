@@ -12,10 +12,7 @@ export default function Courses() {
       <Header />
       <div className="flex flex-col w-full">
         <p className={`${variableText}`}>
-          I&apos;m a{" "}
-          <span className="font-semibold text-highlight">
-            full stack developer
-          </span>{" "}
+          I&apos;m a <span className="font-semibold">full stack developer</span>{" "}
           from Honduras ☕. I have over five years of experience in creating web
           and mobile applications and enjoy tackling challenging problems and
           delivering high quality products that meet the needs of users and
@@ -26,7 +23,7 @@ export default function Courses() {
           width={2000}
           height={2000}
           alt="Eduardo Vasquez"
-          className="w-full h-[200px] object-cover rounded my-5 hover:opacity-90"
+          className="w-full h-[200px] object-cover rounded my-5 hover:opacity-95"
         />
         <p className={`${variableText} mt-5`}>
           I am proficient in various programming languages and frameworks, such
@@ -66,15 +63,10 @@ export default function Courses() {
             height={1000}
             className="w-48 transition duration-300 ease-in-out hover:scale-105 mb-4 mt-6"
           />
-          <p className="text-lg text-highlight mb-1 font-bold">
-            {volunteering.role}
+          <p className="text-lg mb-1 font-semibold">
+            {volunteering.role} - {volunteering.company}
           </p>
-          <p className={`${variableText} font-semibold`}>
-            {volunteering.company}
-          </p>
-          <p className="text-sm text-highlight mb-4">
-            Since: {volunteering.start}
-          </p>
+          <p className="text-sm mb-4 opacity-80">Since: {volunteering.start}</p>
           <p className={`${variableText}`}>{volunteering.description}</p>
         </div>
       </div>

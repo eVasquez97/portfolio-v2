@@ -1,4 +1,3 @@
-import { ubuntu } from "@/app/fonts";
 import { variableBg, variableText } from "@/utils/constants";
 import Image from "next/image";
 
@@ -18,7 +17,7 @@ export default function DetailedBadge({
   return (
     <div
       className={`${variableBg} m-2 flex items-center px-2 p-1 hover:scale-105 duration-300 rounded
-      border border-secondaryText-light dark:border-secondaryText-dark`}
+      border border-secondaryText-light dark:border-secondaryText-dark hover:font-semibold`}
       title={description}
     >
       <div>
@@ -31,13 +30,9 @@ export default function DetailedBadge({
         />
       </div>
       <div>
-        <p
-          className={`${ubuntu.className} text-sm font-[400] text-highlight flex flex-row`}
-        >
+        <p className={`${variableText} text-sm flex flex-row`}>
           {name}
-          <span
-            className={`${ubuntu.className} ${variableText} opacity-60 font-light ml-2`}
-          >
+          <span className={`${variableText} opacity-60 font-light ml-2`}>
             {experience}
           </span>
         </p>

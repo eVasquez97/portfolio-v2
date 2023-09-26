@@ -17,7 +17,7 @@ export default function LightSaber() {
       <div className="w-44 bg-secondary-dark h-[22px] rounded z-20 border border-secondaryText-dark flex items-center justify-center border-x-4 border-x-saberBase">
         <select
           value={pathname}
-          className="bg-secondary-dark px-1 text-text-dark self-center font-medium border-r-2 border-r-saberBase focus:outline-none"
+          className="bg-secondary-dark px-1 text-text-dark self-center font-semibold border-r-2 border-r-saberBase focus:outline-none"
           onChange={(e) => changeRoute(e.target.value)}
         >
           {routes?.map((r) => {
@@ -31,8 +31,8 @@ export default function LightSaber() {
       </div>
       <div
         className="rounded-lg w-full h-[10px] -ml-2 mt-1.5
-    shadow-[0_0_4px_highlight,_0_0_4px_highlight,_0_0_8px_highlight,_0_0_16px_#03e9f4]
-    dark:shadow-[0_0_4px_red,_0_0_8px_red,_0_0_16px_red,_0_0_64px_#ef4444] 
+    shadow-[0_0_4px_lime,_0_0_4px_lime,_0_0_8px_lime,_0_0_16px_lime]
+    dark:shadow-[0_0_4px_red,_0_0_8px_red,_0_0_32px_red,_0_0_100px_red] 
      bg-primary-light animate-pulse ease-in-out"
       ></div>
     </div>

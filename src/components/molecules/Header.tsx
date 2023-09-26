@@ -7,8 +7,8 @@ export default function Header() {
       <div className="typewriter">
         <Title
           text="> Eduardo Vásquez"
-          size="3xl"
-          styles={`${ubuntu.className} w-max text-left text-3xl`}
+          size="2xl"
+          styles={`${ubuntu.className} w-max text-left text-2xl`}
         />
       </div>
     </div>

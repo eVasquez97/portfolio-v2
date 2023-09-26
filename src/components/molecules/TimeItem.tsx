@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Title } from "../atoms";
 
 type TimeLinePeriod = {
@@ -21,10 +20,10 @@ export default function TimeItem({
       <a href={url} target="_blank">
         <div className="flex-start flex items-center">
           <div className="-ml-[9px] mt-2 mr-3 flex h-4 w-4 items-center justify-center rounded-full bg-highlight"></div>
-          <Title text={title} size="lg" />
+          <Title text={title} size="base" />
         </div>
-        <div className="mb-6 ml-6 pb-6 opacity-90">
-          <span className="text-sm text-highlight">{time}</span>
+        <div className="mb-6 ml-6 pb-6">
+          <span className="text-sm opacity-60">{time}</span>
           <p className="text-sm text-text-light dark:text-text-dark">
             {description}
           </p>

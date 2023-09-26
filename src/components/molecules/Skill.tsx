@@ -21,12 +21,12 @@ export default function Skill({ name, experience, description, logo }: Skill) {
       </div>
       <div>
         <p
-          className={`${ubuntu.className} font-[400] text-highlight text-lg flex flex-row`}
+          className={`${ubuntu.className} ${variableText} font-[400] text-base flex flex-row`}
         >
           {name}
           {experience && (
             <span
-              className={`${ubuntu.className} ${variableText} opacity-40 font-light ml-2`}
+              className={`${ubuntu.className} ${variableText} opacity-80 font-light ml-2`}
             >
               {experience}
             </span>
