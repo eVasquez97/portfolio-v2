@@ -1,16 +1,39 @@
-import { Header } from "@/components/molecules";
 import projects from "../utils/projects.json";
-import { DynamicGallery, ProjectCard } from "@/components/organisms";
+import { ProjectCard } from "@/components/organisms";
 import { variableBg, variableText } from "@/utils/constants";
+import Image from "next/image";
 
 export default function Home() {
   const showCase = projects?.slice(0, 4);
-  const minimalLink =
-    "border border-secondaryText-light dark:border-secondaryText-dark px-2 mx-1 rounded font-semibold";
+  const minimalLink = `${variableBg} border border-secondaryText-light dark:border-secondaryText-dark px-1 mx-1 rounded font-semibold`;
+  const images = [
+    "/img/gallery/titulo.jpg",
+    "/img/gallery/trip.JPG",
+    "/img/gallery/random.jpg",
+  ];
+
+  function renderShowcaseImages() {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {images.map((img) => {
+          return (
+            <div className="flex w-full bg-cover bg-no-repeat" key={img}>
+              <Image
+                alt={img}
+                src={img}
+                width={1000}
+                height={1000}
+                className="rounded w-full h-40 object-cover hover:scale-105"
+              />
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col w-full">
-      <Header />
       <p className={`${variableText} my-5`}>
         I&apos;m a{" "}
         <strong className="font-semibold">full stack developer </strong> who
@@ -35,9 +58,9 @@ export default function Home() {
         })}
       </div>
       <p className={`${variableText} my-11`}>
-        And that&apos;s not all, you may check{" "}
+        And that&apos;s not all, you may check 👉🏼{" "}
         <a className={`${minimalLink} ${variableBg}`} href="/projects">
-          👉🏼 all projects{" "}
+          all projects{" "}
         </a>{" "}
         and contributions. I&apos;m always trying to keep up to date with
         current tech and also continue learning to improve my skills. On my free
@@ -45,9 +68,9 @@ export default function Home() {
         <span className="italic">this is the way 🚀.</span>
       </p>
 
-      <DynamicGallery />
+      {renderShowcaseImages()}
 
-      <p className={`${variableText} mt-11`}>
+      <p className={`${variableText} my-11`}>
         I also provide various{" "}
         <a className={`${minimalLink} ${variableBg}`} href="/services">
           services{" "}

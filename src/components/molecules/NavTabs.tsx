@@ -7,7 +7,7 @@ export default function NavTabs() {
   const pathname = usePathname();
 
   return (
-    <div className="flex text-left mb-16 items-center">
+    <div className="flex text-left my-6 items-center">
       {routes.map((route) => {
         const isActive = pathname === route.url;
         return (
@@ -15,10 +15,8 @@ export default function NavTabs() {
             href={route.url}
             key={route.name}
             className={`${
-              isActive
-                ? "font-medium text-highlight opacity-1"
-                : `${variableText} opacity-80`
-            } mr-6 last:mr-0 hover:scale-105 text-xs"
+              isActive ? "font-semibold opacity-1" : `opacity-80`
+            } ${variableText} mx-2 first:ml-0 last:mr-0 hover:scale-105 text-xs"
               `}
           >
             {route.name}

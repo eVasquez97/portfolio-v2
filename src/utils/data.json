@@ -212,33 +212,33 @@
   "otherTech": [
     {
       "name": "Xamarin",
-      "experience": "2+ years",
+      "experience": "~ 2 years",
       "description": "How I started working with mobile apps.",
       "logo": "https://cdn.worldvectorlogo.com/logos/xamarin.svg"
     },
     {
-      "name": "Java Android",
-      "experience": "2+ years",
-      "description": "For mobile development when needed",
-      "logo": "https://cdn.worldvectorlogo.com/logos/java.svg"
+      "name": "Arduino",
+      "experience": "~ 1.5 year",
+      "description": "Just for fun!",
+      "logo": "https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
     },
     {
       "name": "Flask",
-      "experience": "~ 2 years",
+      "experience": "~ 1.5 years",
       "description": "Tried a couple of times.",
       "logo": "https://cdn.worldvectorlogo.com/logos/flask.svg"
     },
     {
       "name": "Swift",
-      "experience": "~ 1.5 years",
+      "experience": "~ 1 years",
       "description": "For mobile development when needed",
       "logo": "https://cdn.worldvectorlogo.com/logos/swift-15.svg"
     },
     {
-      "name": "Arduino",
-      "experience": "~ 1 year",
-      "description": "Just for fun!",
-      "logo": "https://cdn.worldvectorlogo.com/logos/arduino-1.svg"
+      "name": "Java Android",
+      "experience": "~ 1 years",
+      "description": "For mobile development when needed",
+      "logo": "https://cdn.worldvectorlogo.com/logos/java.svg"
     }
   ],
   "techStacks": [

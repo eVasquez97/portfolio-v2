@@ -55,7 +55,9 @@ export default function ProjectCard({
               </p>
             </div>
           </div>
-          <div className=" z-[1] float-right absolute block right-2">
+          <div
+            className={`${variableText} z-[1] float-right absolute block right-2`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

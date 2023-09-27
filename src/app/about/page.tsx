@@ -1,13 +1,14 @@
 import { Title } from "@/components/atoms";
 import data from "../../utils/data.json";
-import { Card, Header, TimeItem, Timeline } from "@/components/molecules";
+import { Card } from "@/components/molecules";
 import Image from "next/image";
 import { variableText } from "@/utils/constants";
 import Link from "next/link";
 import { EducationType } from "./EducationType";
+import { DynamicGallery } from "@/components/organisms";
 
 export default function Courses() {
-  const { education, courses, volunteering } = data;
+  const { education, courses } = data;
 
   function getEducationInfo(ed: EducationType) {
     return (
@@ -26,9 +27,9 @@ export default function Courses() {
                 height={1000}
               />
             </div>
-            <div className="text-center flex-wrap">
+            <div className={`${variableText} text-center flex-wrap`}>
               <p className="font-semibold mb-2">{ed.title}</p>
-              <p className="font-normal text-xs flex-wrap mb-2">
+              <p className="font-normal text-sm flex-wrap mb-2">
                 {ed.institute}
               </p>
               <p className="font-normal italic text-xs opacity-60">{ed.time}</p>
@@ -41,23 +42,17 @@ export default function Courses() {
 
   return (
     <div className="bg-primary-light dark:bg-primary-dark min-w-full">
-      <Header />
       <div className="flex flex-col w-full">
-        <p className={`${variableText}`}>
+        <p className={`${variableText} mb-11`}>
           I&apos;m a <span className="font-semibold">full stack developer</span>{" "}
           from Honduras ☕. I have over five years of experience in creating web
           and mobile applications and enjoy tackling challenging problems and
           delivering high quality products that meet the needs of users and
           clients.
         </p>
-        <Image
-          src="/img/banners/portfolio.png"
-          width={2000}
-          height={2000}
-          alt="Eduardo Vasquez"
-          className="w-full h-[200px] object-cover rounded my-5 hover:opacity-95"
-        />
-        <p className={`${variableText} mt-5`}>
+        <DynamicGallery />
+
+        <p className={`${variableText} mt-11`}>
           I am proficient in various programming languages and frameworks, such
           as{" "}
           <span className="font-semibold">
@@ -79,18 +74,14 @@ export default function Courses() {
         </div>
         <div>
           <Title text="Volunteer work" size="base" styles="font-semibold" />
-          <Image
-            src="/church.png"
-            alt="Episcopal Church"
-            width={1000}
-            height={1000}
-            className="w-48 transition duration-300 ease-in-out hover:scale-105 mb-4 mt-6"
-          />
-          <p className="text-base mb-1 font-semibold">
-            {volunteering.role} - {volunteering.company}
+          <p className={`${variableText} text-base mb-1 mt-8`}>
+            I&apos;ve been volunteering as a{" "}
+            <span className="font-semibold">translator/interpreter</span> for
+            medical and construction teams from the{" "}
+            <span className="font-semibold">Episcopal Church</span> in United
+            States that come anually to Honduras to help. I&apos;ve been doing
+            this volunteer work since 2007.
           </p>
-          <p className="text-sm mb-4 opacity-80">Since: {volunteering.start}</p>
-          <p className={`${variableText}`}>{volunteering.description}</p>
         </div>
       </div>
 
