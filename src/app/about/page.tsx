@@ -51,19 +51,17 @@ export default function Courses() {
           clients.
         </p>
         <DynamicGallery />
-
-        <p className={`${variableText} mt-11`}>
-          I am proficient in various programming languages and frameworks, such
-          as{" "}
-          <span className="font-semibold">
-            JavaScript, React, Node.js, Python, Django, and MongoDB
-          </span>
-          . I am always eager to learn new skills and technologies to enhance my
-          professional growth and development. 🚀
+        <p className={`${variableText} text-base mb-1 mt-8`}>
+          I&apos;ve been volunteering as a{" "}
+          <span className="font-semibold">translator/interpreter</span> for
+          medical and construction teams from the{" "}
+          <span className="font-semibold">Episcopal Church</span> in United
+          States that come anually to Honduras to help. I&apos;ve been doing
+          this volunteer work since 2007.
         </p>
       </div>
 
-      <div className="flex flex-col w-full my-10">
+      <div className="flex flex-col w-full my-8">
         <div>
           <Title text="Education" size="base" styles="font-semibold" />
           <div className="grid md:grid-cols-2 gap-5 my-6">
@@ -72,20 +70,9 @@ export default function Courses() {
             })}
           </div>
         </div>
-        <div>
-          <Title text="Volunteer work" size="base" styles="font-semibold" />
-          <p className={`${variableText} text-base mb-1 mt-8`}>
-            I&apos;ve been volunteering as a{" "}
-            <span className="font-semibold">translator/interpreter</span> for
-            medical and construction teams from the{" "}
-            <span className="font-semibold">Episcopal Church</span> in United
-            States that come anually to Honduras to help. I&apos;ve been doing
-            this volunteer work since 2007.
-          </p>
-        </div>
       </div>
 
-      <Title text="Courses" size="base" styles="mb-8 mt-11 font-semibold" />
+      <Title text="Courses" size="base" styles="my-8 font-semibold" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
         {courses.map((course) => {
           return (

@@ -5,7 +5,8 @@ import Image from "next/image";
 
 export default function Home() {
   const showCase = projects?.slice(0, 4);
-  const minimalLink = `${variableBg} border border-secondaryText-light dark:border-secondaryText-dark px-1 mx-1 rounded font-semibold`;
+  const minimalLink =
+    "text-highlight px-1 mx-1 hover:font-semibold hover:underline";
   const images = [
     "/img/gallery/titulo.jpg",
     "/img/gallery/trip.JPG",
@@ -14,7 +15,7 @@ export default function Home() {
 
   function renderShowcaseImages() {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-2 md:gap-5">
         {images.map((img) => {
           return (
             <div className="flex w-full bg-cover bg-no-repeat" key={img}>
@@ -38,7 +39,8 @@ export default function Home() {
         I&apos;m a{" "}
         <strong className="font-semibold">full stack developer </strong> who
         enjoys tackling challenging problems and delivering high quality
-        products. My most recent projects include:
+        products. I consider myself a React JS master and Python & TypeScript
+        enthusiast. My most recent projects include:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5 mt-4">
         {showCase.map((pro) => {
@@ -62,9 +64,9 @@ export default function Home() {
         <a className={`${minimalLink} ${variableBg}`} href="/projects">
           all projects{" "}
         </a>{" "}
-        and contributions. I&apos;m always trying to keep up to date with
-        current tech and also continue learning to improve my skills. On my free
-        time I enjoy cooking, reading, exercising, and programming cause{" "}
+        and contributions. I&apos;m always eager to learn new skills and
+        technologies to enhance my professional growth and development. On my
+        free time I enjoy cooking, reading, exercising, and programming cause{" "}
         <span className="italic">this is the way 🚀.</span>
       </p>
 
