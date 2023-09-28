@@ -7,7 +7,7 @@ import Link from "next/link";
 import { EducationType } from "./EducationType";
 import { DynamicGallery } from "@/components/organisms";
 
-export default function Courses() {
+export default function About() {
   const { education, courses } = data;
 
   function getEducationInfo(ed: EducationType) {

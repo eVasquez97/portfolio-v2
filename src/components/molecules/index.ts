@@ -6,6 +6,7 @@ import TimeItem from "./TimeItem";
 import Card from "./Card";
 import ServiceCard from "./ServiceCard";
 import NavTabs from "./NavTabs";
+import ShowCase from "./ShowCase";
 
 export {
   Footer,
@@ -16,4 +17,5 @@ export {
   Card,
   ServiceCard,
   NavTabs,
+  ShowCase,
 };

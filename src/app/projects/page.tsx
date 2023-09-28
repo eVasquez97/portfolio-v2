@@ -2,10 +2,21 @@
 import { Title } from "@/components/atoms";
 import data from "../../utils/projects.json";
 import { ProjectCard } from "@/components/organisms";
+import { useState, useEffect } from "react";
 
 export default function Projects() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
   return (
-    <div className="flex flex-col w-full">
+    <div
+      className={`flex flex-col w-full ${
+        show ? "opacity-100 transition-opacity duration-1000" : "opacity-0"
+      }`}
+    >
       <Title
         text="Projects and contributions"
         size="xl"

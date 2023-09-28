@@ -11,20 +11,13 @@
     blink-caret .5s step-end infinite;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0
-  }
 
-  to {
-    width: 100%
-  }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent
