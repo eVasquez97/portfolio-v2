@@ -8,7 +8,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
-  description: "Developer Portfolio",
+  description:
+    "Check out my portfolio to see my latest projects and skills in web development, mobile development, and more.",
+  authors: [{ name: "Eduardo Vásquez" }],
+  keywords: ["react", "nextjs", "typescript", "tailwindcss", "vercel"],
 };
 
 export default function RootLayout({

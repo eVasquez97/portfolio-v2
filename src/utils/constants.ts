@@ -10,25 +10,17 @@ export const routes = [
   { name: "about", url: "/about" },
 ];
 
-export function getTextSize(size: string) {
-  switch (size) {
-    case "xs":
-      return "text-xs";
-    case "sm":
-      return "text-sm";
-    case "base":
-      return "text-base";
-    case "xl":
-      return "text-xl";
-    case "2xl":
-      return "text-2xl";
-    case "3xl":
-      return "text-3xl";
-    case "4xl":
-      return "text-4xl";
-    case "5xl":
-      return "text-5xl";
-    default:
-      return "text-sm";
-  }
+enum TextSize {
+  xs = "text-xs",
+  sm = "text-sm",
+  base = "text-base",
+  xl = "text-xl",
+  "2xl" = "text-2xl",
+  "3xl" = "text-3xl",
+  "4xl" = "text-4xl",
+  "5xl" = "text-5xl",
+}
+
+export function getTextSize(size: keyof typeof TextSize): string {
+  return TextSize[size] || TextSize.sm;
 }
