@@ -7,7 +7,7 @@ type ShowCaseType = {
 };
 
 export default function ShowCase({ items, columns }: ShowCaseType) {
-  const cols = `grid-cols-${columns?.toString() ?? 3}`;
+  const cols = columns ? "grid-cols-" + columns.toString() : "grid-cols-3";
 
   return (
     <div className={`grid ${cols} gap-2 md:gap-5`}>
