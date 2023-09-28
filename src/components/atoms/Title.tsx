@@ -4,7 +4,7 @@ import { TitleType } from "./atomTypes";
 export default function Title({
   text,
   size = "xl",
-  styles,
+  styles = "",
   textColor = variableText,
 }: TitleType) {
   const textSize = getTextSize(size);
