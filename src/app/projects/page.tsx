@@ -1,28 +1,16 @@
-"use client";
 import { Title } from "@/components/atoms";
-import data from "../../utils/projects.json";
 import { ProjectCard } from "@/components/organisms";
-import { useState, useEffect } from "react";
+import data from "../../utils/projects.json";
 
 export default function Projects() {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setShow(true);
-  }, []);
-
   return (
-    <div
-      className={`flex flex-col w-full ${
-        show ? "opacity-100 transition-opacity duration-1000" : "opacity-0"
-      }`}
-    >
+    <div className="flex flex-col w-full">
       <Title
         text="Projects and contributions"
-        size="xl"
-        styles="my-8 font-semibold"
+        size="base"
+        styles="mb-8 font-semibold"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {data.map((pro) => {
           return (
             <ProjectCard

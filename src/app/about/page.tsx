@@ -64,7 +64,7 @@ export default function About() {
       <div className="flex flex-col w-full my-8">
         <div>
           <Title text="Education" size="base" styles="font-semibold" />
-          <div className="grid md:grid-cols-2 gap-5 my-6">
+          <div className="grid md:grid-cols-2 gap-3 my-6">
             {education.map((ed) => {
               return getEducationInfo(ed);
             })}
@@ -73,7 +73,7 @@ export default function About() {
       </div>
 
       <Title text="Courses" size="base" styles="my-8 font-semibold" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {courses.map((course) => {
           return (
             <Card

@@ -5,8 +5,7 @@ import { ShowCase } from "@/components/molecules";
 
 export default function Home() {
   const showCase = projects?.slice(0, 4);
-  const minimalLink =
-    "text-highlight px-1 mx-1 hover:font-semibold hover:underline";
+  const minimalLink = `${variableText} font-semibold hover:underline`;
   const images = [
     "/img/gallery/titulo.jpg",
     "/img/gallery/trip.JPG",
@@ -22,7 +21,7 @@ export default function Home() {
         products. I consider myself a React JS master and Python & TypeScript
         enthusiast. My most recent projects include:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
         {showCase.map((pro) => {
           return (
             <ProjectCard

@@ -26,7 +26,7 @@ export default function ProjectCard({
       }}
     >
       <div
-        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-3 hover:scale-105 ease-in-out transition duration-300`}
+        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-3`}
       >
         <div className="flex flex-row items-center">
           <div className="flex rounded-full">

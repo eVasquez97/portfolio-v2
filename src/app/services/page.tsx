@@ -16,7 +16,7 @@ export default function Services() {
     techStacks,
     services,
   } = data;
-  const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-5";
+  const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-3";
   const internalSection = "flex flex-row flex-wrap w-full";
   const titleStyle = "my-5 font-semibold";
 

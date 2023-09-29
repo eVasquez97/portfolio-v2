@@ -16,8 +16,7 @@ export default function NavTabs() {
             key={route.name}
             className={`${
               isActive ? "font-semibold opacity-1" : `opacity-80`
-            } ${variableText} mx-2 first:ml-0 last:mr-0 hover:scale-105 text-xs"
-              `}
+            } ${variableText} mx-2 first:ml-0 last:mr-0 hover:scale-105`}
           >
             {route.name}
           </Link>
