@@ -1,13 +1,14 @@
+import { adamia } from "@/app/fonts";
 import { Title } from "../atoms";
 
 export default function Header() {
   return (
-    <div className="flex flex-col my-10 w-max">
+    <div className="flex my-10 w-max self-center">
       <div className="typewriter">
         <Title
-          text="Eduardo Vásquez"
-          size="xl"
-          styles="font-semibold w-max text-xl"
+          text="EDUARDO VÁSQUEZ"
+          size="2xl"
+          styles={`${adamia.className} w-max text-2xl`}
         />
       </div>
     </div>

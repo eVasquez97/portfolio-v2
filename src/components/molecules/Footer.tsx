@@ -1,6 +1,7 @@
 import SocialButton from "./SocialButton";
 import data from "../../utils/data.json";
 import { variableText } from "@/utils/constants";
+import { adamia } from "@/app/fonts";
 
 export default function Footer() {
   const { socialMedia } = data;
@@ -10,11 +11,11 @@ export default function Footer() {
   ));
 
   return (
-    <footer className="p-5 mt-11 mb-6 w-full inset-x-0 bottom-0 min-w-full text-center opacity-90">
-      <div className="flex flex-row w-full mx-auto items-center justify-center mb-5">
-        {socialButtons}
-      </div>
-      <p className={`${variableText} `}>Eduardo Vásquez | Sept. 2023</p>
+    <footer className="my-11 pt-4 w-full inset-x-0 bottom-0 opacity-60 flex flex-row justify-between items-center border-t-2 border-t-secondaryText-light dark:border-t-secondaryText-dark">
+      <p className={`${variableText} ${adamia.className} w-full`}>
+        Eduardo Vásquez
+      </p>
+      <div className="flex flex-row mx-auto">{socialButtons}</div>
     </footer>
   );
 }
