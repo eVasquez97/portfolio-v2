@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Footer, Header, NavTabs } from "@/components/molecules";
-import { inter } from "./fonts";
+import { lato } from "./fonts";
 import Loading from "./loading";
 import "./globals.css";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
+        className={`${lato.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
       >
         <main className="flex flex-col mx-auto max-w-2xl w-full mt-1">
           <Header />

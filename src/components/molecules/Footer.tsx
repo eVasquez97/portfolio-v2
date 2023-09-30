@@ -1,7 +1,7 @@
 import SocialButton from "./SocialButton";
 import data from "../../utils/data.json";
 import { variableText } from "@/utils/constants";
-import { adamia } from "@/app/fonts";
+import { tenor } from "@/app/fonts";
 
 export default function Footer() {
   const { socialMedia } = data;
@@ -11,9 +11,9 @@ export default function Footer() {
   ));
 
   return (
-    <footer className="my-11 pt-4 w-full inset-x-0 bottom-0 opacity-60 flex flex-row justify-between items-center border-t-2 border-t-secondaryText-light dark:border-t-secondaryText-dark">
-      <p className={`${variableText} ${adamia.className} w-full text-sm`}>
-        Eduardo Vásquez
+    <footer className="my-11 pt-4 w-full inset-x-0 bottom-0 opacity-75 flex flex-row justify-between items-center border-t-2 border-t-secondaryText-light dark:border-t-secondaryText-dark">
+      <p className={`${variableText} ${tenor.className} w-full text-sm`}>
+        EDUARDO VÁSQUEZ
       </p>
       <div className="flex flex-row mx-auto">{socialButtons}</div>
     </footer>

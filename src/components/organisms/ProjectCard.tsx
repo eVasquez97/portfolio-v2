@@ -45,7 +45,7 @@ export default function ProjectCard({
                 size="base"
                 styles="mr-1 text-base font-semibold"
               />
-              <p className={`${variableText} capitalize text-xs opacity-80`}>
+              <p className={`${variableText} capitalize text-xs opacity-60`}>
                 {platform}
               </p>
             </div>

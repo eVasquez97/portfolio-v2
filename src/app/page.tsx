@@ -5,7 +5,7 @@ import { ShowCase } from "@/components/molecules";
 
 export default function Home() {
   const showCase = projects?.slice(0, 4);
-  const minimalLink = `${variableText} font-semibold hover:underline`;
+  const minimalLink = `${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded ${variableText} font-semibold px-1 hover:underline`;
   const images = [
     "/img/gallery/titulo.jpg",
     "/img/gallery/trip.JPG",
@@ -44,14 +44,14 @@ export default function Home() {
           all projects{" "}
         </a>{" "}
         and contributions. I&apos;m always eager to learn new skills and
-        technologies to enhance my professional growth and development. On my
-        free time I enjoy cooking, reading, exercising, and programming cause{" "}
+        technologies to enhance my professional growth. On my free time I enjoy
+        cooking, reading, exercising, and programming cause{" "}
         <span className="italic">this is the way 🚀.</span>
       </p>
 
       <ShowCase items={images} />
 
-      <p className={`${variableText} my-11`}>
+      <p className={`${variableText} mt-11 mb-5`}>
         I also provide various{" "}
         <a className={`${minimalLink} ${variableBg}`} href="/services">
           services{" "}
