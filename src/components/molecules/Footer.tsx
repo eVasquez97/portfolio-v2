@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="my-11 pt-4 w-full inset-x-0 bottom-0 opacity-60 flex flex-row justify-between items-center border-t-2 border-t-secondaryText-light dark:border-t-secondaryText-dark">
-      <p className={`${variableText} ${adamia.className} w-full`}>
+      <p className={`${variableText} ${adamia.className} w-full text-sm`}>
         Eduardo Vásquez
       </p>
       <div className="flex flex-row mx-auto">{socialButtons}</div>
