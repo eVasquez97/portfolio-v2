@@ -2,7 +2,6 @@ import { variableText } from "@/utils/constants";
 import Link from "next/link";
 import data from "../../utils/data.json";
 import SocialButton from "./SocialButton";
-import { lora } from "@/app/fonts";
 
 export default function Footer() {
   const { socialMedia } = data;
@@ -19,10 +18,7 @@ export default function Footer() {
 
   return (
     <footer className="my-12 w-full inset-x-0 bottom-0 flex flex-row justify-between items-center opacity-60 border-t border-t-secondaryText-light dark:border-t-secondaryText-dark pt-3">
-      <Link
-        href="/"
-        className={`${lora.className} ${variableText} w-full font-light text-left`}
-      >
+      <Link href="/" className={`${variableText} w-full text-left`}>
         Eduardo Vásquez
       </Link>
       <div className="flex flex-row">{socialButtons}</div>

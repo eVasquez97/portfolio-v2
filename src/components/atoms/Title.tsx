@@ -3,12 +3,12 @@ import { TitleType } from "./atomTypes";
 
 export default function Title({
   text,
-  size = "xl",
+  size = "lg",
   styles = "",
   textColor = variableText,
 }: TitleType) {
   const textSize = getTextSize(size);
   return (
-    <p className={`font-[400] ${textSize} ${styles} ${textColor}`}>{text}</p>
+    <h1 className={`font-[500] ${textSize} ${styles} ${textColor}`}>{text}</h1>
   );
 }

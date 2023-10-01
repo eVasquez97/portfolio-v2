@@ -1,10 +1,10 @@
-import { Suspense } from "react";
+import { Footer, Header, NavTabs } from "@/components/molecules";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Footer, Header, NavTabs } from "@/components/molecules";
-import { inter } from "./fonts";
-import Loading from "./loading";
+import { Suspense } from "react";
+import { fira } from "./fonts";
 import "./globals.css";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Eduardo Vásquez",
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
+        className={`${fira.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
       >
         <main className="flex flex-col mx-auto max-w-2xl w-full">
           <NavTabs />

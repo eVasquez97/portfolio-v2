@@ -15,14 +15,11 @@ export default function ServiceCard({
 }: Service) {
   return (
     <div className="w-full mb-11">
-      <p className={`${variableText} font-normal mt-2 underline`}>{service}</p>
-      <p className={`mt-1 mb-2 ${variableText} font-light`}>{description}</p>
+      <p className="text-highlight font-normal mt-2">{service}</p>
+      <p className={`mt-1 mb-2 ${variableText} `}>{description}</p>
       {benefits?.map((b) => {
         return (
-          <p
-            className={`list-item ${variableText} mb-2 ml-6 font-light`}
-            key={b}
-          >
+          <p className={`list-item ${variableText} mb-2 ml-6 `} key={b}>
             {b}
           </p>
         );

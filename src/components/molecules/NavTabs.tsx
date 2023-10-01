@@ -1,8 +1,7 @@
 "use client";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { routes, variableText } from "@/utils/constants";
-import { lora } from "@/app/fonts";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavTabs() {
   const pathname = usePathname();
@@ -15,9 +14,9 @@ export default function NavTabs() {
           <Link
             href={route.url}
             key={route.name}
-            className={`${lora.className} ${
-              isActive && "font-normal opacity-100"
-            } ${variableText} font-light text-sm mx-2 first:ml-0 last:mr-0 opacity-60`}
+            className={`${
+              isActive && "font-semibold opacity-100"
+            } ${variableText} mx-2 first:ml-0 last:mr-0 opacity-60`}
           >
             {route.name}
           </Link>

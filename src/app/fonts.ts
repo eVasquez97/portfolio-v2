@@ -1,15 +1,8 @@
-import { Inter, Lora } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 
-export const inter = Inter({
+export const fira = Fira_Sans({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500"],
+  weight: ["100", "300", "400", "700"],
   display: "swap",
-  variable: "--inter-font",
-});
-
-export const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--lora-font",
+  variable: "--fira-font",
 });

@@ -6,7 +6,7 @@ import { ShowCase } from "@/components/molecules";
 
 export default function Home() {
   const showCase = projects?.slice(0, 4);
-  const minimalLink = `${variableText} font-normal hover:underline mx-1 underline opacity-80 hover:opacity-100`;
+  const minimalLink = "text-highlight mx-1 hover:underline";
   const images = [
     "/img/gallery/titulo.jpg",
     "/img/gallery/trip.JPG",
@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full">
-      <p className={`${variableText} mb-5 font-light`}>
+      <p className={`${variableText} mb-5`}>
         I&apos;m a{" "}
         <Link className={`${minimalLink}`} href="/services">
           full stack developer{" "}
@@ -24,7 +24,7 @@ export default function Home() {
         products. I consider myself a React JS master and Python & TypeScript
         enthusiast. My most recent projects include:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mt-2">
         {showCase.map((pro) => {
           return (
             <ProjectCard
@@ -41,17 +41,16 @@ export default function Home() {
           );
         })}
       </div>
-      <p className={`${variableText} my-8 font-light`}>
+      <p className={`${variableText} my-8`}>
         And that&apos;s not all, you may check{" "}
         <Link className={`${minimalLink}`} href="/projects">
           all projects{" "}
         </Link>{" "}
         and contributions. I&apos;m always eager to learn new skills and
-        technologies to enhance my professional growth. On my free time I enjoy
-        cooking, reading, exercising, and programming cause this is the way. 🚀
+        technologies to enhance my professional growth.
       </p>
       <ShowCase items={images} />
-      <p className={`${variableText} my-8 font-light`}>
+      <p className={`${variableText} my-8`}>
         I also provide various{" "}
         <Link className={`${minimalLink}`} href="/services">
           services{" "}

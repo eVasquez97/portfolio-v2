@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .typewriter p {
   overflow: hidden;
   border-right: .15em solid #0078d4;

@@ -51,7 +51,7 @@ export default function ProjectInfo() {
             styles={`${variableText} font-normal mt-2 capitalize text-2xl`}
           />
           <span
-            className={`${variableText} font-light text-sm opacity-60 ml-2 mt-2 capitalize mb-6`}
+            className={`${variableText}  text-sm opacity-60 ml-2 mt-2 capitalize mb-6`}
           >
             {project?.platform}
           </span>
@@ -73,7 +73,7 @@ export default function ProjectInfo() {
           size="base"
           styles={`${variableText} font-normal`}
         />
-        <p className={`${variableText} my-5 font-light`}>
+        <p className={`${variableText} my-5 `}>
           {project?.intro} {project?.fullDesc}
         </p>
       </div>
@@ -95,11 +95,11 @@ export default function ProjectInfo() {
                 <p className="text-highlight font-normal mb-1">
                   {project?.role}
                 </p>
-                <p className={`${variableText} mb-1 font-light`}>
+                <p className={`${variableText} mb-1 `}>
                   {project?.company} - {project?.time}
                 </p>
                 <p
-                  className={`${variableText} italic capitalize opacity-60 text-sm font-light`}
+                  className={`${variableText} italic capitalize opacity-60 text-sm `}
                 >
                   {project?.jobType} - {project?.location}
                 </p>
@@ -112,7 +112,7 @@ export default function ProjectInfo() {
                 size="base"
                 styles={`${variableText} font-normal`}
               />
-              <div className="flex flex-row flex-wrap my-2 font-light">
+              <div className="flex flex-row flex-wrap my-2 ">
                 {project?.techStack.map((ts) => {
                   return (
                     <Badge key={ts} text={ts} styles={`${variableText} m-1`} />
@@ -134,10 +134,7 @@ export default function ProjectInfo() {
             <div className="p-6">
               {project?.responsibilities.map((res) => {
                 return (
-                  <p
-                    key={res}
-                    className={`${variableText} list-item mb-2 font-light`}
-                  >
+                  <p key={res} className={`${variableText} list-item mb-2 `}>
                     {res}
                   </p>
                 );

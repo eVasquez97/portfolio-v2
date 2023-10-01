@@ -5,8 +5,8 @@ import data from "../../utils/projects.json";
 export default function Projects() {
   return (
     <div className="flex flex-col w-full">
-      <Title text="Projects" size="base" styles="mb-6 font-normal" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <Title text="Projects" styles="mb-6" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
         {data.map((pro) => {
           return (
             <ProjectCard

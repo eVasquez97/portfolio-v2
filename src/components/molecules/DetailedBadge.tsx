@@ -26,9 +26,7 @@ export default function DetailedBadge({
         <p className={`${variableText} text-sm flex flex-row`}>
           {name}
           {experience && (
-            <span
-              className={`${variableText} opacity-60 font-light ml-2 text-sm`}
-            >
+            <span className={`${variableText} opacity-60  ml-2 text-sm`}>
               {experience}
             </span>
           )}

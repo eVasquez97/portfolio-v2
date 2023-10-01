@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Badge, Title } from "../atoms";
-import { variableBg, variableText } from "@/utils/constants";
+import { showIcon, variableBg, variableText } from "@/utils/constants";
 import { ProjectProps } from "./orgamismTypes";
+import Icon from "../atoms/Icon";
 
 export default function ProjectCard({
   name,
@@ -26,12 +27,12 @@ export default function ProjectCard({
       }}
     >
       <div
-        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-3`}
+        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-2.5`}
       >
         <div className="flex flex-row items-center">
-          <div className="flex rounded-full">
+          <div className="flex rounded-full mr-1.5">
             <Image
-              className="border border-secondaryText-light dark:border-secondaryText-dark w-12 h-12 rounded-full mr-2 object-cover"
+              className="border border-secondaryText-light dark:border-secondaryText-dark w-12 h-12 rounded-full mr-3 object-cover"
               src={comapanyLogo || img || "/img/banner1.jpg"}
               alt=""
               width={1000}
@@ -40,61 +41,46 @@ export default function ProjectCard({
           </div>
           <div className="flex flex-col w-full ml-2">
             <div className="flex flex-row">
-              <Title
-                text={name}
-                size="base"
-                styles="mr-1 text-base font-normal"
-              />
-              <p className={`${variableText} capitalize text-xs opacity-60`}>
+              <Title text={name} styles="mr-1" />
+              <span
+                className={`${variableText} capitalize text-[10px] opacity-60`}
+              >
                 {platform}
-              </p>
+              </span>
             </div>
             <div className="flex flex-row ">
-              <p
-                className={`${variableText} ${detailText} font-light text-sm opacity-60`}
+              <span
+                className={`${variableText} ${detailText} text-xs opacity-60`}
               >
                 {company} - {jobType}
-              </p>
+              </span>
             </div>
           </div>
           <div
             className={`${variableText} z-[1] float-right absolute block right-2`}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
+            <Icon
+              icon={showIcon}
               stroke="currentColor"
-              className="w-5 h-5 ml-2 opacity-60"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-              />
-            </svg>
+              styles="w-5 h-5 ml-2 opacity-60"
+            />
           </div>
         </div>
 
         {intro && (
-          <div className="mt-3">
-            <p
-              className={`${variableText} text-sm ml-2 my-5 opacity-80 font-light `}
-            >
-              {intro}
-            </p>
+          <div className="mt-5">
+            <span className={`${variableText} text-sm ml-2`}>{intro}</span>
 
             {techStack && (
-              <div className="flex flex-row flex-wrap w-full mt-4">
+              <div className="flex flex-row flex-wrap w-full mt-3">
                 {techStack.map((ts) => {
                   return (
                     <Badge
                       key={ts}
                       text={ts}
                       styles="border border-secondaryText-light dark:border-secondaryText-dark m-1"
-                      background="transparent"
-                      textColor={variableText}
+                      background="bg-highlight"
+                      textColor="text-primary-light"
                     />
                   );
                 })}
