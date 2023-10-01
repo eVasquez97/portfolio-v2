@@ -70,7 +70,7 @@ export default function Header() {
       <Title
         text="EDUARDO VÁSQUEZ"
         size="2xl"
-        styles={`${tenor.className} w-max text-2xl hover:underline`}
+        styles={`${tenor.className} w-max text-2xl`}
       />
     </Link>
   );
