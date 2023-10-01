@@ -14,7 +14,7 @@ type CardProps = {
 export default function Card({ ...props }: CardProps) {
   return (
     <div
-      className={`${variableBg} ${variableText} border border-secondaryText-light dark:border-secondaryText-dark block md:max-w-lg w-full rounded`}
+      className={`${variableBg} ${variableText} border border-secondaryText-light dark:border-secondaryText-dark block md:max-w-lg w-full`}
     >
       <a href={props.url} target="_blank">
         <div className="p-4">

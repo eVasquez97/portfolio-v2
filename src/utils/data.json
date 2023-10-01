@@ -19,7 +19,7 @@
   "courses": [
     {
       "name": "The Complete GitHub Actions & Workflows Guide",
-      "time": "Issued on Aug. 2023",
+      "time": "Aug. 2023",
       "certificationID": "UC-94b14b4f-23a1-4202-b3ec-7f7a693ef62d",
       "headerColor": "transparent",
       "url": "https://www.udemy.com/certificate/UC-94b14b4f-23a1-4202-b3ec-7f7a693ef62d/",
@@ -28,7 +28,7 @@
     },
     {
       "name": "TypeScript sin fronteras: guía definitva",
-      "time": "Issued on June 2023",
+      "time": "June 2023",
       "certificationID": "UC-ed0e59c8-089b-4624-850b-21f5c5dbe266/",
       "headerColor": "transparent",
       "url": "https://www.udemy.com/certificate/UC-ed0e59c8-089b-4624-850b-21f5c5dbe266/",
@@ -37,7 +37,7 @@
     },
     {
       "name": "React testing con jest y enzyme",
-      "time": "Issued on Sept. 2022",
+      "time": "Sept. 2022",
       "certificationID": "UC-3fdd9e8c-5660-4332-bfdd-e9e28cbc29c1",
       "headerColor": "transparent",
       "url": "https://www.udemy.com/certificate/UC-3fdd9e8c-5660-4332-bfdd-e9e28cbc29c1/",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Python sin fronteras",
-      "time": "Issued on June. 2022",
+      "time": "June. 2022",
       "certificationID": "UC-b7551b50-2e5d-41df-a956-b2ba4ffc1ad3",
       "headerColor": "transparent",
       "url": "https://www.udemy.com/certificate/UC-b7551b50-2e5d-41df-a956-b2ba4ffc1ad3/",
@@ -55,7 +55,7 @@
     },
     {
       "name": "SwiftUI Masterclass 2022 - iOS 15 & Swift 5",
-      "time": "Issued on Jan. 2022",
+      "time": "Jan. 2022",
       "certificationID": "UC-a9370e6b-3732-4d8a-b8d1-f60f3ddb5be4",
       "headerColor": "transparent",
       "url": "https://www.udemy.com/certificate/UC-a9370e6b-3732-4d8a-b8d1-f60f3ddb5be4/",
@@ -64,7 +64,7 @@
     },
     {
       "name": "CCNA (Level 200)",
-      "time": "Issued on Oct. 4, 2020",
+      "time": "Oct. 2020",
       "certificationID": "a5961b75-3832-4326-99e4-f508598440fb",
       "headerColor": "transparent",
       "url": "https://www.credly.com/badges/a5961b75-3832-4326-99e4-f508598440fb?source=linked_in_profile",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Python3",
-      "time": "Issued on 2018",
+      "time": "2018",
       "certificationID": "1073-8851434",
       "headerColor": "transparent",
       "url": "https://www.sololearn.com/Certificate/1073-8851434/pdf/",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Querying with Transact-SQL",
-      "time": "Issued on 2016",
+      "time": "2016",
       "certificationID": "DAT201-x",
       "headerColor": "transparent",
       "url": "https://learning.edx.org/course/course-v1:Microsoft+DAT201x+3T2017/home",
@@ -271,7 +271,7 @@
     {
       "name": "Twitter",
       "url": "https://twitter.com/EBladimirVL",
-      "icon": "M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+      "icon": "M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"
     },
     {
       "name": "Facebook",
@@ -296,7 +296,7 @@
   ],
   "services": [
     {
-      "service": "🔍 Software Analyst",
+      "service": "Software Analyst",
       "description": "Several years in the industry have provided me with enough experience to provide this service. I help entrepeneurs and stablished companies to scale and improve their existing or new solutions.",
       "benefits": [
         "Ideal for starting new projects.",
@@ -306,7 +306,7 @@
       "logo": "/img/analysis.svg"
     },
     {
-      "service": "💻 Software Developer",
+      "service": "Software Developer",
       "description": "My main work and also what I love to do. Paired with experience in software analysis, I tend to provide the most efficient solutions for any project.",
       "benefits": [
         "Desgin scalable systems that are 'bug-proof'.",
@@ -317,7 +317,7 @@
       "logo": "/img/software.svg"
     },
     {
-      "service": "🔦 Hardware maintenance",
+      "service": "Hardware maintenance",
       "description": "Owner of a small business that provides hardware related services for other companies. We also do design, but I have been working independently before graduating from college.",
       "benefits": [
         "Analysis and aid in setting up new office spaces.",
@@ -328,7 +328,7 @@
       "logo": "/img/hardware.svg"
     },
     {
-      "service": "🗓️ Technical Interviewer",
+      "service": "Technical Interviewer",
       "description": "Due to several years of experience with a couple of tech stacks, I sometimes help out as a technical interviewer.",
       "benefits": [
         "I produce effective and understandable ways to evaluate possible candidates, testing both, their soft and technical skills.",

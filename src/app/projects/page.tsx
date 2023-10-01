@@ -5,11 +5,7 @@ import data from "../../utils/projects.json";
 export default function Projects() {
   return (
     <div className="flex flex-col w-full">
-      <Title
-        text="Projects and contributions"
-        size="base"
-        styles="mb-8 font-semibold"
-      />
+      <Title text="Projects" size="base" styles="mb-2 font-semibold" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {data.map((pro) => {
           return (

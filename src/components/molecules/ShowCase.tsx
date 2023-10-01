@@ -19,7 +19,7 @@ export default function ShowCase({ items, columns }: ShowCaseType) {
               src={itm}
               width={1000}
               height={1000}
-              className="rounded w-full h-40 object-cover hover:scale-105"
+              className="w-full h-40 object-cover opacity-95 hover:opacity-100"
             />
           </div>
         );

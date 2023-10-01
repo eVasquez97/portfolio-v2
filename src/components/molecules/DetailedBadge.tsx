@@ -10,7 +10,7 @@ export default function DetailedBadge({
 }: DetailedBadgeType) {
   return (
     <div
-      className={`${variableBg} m-2 flex items-center px-2 p-1 hover:scale-105 duration-300 rounded
+      className={`${variableBg} m-2 flex items-center px-2 p-1 hover:scale-105 duration-300
       border border-secondaryText-light dark:border-secondaryText-dark hover:font-semibold`}
       title={description}
     >

@@ -82,8 +82,8 @@ export default function Services() {
         <p className={variableText}>
           Throughout these years working on the IT sector, I have performed
           several roles and provided a lot of services, but when it comes to
-          programming effective solutions ⭐, these are the main technologies
-          that I have used:
+          programming effective solutions, these are the main technologies that
+          I have used:
         </p>
         <div className="w-full flex flex-col flex-wrap my-6">
           {itemsSection(programmingLanguages, "Programming languages")}

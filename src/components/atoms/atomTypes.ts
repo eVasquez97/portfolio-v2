@@ -11,3 +11,12 @@ export type TitleType = {
   styles?: string;
   textColor?: string;
 };
+
+export type IconType = {
+  icon: string;
+  styles?: string;
+  fill?: string;
+  stroke?: string;
+  color?: string;
+  viewBox?: string;
+};

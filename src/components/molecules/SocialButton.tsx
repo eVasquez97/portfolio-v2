@@ -1,12 +1,19 @@
 import { variableText } from "@/utils/constants";
+import Icon from "../atoms/Icon";
 
 type MediaButton = {
   name: string;
   url: string;
   icon: string;
+  viewBox?: string;
 };
 
-export default function SocialButton({ name, url, icon }: MediaButton) {
+export default function SocialButton({
+  name,
+  url,
+  icon,
+  viewBox,
+}: MediaButton) {
   return (
     <a
       href={url}
@@ -14,14 +21,13 @@ export default function SocialButton({ name, url, icon }: MediaButton) {
       aria-label={name}
       className={` ${variableText} mx-2 hover:scale-105`}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-4"
+      <Icon
+        icon={icon}
+        styles="w-4 h-4"
         fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d={icon} />
-      </svg>
+        stroke="none"
+        viewBox={viewBox}
+      />
     </a>
   );
 }

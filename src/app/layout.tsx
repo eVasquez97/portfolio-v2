@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${lato.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
       >
-        <main className="flex flex-col mx-auto max-w-2xl w-full mt-1">
+        <main className="flex flex-col mx-auto max-w-2xl w-full">
           <Header />
           <NavTabs />
           <Suspense fallback={<Loading />}>

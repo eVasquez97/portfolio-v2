@@ -1,30 +1,77 @@
+"use client";
 import { tenor } from "@/app/fonts";
-import { Title } from "../atoms";
+import {
+  firstOrder,
+  galacticEmpire,
+  jediOrder,
+  mandalorian,
+  variableText,
+} from "@/utils/constants";
 import Link from "next/link";
-import { variableText } from "@/utils/constants";
+import { useState } from "react";
+import { Title } from "../atoms";
+import Icon from "../atoms/Icon";
 
 export default function Header() {
+  enum soundTrack {
+    jediOrder = "/jedi.mp3",
+    mandalorian = "/mandalorian.mp3",
+    galacticEmpire = "/sith.mp3",
+    firstOrder = "/sith.mp3",
+  }
+
+  const icons = [jediOrder, mandalorian, galacticEmpire, firstOrder];
+  const [icon, setIcon] = useState(icons[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+
+  function playAudio() {
+    const keys = Object.keys(soundTrack);
+    const randomKey = keys[Math.floor(Math.random() * 3)];
+    setIcon(icons[keys.indexOf(randomKey)]);
+    const newAudio = new Audio(
+      soundTrack[randomKey as keyof typeof soundTrack]
+    );
+    newAudio.volume = 0.02;
+
+    if (!isPlaying) {
+      newAudio.play();
+      setIsPlaying(true);
+      setAudio(newAudio);
+
+      newAudio.addEventListener("ended", () => {
+        setIsPlaying(false);
+      });
+    }
+  }
+
+  function pauseAudio() {
+    if (audio) {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  }
+
   return (
-    <Link href="/" className="flex my-11 w-max self-center">
+    <Link
+      href="/"
+      className="flex mt-11 mb-5 w-max self-center"
+      onClick={() => playAudio()}
+    >
       <p className={`${variableText}`}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="100"
-          height="100"
-          viewBox="0 0 32 32"
-          className="w-8 h-8 mr-2"
+        <Icon
+          icon={icon}
           fill="currentColor"
-        >
-          <path d="M 15.486328 3 C 15.486328 3 15.173922 14.949516 15.044922 19.853516 L 13.292969 17.292969 L 14.419922 20.388672 L 10.927734 20.896484 L 14.419922 21.404297 L 13.070312 24.048828 L 14.994141 22.029297 C 14.894141 25.867297 14.871094 26.810547 14.871094 26.810547 C 14.871094 26.810547 6.2579219 22.810656 11.044922 13.972656 C 11.044922 13.972656 5.0754219 7.3820312 10.482422 3.3320312 C 10.482422 3.3320312 1.2494219 8.9074688 7.1074219 18.480469 C 7.1074219 18.480469 2.263875 13.74975 4.796875 8.96875 C 4.796875 8.96875 0.4068125 15.160656 5.7578125 21.972656 C 5.7578125 21.972656 4.2959531 21.075672 3.0019531 17.638672 C 3.0019531 17.638672 3.9437187 27.865047 15.386719 27.998047 L 15.615234 27.998047 C 27.051234 27.866047 28 17.640625 28 17.640625 C 26.683 21.071625 25.216797 21.974609 25.216797 21.974609 C 30.566797 15.162609 26.175781 8.9707031 26.175781 8.9707031 C 28.708781 13.757703 23.865234 18.482422 23.865234 18.482422 C 29.723234 8.9144219 20.490234 3.3359375 20.490234 3.3359375 C 25.896234 7.3919375 19.927734 13.974609 19.927734 13.974609 C 24.714734 22.811609 16.101562 26.8125 16.101562 26.8125 C 16.101562 26.8125 16.079516 25.86925 15.978516 22.03125 C 16.218516 22.28225 17.902344 24.050781 17.902344 24.050781 L 16.552734 21.40625 L 20.046875 20.898438 L 16.552734 20.390625 L 17.679688 17.294922 L 15.927734 19.855469 C 15.803734 14.961469 15.492328 3.1 15.486328 3 z"></path>
-        </svg>
-      </p>
-      <div className="typewriter">
-        <Title
-          text="EDUARDO VÁSQUEZ"
-          size="2xl"
-          styles={`${tenor.className} w-max text-2xl`}
+          styles="w-8 h-8 mr-2"
+          stroke="none"
+          viewBox={icon === icons[2] ? "0 0 50 50" : "0 0 32 32"}
         />
-      </div>
+      </p>
+      <Title
+        text="EDUARDO VÁSQUEZ"
+        size="2xl"
+        styles={`${tenor.className} w-max text-2xl hover:underline`}
+      />
     </Link>
   );
 }

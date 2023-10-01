@@ -18,19 +18,16 @@ export default function ProjectInfo() {
   function getProjectUrl() {
     return (
       project?.status === "live" && (
-        <Link
-          href={project?.url}
-          target="_blank"
-          className="rounded text-primary-light font-medium text-base"
-        >
-          <div className="p-1 rounded flex flex-row bg-highlight px-2">
+        <Link href={project?.url} target="_blank" className="text-highlight">
+          <div className="p-1 flex flex-row px-2 items-center">
+            View
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-5 h-5 mr-2"
+              className="w-4 h-4 ml-2"
             >
               <path
                 strokeLinecap="round"
@@ -38,7 +35,6 @@ export default function ProjectInfo() {
                 d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
               />
             </svg>
-            View
           </div>
         </Link>
       )
@@ -68,7 +64,7 @@ export default function ProjectInfo() {
         alt={project?.id || "img"}
         width={2000}
         height={2000}
-        className="w-full h-[180px] object-cover object-center rounded mb-5"
+        className="w-full h-[180px] object-cover object-center mb-5 opacity-95 hover:opacity-100"
       />
 
       <div className="my-8">
@@ -84,11 +80,9 @@ export default function ProjectInfo() {
 
       <div className="flex flex-col w-full">
         <div className="flex w-full items-center justify-between my-5">
-          <div
-            className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark w-full p-5 pb-0 rounded`}
-          >
+          <div className={`${variableBg} w-full p-5 pb-0`}>
             <div className="flex flex-col items-center md:flex-row">
-              <div className="flex rounded-full md:mr-5">
+              <div className="flex-full md:mr-5">
                 <Image
                   className="border border-secondaryText-light dark:border-secondaryText-dark h-40 w-40 mb-4 md:pb-0 md:w-20 md:h-20 rounded-full object-cover object-right"
                   src={project.companyLogo || "/img/banner1.jpg"}

@@ -12,7 +12,7 @@ export default function Skill({
 
   return (
     <div
-      className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark p-4 min-w-[140px] max-w-sm w-full min-h-[80px] mx-auto rounded flex items-center space-x-4 hover:scale-105 duration-300`}
+      className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark p-4 min-w-[140px] max-w-sm w-full min-h-[80px] mx-auto flex items-center space-x-4 hover:scale-105 duration-300`}
     >
       <div className="shrink-0">
         {logo && <Image src={logo} alt={name} width={44} height={44} />}
