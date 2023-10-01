@@ -10,8 +10,7 @@ export default function DetailedBadge({
 }: DetailedBadgeType) {
   return (
     <div
-      className={`${variableBg} m-2 flex items-center px-2 p-1 hover:scale-105 duration-300
-      border border-secondaryText-light dark:border-secondaryText-dark hover:font-semibold`}
+      className={`${variableBg} m-1 flex items-center px-2 p-1 rounded`}
       title={description}
     >
       <div>
@@ -26,9 +25,13 @@ export default function DetailedBadge({
       <div>
         <p className={`${variableText} text-sm flex flex-row`}>
           {name}
-          <span className={`${variableText} opacity-60 font-light ml-2`}>
-            {experience}
-          </span>
+          {experience && (
+            <span
+              className={`${variableText} opacity-60 font-light ml-2 text-sm`}
+            >
+              {experience}
+            </span>
+          )}
         </p>
       </div>
     </div>

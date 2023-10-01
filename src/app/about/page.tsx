@@ -1,32 +1,30 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Title } from "@/components/atoms";
-import { DynamicGallery } from "@/components/organisms";
-import { EducationType } from "./EducationType";
-import { variableText } from "@/utils/constants";
-import data from "../../utils/data.json";
 import Icon from "@/components/atoms/Icon";
 import { ShowCase } from "@/components/molecules";
+import { variableText } from "@/utils/constants";
+import Link from "next/link";
+import data from "../../utils/data.json";
+import { EducationType } from "./EducationType";
 
 export default function About() {
   const { education, courses } = data;
   const images = [
-    "/img/gallery/titulo.jpg",
-    "/img/gallery/trip.JPG",
-    "/img/gallery/random.jpg",
+    "/img/gallery/hobby1.jpg",
+    "/img/gallery/random2.jpg",
+    "/img/banners/portfolio.png",
   ];
 
   function getEducationInfo(ed: EducationType) {
     return (
-      <Link key={ed.title} href={ed.url} className="hover:font-semibold">
+      <Link key={ed.title} href={ed.url} className="hover:font-normal">
         <div className="flex w-full my-4" key={ed.title}>
           <div className="flex flex-col w-full">
             <div className={`${variableText} text-left flex-wrap`}>
-              <p className="font-semibold">{ed.title}</p>
-              <p className="font-normal text-sm flex-wrap mb-2">
+              <p className="font-normal underline">{ed.title}</p>
+              <p className="font-light text-sm flex-wrap mb-2">
                 {ed.institute}
               </p>
-              <p className="font-normal italic text-xs opacity-60">{ed.time}</p>
+              <p className="font-light italic text-xs opacity-60">{ed.time}</p>
             </div>
           </div>
         </div>
@@ -38,25 +36,25 @@ export default function About() {
     <div className="bg-primary-light dark:bg-primary-dark min-w-full">
       <div className="flex flex-col w-full">
         <ShowCase items={images} />
-        <p className={`${variableText} my-11`}>
-          I&apos;m a <span className="font-semibold">full stack developer</span>{" "}
+        <p className={`${variableText} my-11 font-light`}>
+          I&apos;m a <span className="font-normal">full stack developer</span>{" "}
           from Honduras. I have over five years of experience in creating web
           and mobile applications and enjoy tackling challenging problems and
           delivering quality products that meet the needs of users and clients.
           Besides coding, I also enjoy going to the beach and cooking - fried
           chicken is my specialty. I&apos;ve also been volunteering as an{" "}
-          <span className="font-semibold">interpreter</span> for medical and
+          <span className="font-normal">interpreter</span> for medical and
           construction teams from the{" "}
-          <span className="font-semibold">Episcopal Church</span> in United
-          States that come anually to Honduras to help. I&apos;ve been doing
-          this volunteer work since 2007.
+          <span className="font-normal">Episcopal Church</span> in United States
+          that come anually to Honduras to help. I&apos;ve been doing this
+          volunteer work since 2007.
         </p>
       </div>
 
       <div className="flex flex-col w-full mb-8">
         <div>
-          <Title text="Education" size="base" styles="font-semibold" />
-          <div className="flex flex-col w-full">
+          <Title text="Education" size="base" styles="font-normal" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {education.map((ed) => {
               return getEducationInfo(ed);
             })}
@@ -67,16 +65,14 @@ export default function About() {
       <Title
         text="Courses / Certifications"
         size="base"
-        styles="my-8 font-semibold"
+        styles="my-8 font-normal"
       />
       <table className={`${variableText} table w-full text-left`}>
         <thead>
-          <tr className="font-normal pb-2">
-            <th className="max-w-[44px] font-normal">
-              <p>Date</p>
-            </th>
-            <th className="flex flex-wrap font-normal px-1">
-              <p>Title</p>
+          <tr className="pb-2">
+            <th className="max-w-[44px] font-light text-sm opacity-80">date</th>
+            <th className="flex flex-wrap font-light px-1 text-sm opacity-80">
+              title
             </th>
             <th className="max-w-[44px]"></th>
           </tr>
@@ -88,11 +84,11 @@ export default function About() {
                 key={course.certificationID}
                 className="px-2 border-t-[1px] border-t-secondaryText-light dark:border-t-secondaryText-dark"
               >
-                <td className="py-3 font-light text-sm pr-2">
+                <td className="py-3 font-light text-xs pr-2 opacity-80">
                   <p>{course.time}</p>
                 </td>
                 <td className="font-normal px-1">
-                  <div className="py-1">
+                  <div className="py-1 opacity-95">
                     <p>{course.name}</p>
                     <p className="text-xs opacity-60">{course.company}</p>
                   </div>

@@ -18,7 +18,7 @@ export default function Services() {
   } = data;
   const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-3";
   const internalSection = "flex flex-row flex-wrap w-full";
-  const titleStyle = "my-5 font-semibold";
+  const titleStyle = "my-5 font-normal";
 
   function itemsSection(items: any[], title: string) {
     return (
@@ -30,7 +30,6 @@ export default function Services() {
               <DetailedBadge
                 key={item.name}
                 name={item.name}
-                experience={item.experience}
                 logo={item.logo}
                 description={item.description}
               />
@@ -43,7 +42,11 @@ export default function Services() {
 
   return (
     <div className="w-full flex flex-col">
-      <Title text="Most used tech stacks" size="base" styles={titleStyle} />
+      <Title
+        text="Most used tech stacks"
+        size="base"
+        styles="font-normal mb-5"
+      />
       <div className={`${gridStyle} mb-11`}>
         {techStacks.map((ts) => {
           return (
@@ -58,7 +61,7 @@ export default function Services() {
         })}
       </div>
       <div>
-        <p className={`${variableText}`}>
+        <p className={`${variableText} font-light`}>
           Some of the main services I provide are:
         </p>
         <div className="min-w-full my-6">
@@ -78,7 +81,7 @@ export default function Services() {
 
       <Quote quote="Always in motion the future is. - Yoda" />
 
-      <div className="bg-primary-light dark:bg-primary-dark mt-8">
+      <div className="bg-primary-light dark:bg-primary-dark mt-8 font-light">
         <p className={variableText}>
           Throughout these years working on the IT sector, I have performed
           several roles and provided a lot of services, but when it comes to

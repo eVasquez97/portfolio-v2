@@ -1,15 +1,15 @@
-import { Lato, Tenor_Sans } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 
-export const lato = Lato({
+export const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "900"],
+  weight: ["100", "300", "400", "500"],
   display: "swap",
-  variable: "--lato-font",
+  variable: "--inter-font",
 });
 
-export const tenor = Tenor_Sans({
+export const lora = Lora({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--tenor-font",
+  variable: "--lora-font",
 });

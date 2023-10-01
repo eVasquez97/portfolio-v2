@@ -1,6 +1,6 @@
 export type DetailedBadgeType = {
   name: string;
-  experience: string;
+  experience?: string;
   logo: string;
-  description: string;
+  description?: string;
 };

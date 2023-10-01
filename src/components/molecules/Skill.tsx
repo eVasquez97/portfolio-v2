@@ -12,13 +12,13 @@ export default function Skill({
 
   return (
     <div
-      className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark p-4 min-w-[140px] max-w-sm w-full min-h-[80px] mx-auto flex items-center space-x-4 hover:scale-105 duration-300`}
+      className={`${variableBg} border border-secondaryText-light dark:border-secondaryText-dark p-4 min-w-[140px] max-w-sm w-full min-h-[80px] mx-auto flex items-center space-x-4 rounded`}
     >
       <div className="shrink-0">
         {logo && <Image src={logo} alt={name} width={44} height={44} />}
       </div>
       <div>
-        <p className={` ${variableText} text-base font-semibold flex flex-row`}>
+        <p className={` ${variableText} text-base font-normal flex flex-row`}>
           {name}
           {experience && (
             <span className={`${variableText} font-normal opacity-60 ml-2`}>

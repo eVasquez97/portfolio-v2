@@ -48,10 +48,10 @@ export default function ProjectInfo() {
           <Title
             text={project?.name}
             size="2xl"
-            styles={`${variableText} font-semibold mt-2 capitalize text-2xl`}
+            styles={`${variableText} font-normal mt-2 capitalize text-2xl`}
           />
           <span
-            className={`${variableText} text-sm opacity-60 ml-2 mt-2 capitalize mb-6`}
+            className={`${variableText} font-light text-sm opacity-60 ml-2 mt-2 capitalize mb-6`}
           >
             {project?.platform}
           </span>
@@ -64,16 +64,16 @@ export default function ProjectInfo() {
         alt={project?.id || "img"}
         width={2000}
         height={2000}
-        className="w-full h-[180px] object-cover object-center mb-5 opacity-95 hover:opacity-100"
+        className="w-full h-[180px] object-cover object-center mb-5 opacity-95 hover:opacity-100 rounded"
       />
 
       <div className="my-8">
         <Title
           text="Description"
           size="base"
-          styles={`${variableText} font-semibold`}
+          styles={`${variableText} font-normal`}
         />
-        <p className={`${variableText} my-5`}>
+        <p className={`${variableText} my-5 font-light`}>
           {project?.intro} {project?.fullDesc}
         </p>
       </div>
@@ -92,14 +92,14 @@ export default function ProjectInfo() {
                 />
               </div>
               <div className="flex flex-col">
-                <p className="text-highlight font-semibold mb-1">
+                <p className="text-highlight font-normal mb-1">
                   {project?.role}
                 </p>
-                <p className={`${variableText} mb-1`}>
+                <p className={`${variableText} mb-1 font-light`}>
                   {project?.company} - {project?.time}
                 </p>
                 <p
-                  className={`${variableText} italic capitalize opacity-60 text-sm`}
+                  className={`${variableText} italic capitalize opacity-60 text-sm font-light`}
                 >
                   {project?.jobType} - {project?.location}
                 </p>
@@ -110,9 +110,9 @@ export default function ProjectInfo() {
               <Title
                 text="Tech stack"
                 size="base"
-                styles={`${variableText} font-semibold`}
+                styles={`${variableText} font-normal`}
               />
-              <div className="flex flex-row flex-wrap my-2">
+              <div className="flex flex-row flex-wrap my-2 font-light">
                 {project?.techStack.map((ts) => {
                   return (
                     <Badge key={ts} text={ts} styles={`${variableText} m-1`} />
@@ -129,12 +129,15 @@ export default function ProjectInfo() {
             <Title
               text="Main responsibilities"
               size="base"
-              styles={`${variableText} font-semibold`}
+              styles={`${variableText} font-normal`}
             />
             <div className="p-6">
               {project?.responsibilities.map((res) => {
                 return (
-                  <p key={res} className={`${variableText} list-item mb-2`}>
+                  <p
+                    key={res}
+                    className={`${variableText} list-item mb-2 font-light`}
+                  >
                     {res}
                   </p>
                 );
