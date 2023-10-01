@@ -43,7 +43,7 @@ export default function Home() {
         and contributions. I&apos;m always eager to learn new skills and
         technologies to enhance my professional growth. On my free time I enjoy
         cooking, reading, exercising, and programming cause{" "}
-        <span className="italic">this is the way.</span>I also provide various{" "}
+        <span className="italic">this is the way.</span> I also provide various{" "}
         <Link className={`${minimalLink}`} href="/services">
           services{" "}
         </Link>

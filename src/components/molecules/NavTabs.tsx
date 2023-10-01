@@ -7,7 +7,7 @@ export default function NavTabs() {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-row justify-end w-full mt-5 mb-12 pb-2 border-b-2 border-b-secondaryText-light dark:border-b-secondaryText-dark">
+    <div className="flex flex-row justify-center md:justify-end w-full mt-5 mb-12 pb-2 border-b-2 border-b-secondaryText-light dark:border-b-secondaryText-dark">
       {routes.map((route) => {
         const isActive = pathname === route.url;
         return (
