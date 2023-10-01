@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${fira.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
       >
-        <main className="flex flex-col mx-auto max-w-2xl w-full">
+        <main className="flex flex-col mx-auto max-w-2xl w-full dark:opacity-90">
           <NavTabs />
           <Header />
           <Suspense fallback={<Loading />}>
