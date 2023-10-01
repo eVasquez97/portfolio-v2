@@ -64,7 +64,7 @@
     ],
     "img": "/img/banners/imitig8.jpg",
     "url": "https://apps.apple.com/bo/app/imitig8-risk-global/id1532921468",
-    "companyLogo": "/img/companies/puzzle.jpeg",
+    "companyLogo": "/img/companies/puzzle.JPG",
     "fullDesc": "This was inherited code and as usual, it came with a lot of problems inherited. Initally I was hired as a mobile developer but after the first weeks, I started working as a full stack developer creating new modules on the mobile app, the website, and refactring backend endpoints. This project was improved drastically and I also solved several security breaches that came along with the project."
   },
   {
@@ -88,7 +88,7 @@
     ],
     "img": "/img/banners/iron24.jpg",
     "url": "https://play.google.com/store/apps/details?id=com.franchiczar.iron",
-    "companyLogo": "/img/companies/believe.jpeg",
+    "companyLogo": "/img/companies/believe.JPG",
     "fullDesc": "One of the four franchises owned by our client, Iron24 is a chain of gyms in the US. We developed a white ladeling app and we started with Iron24. My main contributions were the Google Maps API integration, the Stripe API integration as well as the creation and maintenance of several app modules including: Facility Selection, Checkout screen, Payment Method screen, Profile Screen, to name a few."
   },
   {
