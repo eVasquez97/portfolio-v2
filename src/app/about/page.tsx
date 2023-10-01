@@ -11,7 +11,7 @@ export default function About() {
   const images = [
     "/img/gallery/hobby1.jpg",
     "/img/gallery/random2.jpg",
-    "/img/banners/portfolio.png",
+    "/img/gallery/grad.jpg",
   ];
 
   function getEducationInfo(ed: EducationType) {
