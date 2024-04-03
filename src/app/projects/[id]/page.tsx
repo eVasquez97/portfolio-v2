@@ -95,7 +95,7 @@ export default function ProjectInfo() {
 
       <div className="flex flex-col w-full">
         <div className="flex w-full items-center my-5">
-          <div className="flex-full md:mr-5 items-center">
+          <div className="flex-full md:mr-5 mr-2 items-center">
             <Image
               className="border border-secondaryText-light dark:border-secondaryText-dark h-40 w-40 mb-4 md:pb-0 md:w-20 md:h-20 rounded object-cover object-right"
               src={project.companyLogo || "/img/banner1.jpg"}
