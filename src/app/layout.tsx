@@ -1,8 +1,8 @@
-import { Footer, Header, NavTabs } from "@/components/molecules";
+import { Footer, NavTabs } from "@/components/molecules";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { fira } from "./fonts";
+import { ubuntu } from "./fonts";
 import "./globals.css";
 import Loading from "./loading";
 
@@ -22,11 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fira.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
+        className={`${ubuntu.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
       >
-        <main className="flex flex-col mx-auto max-w-2xl w-full dark:opacity-90">
+        <main className="flex flex-col mx-auto max-w-xl w-full dark:opacity-90">
           <NavTabs />
-          <Header />
           <Suspense fallback={<Loading />}>
             {children}
             <Footer />

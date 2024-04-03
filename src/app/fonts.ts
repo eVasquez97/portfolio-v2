@@ -1,8 +1,8 @@
-import { Fira_Sans } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 
-export const fira = Fira_Sans({
+export const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700"],
+  weight: ["300", "400", "500", "700"],
   display: "swap",
-  variable: "--fira-font",
+  variable: "--ubuntu-font",
 });

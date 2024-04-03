@@ -250,13 +250,13 @@
     },
     {
       "name": "Mobile",
-      "experience": "4.5 years",
+      "experience": "5+ years",
       "description": "React Native + C# + MongoDB",
-      "logo": "https://cdn.worldvectorlogo.com/logos/android.svg"
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
     },
     {
       "name": "Web",
-      "experience": "2+ years",
+      "experience": "3+ years",
       "description": "TypeScript + Python + MongoDB",
       "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
     },
@@ -264,7 +264,7 @@
       "name": "Mobile",
       "experience": "2 years",
       "description": "React Native + Python + MongoDB",
-      "logo": "https://cdn.worldvectorlogo.com/logos/apple-13.svg"
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
     }
   ],
   "socialMedia": [

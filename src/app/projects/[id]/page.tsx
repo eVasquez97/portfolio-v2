@@ -19,7 +19,7 @@ export default function ProjectInfo() {
     return (
       project?.status === "live" && (
         <Link href={project?.url} target="_blank" className="text-highlight">
-          <div className="p-1 flex flex-row px-2 items-center">
+          <div className="p-1 flex flex-row px-2 items-center font-light">
             View
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export default function ProjectInfo() {
                 />
               </div>
               <div className="flex flex-col">
-                <p className="text-highlight font-normal mb-1">
+                <p className="text-highlight font-semibold mb-1">
                   {project?.role}
                 </p>
                 <p className={`${variableText} mb-1 `}>
@@ -110,7 +110,7 @@ export default function ProjectInfo() {
               <Title
                 text="Tech stack"
                 size="base"
-                styles={`${variableText} font-normal`}
+                styles={`${variableText} font-light`}
               />
               <div className="flex flex-row flex-wrap my-2 ">
                 {project?.techStack.map((ts) => {

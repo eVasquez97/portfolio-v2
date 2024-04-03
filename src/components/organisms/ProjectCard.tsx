@@ -32,7 +32,7 @@ export default function ProjectCard({
         <div className="flex flex-row items-center">
           <div className="flex rounded-full mr-1.5">
             <Image
-              className="border border-secondaryText-light dark:border-secondaryText-dark w-12 h-12 rounded-full mr-3 object-cover"
+              className="border border-secondaryText-light dark:border-secondaryText-dark w-12 h-12 rounded mr-3 object-cover opacity-90 hover:opacity-100"
               src={comapanyLogo || img || "/img/banner1.jpg"}
               alt=""
               width={1000}
@@ -41,7 +41,7 @@ export default function ProjectCard({
           </div>
           <div className="flex flex-col w-full ml-2">
             <div className="flex flex-row">
-              <Title text={name} styles="mr-1" />
+              <Title text={name} styles="mr-1 font-normal" />
               <span
                 className={`${variableText} capitalize text-[10px] opacity-60`}
               >
@@ -69,7 +69,9 @@ export default function ProjectCard({
 
         {intro && (
           <div className="mt-5">
-            <span className={`${variableText} text-sm ml-2`}>{intro}</span>
+            <span className={`${variableText} text-sm ml-2 font-light`}>
+              {intro}
+            </span>
 
             {techStack && (
               <div className="flex flex-row flex-wrap w-full mt-3">

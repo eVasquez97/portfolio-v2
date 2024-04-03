@@ -1,5 +1,29 @@
 [
   {
+    "id": "barosa_app",
+    "name": "Barosa",
+    "platform": "mobile",
+    "intro": "A collector's dream come true.",
+    "techStack": ["React Native", "MongoDB", "TypeScript"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "Puzzle",
+    "location": "Remote",
+    "role": "Full Stack Developer",
+    "time": "Nov. 2023 - present",
+    "responsibilities": [
+      "Develop the Vouch feature for the application.",
+      "Devlop, update and maintain the Groups feature as well as generate the logic for Posting items for sale",
+      "Refactor and implement best code practices for several modules in the application",
+      "Aid in documenting new features and modules for the application",
+      "Mainatain and update the application."
+    ],
+    "img": "/img/banners/mock-shop.png",
+    "url": "",
+    "companyLogo": "/img/companies/puzzle.jpeg",
+    "fullDesc": "Barosa is my most recent project, it is like a social media platform for collectors, where they can share their collections, buy, sell, and trade items. The project is still in development and I am currently working on the Vouch, Groups, and Posts features. We're aiming for a soon release to the stores and also a web version of the app is planned for the future. Interesting fact: Barosa means trust."
+  },
+  {
     "id": "portfolio_v3",
     "name": "Dev Portfolio",
     "platform": "web",
