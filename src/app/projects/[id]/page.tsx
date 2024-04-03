@@ -45,11 +45,11 @@ export default function ProjectInfo() {
     <div className="w-full h-full">
       <div className="flex flex-row my-4 justify-between items-center">
         <div className="flex flex-row">
-          <Title
-            text={project?.name}
-            size="2xl"
-            styles={`${variableText} font-normal mt-2 capitalize text-2xl`}
-          />
+          <p
+            className={`${variableText} font-semibold mt-2 capitalize text-3xl`}
+          >
+            {project.name}
+          </p>
           <span
             className={`${variableText}  text-sm opacity-60 ml-2 mt-2 capitalize mb-6`}
           >
@@ -57,6 +57,20 @@ export default function ProjectInfo() {
           </span>
         </div>
         <div className="flex self-center">{getProjectUrl()}</div>
+      </div>
+
+      <div className="w-full mb-5 -mt-2">
+        <div className="flex flex-row flex-wrap my-2 ">
+          {project?.techStack.map((ts) => {
+            return (
+              <Badge
+                key={ts}
+                text={ts}
+                styles={`${variableText} m-1 first:ml-0`}
+              />
+            );
+          })}
+        </div>
       </div>
 
       <Image
@@ -71,7 +85,8 @@ export default function ProjectInfo() {
         <Title
           text="Description"
           size="base"
-          styles={`${variableText} font-normal`}
+          styles="font-normal"
+          textColor="text-highlight"
         />
         <p className={`${variableText} my-5 `}>
           {project?.intro} {project?.fullDesc}
@@ -79,47 +94,26 @@ export default function ProjectInfo() {
       </div>
 
       <div className="flex flex-col w-full">
-        <div className="flex w-full items-center justify-between my-5">
-          <div className={`${variableBg} w-full p-5 pb-0`}>
-            <div className="flex flex-col items-center md:flex-row">
-              <div className="flex-full md:mr-5">
-                <Image
-                  className="border border-secondaryText-light dark:border-secondaryText-dark h-40 w-40 mb-4 md:pb-0 md:w-20 md:h-20 rounded-full object-cover object-right"
-                  src={project.companyLogo || "/img/banner1.jpg"}
-                  alt=""
-                  width={1000}
-                  height={1000}
-                />
-              </div>
-              <div className="flex flex-col">
-                <p className="text-highlight font-semibold mb-1">
-                  {project?.role}
-                </p>
-                <p className={`${variableText} mb-1 `}>
-                  {project?.company} - {project?.time}
-                </p>
-                <p
-                  className={`${variableText} italic capitalize opacity-60 text-sm `}
-                >
-                  {project?.jobType} - {project?.location}
-                </p>
-              </div>
-            </div>
-
-            <div className="w-full my-5">
-              <Title
-                text="Tech stack"
-                size="base"
-                styles={`${variableText} font-light`}
-              />
-              <div className="flex flex-row flex-wrap my-2 ">
-                {project?.techStack.map((ts) => {
-                  return (
-                    <Badge key={ts} text={ts} styles={`${variableText} m-1`} />
-                  );
-                })}
-              </div>
-            </div>
+        <div className="flex w-full items-center my-5">
+          <div className="flex-full md:mr-5 items-center">
+            <Image
+              className="border border-secondaryText-light dark:border-secondaryText-dark h-60 w-60 mb-4 md:pb-0 md:w-20 md:h-20 rounded object-cover object-right"
+              src={project.companyLogo || "/img/banner1.jpg"}
+              alt=""
+              width={1000}
+              height={1000}
+            />
+          </div>
+          <div className="flex flex-col -mt-4">
+            <p className="text-highlight font-bold mb-1">{project?.role}</p>
+            <p className={`${variableText} mb-1`}>
+              {project?.company} - {project?.time}
+            </p>
+            <p
+              className={`${variableText} italic capitalize opacity-60 text-sm `}
+            >
+              {project?.jobType} - {project?.location}
+            </p>
           </div>
         </div>
 
@@ -129,7 +123,8 @@ export default function ProjectInfo() {
             <Title
               text="Main responsibilities"
               size="base"
-              styles={`${variableText} font-normal`}
+              styles="font-normal"
+              textColor="text-highlight"
             />
             <div className="p-6">
               {project?.responsibilities.map((res) => {

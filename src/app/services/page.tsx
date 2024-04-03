@@ -33,7 +33,7 @@ export default function Services() {
         target="_blank"
       >
         <div className="flex w-full my-4" key={ed.title}>
-          <div className="w-[90] mr-2">
+          <div className="w-[90] mr-2 bg-transparent rounded">
             <Image src={ed.image} alt={ed.title} width={90} height={90} />
           </div>
           <div className="flex flex-col w-full">
@@ -51,7 +51,12 @@ export default function Services() {
   function itemsSection(items: any[], title: string) {
     return (
       <div className="w-full h-full my-2">
-        <Title text={title} size="base" styles={titleStyle} />
+        <Title
+          text={title}
+          size="base"
+          styles={titleStyle}
+          textColor="text-highlight"
+        />
         <div className={internalSection}>
           {items.map((item: DetailedBadgeType) => {
             return (

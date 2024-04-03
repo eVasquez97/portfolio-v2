@@ -25,6 +25,7 @@ export default function ProjectCard({
         pathname: `/projects/${name}`,
         query: { id: id },
       }}
+      className="hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >
       <div
         className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-2.5`}
@@ -41,7 +42,7 @@ export default function ProjectCard({
           </div>
           <div className="flex flex-col w-full ml-2">
             <div className="flex flex-row">
-              <Title text={name} styles="mr-1 font-normal" />
+              <p className="mr-1 font-bold text-lg text-highlight">{name}</p>
               <span
                 className={`${variableText} capitalize text-[10px] opacity-60`}
               >

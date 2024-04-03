@@ -9,6 +9,10 @@ export default function Title({
 }: TitleType) {
   const textSize = getTextSize(size);
   return (
-    <h1 className={`font-[500] ${textSize} ${styles} ${textColor}`}>{text}</h1>
+    <h1
+      className={`font-[500] ${textSize} ${styles} ${textColor} border-b-2 opacity-80 w-full`}
+    >
+      {text}
+    </h1>
   );
 }

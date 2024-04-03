@@ -1,17 +1,17 @@
-import Link from "next/link";
+import { variableText } from "@/utils/constants";
 import { MandoSticker, Title } from "../atoms";
 
 export default function Header() {
   return (
-    <Link href="/" className="flex my-11 w-max items-center">
+    <div className="flex mt-4 mb-10 w-max items-center">
       <>
         <MandoSticker />
-        <Title
-          text="Eduardo Vásquez"
-          size="2xl"
-          styles="font-semibold w-max text-2xl opacity-95 hover:opacity-100 transition-opacity ml-2"
-        />
+        <p
+          className={` ${variableText}font-normal w-max text-2xl opacity-95 ml-2`}
+        >
+          This is the way
+        </p>
       </>
-    </Link>
+    </div>
   );
 }

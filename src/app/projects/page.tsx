@@ -1,16 +1,11 @@
-import { Title } from "@/components/atoms";
-import { ProjectCard } from "@/components/organisms";
+import { ProjectCard, Quote } from "@/components/organisms";
 import data from "../../utils/projects.json";
 
 export default function Projects() {
   return (
     <div className="flex flex-col w-full">
-      <Title
-        text="Projects"
-        styles="mb-4 font-normal"
-        textColor="text-highlight"
-      />
-      <div className="grid grid-cols-1 gap-3">
+      <Quote quote="In my experience, there’s no such thing as luck. - Obi Wan Kenobi" />
+      <div className="grid grid-cols-1 gap-3 mt-5">
         {data.map((pro) => {
           return (
             <ProjectCard

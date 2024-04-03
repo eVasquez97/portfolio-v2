@@ -1,9 +1,9 @@
-import { ProjectCard } from "@/components/organisms";
+import { ProjectCard, Quote } from "@/components/organisms";
 import { variableText } from "@/utils/constants";
 import Link from "next/link";
 import projects from "../utils/projects.json";
 import data from "../utils/data.json";
-import { ShowCase } from "@/components/molecules";
+import { Header, ShowCase } from "@/components/molecules";
 import Icon from "@/components/atoms/Icon";
 import { Title } from "@/components/atoms";
 
@@ -13,27 +13,23 @@ export default function Home() {
   const images = [
     "/img/gallery/titulo.jpg",
     "/img/gallery/trip.JPG",
-    "/img/gallery/random.jpg",
+    "/img/gallery/grad.jpg",
   ];
   const { courses } = data;
 
   return (
     <div className="flex flex-col w-full">
+      <Header />
       <ShowCase items={images} />
-      <p className={`${variableText} my-5`}>
+      <p className={`${variableText} my-6`}>
         I&apos;m a{" "}
         <Link className={`${minimalLink}`} href="/services">
           full stack developer{" "}
         </Link>{" "}
         who enjoys tackling challenging problems and delivering quality
         products. I consider myself a React JS master and Python & TypeScript
-        enthusiast. And that&apos;s not all, you may check{" "}
-        <Link className={`${minimalLink}`} href="/projects">
-          all projects{" "}
-        </Link>{" "}
-        and contributions. I&apos;m always eager to learn new skills and
-        technologies to enhance my professional growth. My most recent projects
-        include:
+        enthusiast. I&apos;m always eager to learn new skills and technologies
+        to enhance my professional growth. My most recent projects include:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mt-2">
         {showCase.map((pro) => {
@@ -67,7 +63,7 @@ export default function Home() {
         styles="my-5 font-normal"
         textColor="text-highlight"
       />
-      <table className={`${variableText} table w-full text-left`}>
+      <table className={`${variableText} table w-full text-left mb-8`}>
         <thead>
           <tr className="pb-2">
             <th className="max-w-[44px] text-sm opacity-80 font-normal">
@@ -89,9 +85,9 @@ export default function Home() {
                 <td className="py-3  text-xs pr-2 opacity-80">
                   <p>{course.time}</p>
                 </td>
-                <td className="font-normal px-1">
+                <td className="px-1">
                   <div className="py-1.5">
-                    <p>{course.name}</p>
+                    <p className="opacity-95">{course.name}</p>
                     <p className="text-xs opacity-60">{course.company}</p>
                   </div>
                 </td>
@@ -108,6 +104,8 @@ export default function Home() {
           })}
         </tbody>
       </table>
+
+      <Quote quote="Do or do not, there is not try. - Yoda" />
     </div>
   );
 }
