@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Badge, Title } from "@/components/atoms";
+import { Title } from "@/components/atoms";
 import { useSearchParams } from "next/navigation";
 import data from "../../../utils/projects.json";
-import { variableBg, variableText } from "@/utils/constants";
+import tech from "../../../utils/data.json";
+import { variableText } from "@/utils/constants";
+import DetailedBadge from "@/components/molecules/DetailedBadge";
 
 function getProjectData(id: string) {
   return data.find((x) => x.id === id);
@@ -14,6 +16,15 @@ export default function ProjectInfo() {
   const params = useSearchParams();
   const id = params.get("id");
   const project = getProjectData(id || "1");
+  const { programmingLanguages, dbTech, cloudServices, otherTech, frameworks } =
+    tech;
+  const allTech = [
+    ...programmingLanguages,
+    ...dbTech,
+    ...cloudServices,
+    ...otherTech,
+    ...frameworks,
+  ];
 
   function getProjectUrl() {
     return (
@@ -62,12 +73,15 @@ export default function ProjectInfo() {
       <div className="w-full mb-5 -mt-2">
         <div className="flex flex-row flex-wrap my-2 ">
           {project?.techStack.map((ts) => {
+            const tech = allTech.find((t) => t.name === ts);
             return (
-              <Badge
-                key={ts}
-                text={ts}
-                styles={`${variableText} m-1 first:ml-0`}
-              />
+              tech && (
+                <DetailedBadge
+                  key={tech.name}
+                  logo={tech.logo}
+                  name={tech?.name}
+                />
+              )
             );
           })}
         </div>

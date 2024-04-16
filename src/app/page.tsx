@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full">
-      <Header />
+      <Quote quote="This is the way. - Din Djarin" style="mb-5" />
       <ShowCase items={images} />
       <p className={`${variableText} my-6`}>
         I&apos;m a{" "}

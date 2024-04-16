@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge, Title } from "../atoms";
+import { Badge } from "../atoms";
 import { showIcon, variableBg, variableText } from "@/utils/constants";
 import { ProjectProps } from "./orgamismTypes";
 import Icon from "../atoms/Icon";
+import data from "@/utils/data.json";
+import DetailedBadge from "../molecules/DetailedBadge";
 
 export default function ProjectCard({
   name,
@@ -18,6 +20,15 @@ export default function ProjectCard({
   comapanyLogo,
 }: ProjectProps) {
   const detailText = "capitalize";
+  const { programmingLanguages, dbTech, cloudServices, otherTech, frameworks } =
+    data;
+  const techs = [
+    ...programmingLanguages,
+    ...dbTech,
+    ...cloudServices,
+    ...otherTech,
+    ...frameworks,
+  ];
 
   return (
     <Link
@@ -77,14 +88,15 @@ export default function ProjectCard({
             {techStack && (
               <div className="flex flex-row flex-wrap w-full mt-3">
                 {techStack.map((ts) => {
+                  const tech = techs.find((t) => t.name === ts);
                   return (
-                    <Badge
-                      key={ts}
-                      text={ts}
-                      styles="border border-secondaryText-light dark:border-secondaryText-dark m-1"
-                      background="bg-highlight"
-                      textColor="text-primary-light"
-                    />
+                    tech && (
+                      <DetailedBadge
+                        key={tech.name}
+                        logo={tech.logo}
+                        name={tech.name}
+                      />
+                    )
                   );
                 })}
               </div>
