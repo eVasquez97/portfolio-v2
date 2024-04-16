@@ -14,6 +14,7 @@ export default function Home() {
     "/img/gallery/titulo.jpg",
     "/img/gallery/trip.JPG",
     "/img/gallery/grad.jpg",
+    "/img/gallery/hobby2.jpg",
   ];
   const { courses } = data;
 
