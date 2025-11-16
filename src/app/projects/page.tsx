@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <div className="flex flex-col w-full">
       <Quote quote="In my experience, there’s no such thing as luck. - Obi Wan Kenobi" />
-      <div className="grid grid-cols-1 gap-3 mt-5">
+      <div className="grid grid-cols-2 gap-4 mt-5">
         {data.map((pro) => {
           return (
             <ProjectCard

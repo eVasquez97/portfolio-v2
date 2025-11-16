@@ -142,7 +142,7 @@
     "id": "saver_site",
     "name": "The Saver",
     "platform": "web",
-    "intro": "Don't like printed magazines? Visit this site...",
+    "intro": "Don't like printed magazines?",
     "techStack": ["React JS", "GraphQL", "AWS"],
     "status": "live",
     "jobType": "full time",

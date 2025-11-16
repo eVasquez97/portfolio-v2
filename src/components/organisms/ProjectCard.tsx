@@ -39,7 +39,7 @@ export default function ProjectCard({
       className="hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >
       <div
-        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-2.5`}
+        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-2.5 min-h-full`}
       >
         <div className="flex flex-row items-center">
           <div className="flex rounded-full mr-1.5">
@@ -81,12 +81,12 @@ export default function ProjectCard({
 
         {intro && (
           <div className="mt-5">
-            <span className={`${variableText} text-sm ml-2 font-light`}>
+            <span className={`${variableText} text-sm ml-1 font-light`}>
               {intro}
             </span>
 
             {techStack && (
-              <div className="flex flex-row flex-wrap w-full mt-3">
+              <div className="flex flex-row flex-wrap w-full mt-4">
                 {techStack.map((ts) => {
                   const tech = techs.find((t) => t.name === ts);
                   return (
