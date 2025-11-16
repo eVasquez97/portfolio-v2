@@ -10,7 +10,7 @@ export default function ShowCase({ items, columns }: ShowCaseType) {
   const cols = columns ? `grid-cols-${columns.toString()}` : "md:grid-cols-3";
 
   return (
-    <div className={`grid ${cols} gap-2`}>
+    <div className={`grid ${cols} gap-2 grid-cols-1 w-full`}>
       {items.map((itm) => {
         return (
           <div className="flex w-full bg-cover bg-no-repeat" key={itm}>
