@@ -10,12 +10,7 @@ import { Title } from "@/components/atoms";
 export default function Home() {
   const showCase = projects?.slice(0, 4);
   const minimalLink = "text-highlight mx-1 hover:underline";
-  const images = [
-    "/img/gallery/titulo.jpg",
-    "/img/gallery/trip.JPG",
-    "/img/gallery/grad.jpg",
-    "/img/gallery/hobby2.jpg",
-  ];
+  const images = ["/perfil.jpg", "/img/banner1.JPG", "/img/gallery/random.JPG"];
   const { courses } = data;
 
   return (
@@ -25,12 +20,14 @@ export default function Home() {
       <p className={`${variableText} my-6`}>
         I&apos;m a{" "}
         <Link className={`${minimalLink}`} href="/services">
-          full stack developer{" "}
+          Full Stack Engineer{" "}
         </Link>{" "}
-        who enjoys tackling challenging problems and delivering quality
-        products. I consider myself a React JS master and Python & TypeScript
-        enthusiast. I&apos;m always eager to learn new skills and technologies
-        to enhance my professional growth. My most recent projects include:
+        with 6+ years of experience building scalable web and mobile apps.
+        Skilled in modern frameworks and cloud platforms, with a focus on
+        real-time systems and clean architecture. Eager to learn, grow, and
+        contribute to impactful engineering teams. Actively seeking new
+        opportunities to contribute to high-impact engineering teams. My most
+        recent projects include:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mt-2">
         {showCase.map((pro) => {

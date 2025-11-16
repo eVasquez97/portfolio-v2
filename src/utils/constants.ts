@@ -4,8 +4,8 @@ export const statDetail = `${variableText} mb-4 font-medium`;
 export const statContainer = "mb-12 md:mb-0";
 
 export const routes = [
-  { name: "projects", url: "/projects" },
-  { name: "experience", url: "/services" },
+  { name: "Projects", url: "/projects" },
+  { name: "Experience", url: "/services" },
 ];
 
 enum TextSize {

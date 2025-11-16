@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--space-mono-font);
+  }
+
+  body {
+    font-family: var(--jetbrains-font);
+  }
+}
+
 :root p {
   font-weight: 300;
   opacity: 0.9;
