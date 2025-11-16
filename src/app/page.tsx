@@ -10,7 +10,7 @@ import { Title } from "@/components/atoms";
 export default function Home() {
   const showCase = projects?.slice(0, 4);
   const minimalLink = "text-highlight mx-1 hover:underline";
-  const images = ["/perfil.jpg", "/img/banner1.JPG", "/img/gallery/random.JPG"];
+  const images = ["/perfil.JPG", "/img/banner1.jpg", "/img/gallery/random.jpg"];
   const { courses } = data;
 
   return (

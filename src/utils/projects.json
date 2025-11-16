@@ -42,7 +42,7 @@
     ],
     "img": "/img/banners/portfolio.png",
     "url": "/",
-    "companyLogo": "/perfil.jpg",
+    "companyLogo": "/perfil.JPG",
     "fullDesc": "This is the third version of my professional portfolio. I decided to go with Next.js 13 and Typescript with Tailwind CSS to practice and to 'play' with the newest version of Next.js. It has been and will continue to be a proyect with improvements. Hopefully this captures how organized, detailed, creative, and honest I am as a person and as a developer. PD: it is fully responsive and supports both light and dark themes."
   },
   {
