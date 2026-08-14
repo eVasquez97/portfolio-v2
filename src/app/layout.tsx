@@ -6,12 +6,32 @@ import { ubuntu } from "./fonts";
 import "./globals.css";
 import Loading from "./loading";
 
+const siteUrl = "https://evasquez97.vercel.app";
+const title = "Eduardo Vásquez";
+const description =
+  "Check out my portfolio to see my latest projects and skills in web development, mobile development, and more.";
+
 export const metadata: Metadata = {
-  title: "Eduardo Vásquez",
-  description:
-    "Check out my portfolio to see my latest projects and skills in web development, mobile development, and more.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
   authors: [{ name: "Eduardo Vásquez" }],
   keywords: ["react", "nextjs", "typescript", "tailwindcss", "vercel"],
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: title,
+    images: [{ url: "/perfil.JPG" }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/perfil.JPG"],
+  },
 };
 
 export default function RootLayout({
