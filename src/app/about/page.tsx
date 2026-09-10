@@ -3,24 +3,26 @@ import { variableText } from "@/utils/constants";
 
 export default function About() {
   const images = [
-    "/img/gallery/hobby1.jpg",
-    "/img/gallery/random2.jpg",
-    "/img/gallery/grad.jpg",
+    "/perfil.JPG",
+    "/img/banner1.jpg",
+    "/img/gallery/random.jpg",
+    "/img/gallery/hobby2.jpg",
+    "/img/gallery/random3.jpg",
   ];
 
   return (
-    <div className="bg-primary-light dark:bg-primary-dark min-w-full">
-      <div className="flex flex-col w-full">
-        <p className={`${variableText} mb-11 `}>
-          I&apos;m a <span className="font-normal">full stack developer</span>{" "}
-          from Honduras. I have over five years of experience in creating web
-          and mobile applications and enjoy tackling challenging problems and
-          delivering quality products that meet the needs of users and clients.
-        </p>
-        <ShowCase items={images} />
-      </div>
+    <div className="flex flex-col w-full">
+      <ShowCase items={images} />
 
-      <div className="flex flex-col w-full mb-8"></div>
+      <p className={`${variableText} my-4`}>
+        On my free time I enjoy programming, reading, exercising, and cooking -
+        fried chicken is my specialty. I&apos;ve also been volunteering as an{" "}
+        <span className="font-normal">interpreter</span> for medical and
+        construction teams from the{" "}
+        <span className="font-normal">Episcopal Church</span> in United States
+        that come annually to Honduras to help. I&apos;ve been doing this
+        volunteer work since 2007.
+      </p>
     </div>
   );
 }

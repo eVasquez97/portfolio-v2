@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "../atoms";
 import { showIcon, variableBg, variableText } from "@/utils/constants";
 import { ProjectProps } from "./orgamismTypes";
 import Icon from "../atoms/Icon";
@@ -15,7 +14,6 @@ export default function ProjectCard({
   company,
   img,
   techStack,
-  intro,
   style,
   comapanyLogo,
 }: ProjectProps) {
@@ -36,64 +34,57 @@ export default function ProjectCard({
         pathname: `/projects/${name}`,
         query: { id: id },
       }}
-      className="hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      className="group block"
     >
       <div
-        className={`${style} ${variableBg} border border-secondaryText-light/40 dark:border-secondaryText-dark/40 rounded-lg md:w-full relative justify-start p-3 min-h-full`}
+        className={`${style} ${variableBg} border border-secondaryText-light/30 dark:border-secondaryText-dark/30 rounded-lg md:w-full relative p-3 transition-colors hover:border-highlight/50`}
       >
         <div className="flex flex-row items-center">
-          <div className="flex rounded-full mr-1.5">
-            <Image
-              className="border border-secondaryText-light/40 dark:border-secondaryText-dark/40 w-20 h-20 rounded mr-3 object-cover opacity-90 hover:opacity-100"
-              src={comapanyLogo || img || "/img/banner1.jpg"}
-              alt=""
-              width={1000}
-              height={1000}
-            />
-          </div>
-          <div className="flex flex-col w-full ml-2">
-            <div className="flex flex-row">
-              <p className="mr-1 font-bold text-lg text-highlight">{name}</p>
+          <Image
+            className="border border-secondaryText-light/30 dark:border-secondaryText-dark/30 w-12 h-12 rounded-md mr-3 object-cover opacity-90 group-hover:opacity-100 flex-shrink-0"
+            src={comapanyLogo || img || "/img/banner1.jpg"}
+            alt=""
+            width={100}
+            height={100}
+          />
+          <div className="flex flex-col w-full min-w-0 mr-6">
+            <div className="flex items-center space-x-2">
+              <p className="font-semibold text-base text-highlight truncate">
+                {name}
+              </p>
               <span
-                className={`${variableText} capitalize text-[10px] opacity-60`}
+                className={`${variableText} capitalize text-[10px] opacity-50 px-1.5 py-0.5 rounded bg-secondaryText-light/10 dark:bg-secondaryText-dark/10`}
               >
                 {platform}
               </span>
             </div>
-            <div className="flex flex-row ">
-              <span
-                className={`${variableText} ${detailText} text-xs opacity-60`}
-              >
-                {company} - {jobType}
-              </span>
-            </div>
-            <div className="flex flex-row flex-wrap w-full">
-              {techStack && (
-                <div className="flex flex-row flex-wrap w-full">
-                  {techStack.map((ts) => {
-                    const tech = techs.find((t) => t.name === ts);
-                    return (
-                      tech && (
-                        <DetailedBadge
-                          key={tech.name}
-                          logo={tech.logo}
-                          name={tech.name}
-                        />
-                      )
-                    );
-                  })}
-                </div>
-              )}
-            </div>
+            <span
+              className={`${variableText} ${detailText} text-xs opacity-60 truncate mt-0.5`}
+            >
+              {company} {jobType && `- ${jobType}`}
+            </span>
+
+            {techStack && techStack.length > 0 && (
+              <div className="flex flex-row flex-wrap w-full gap-1 mt-2">
+                {techStack.map((ts) => {
+                  const tech = techs.find((t) => t.name === ts);
+                  return (
+                    tech && (
+                      <DetailedBadge
+                        key={tech.name}
+                        logo={tech.logo}
+                        name={tech.name}
+                      />
+                    )
+                  );
+                })}
+              </div>
+            )}
           </div>
           <div
-            className={`${variableText} z-[1] float-right absolute block right-4`}
+            className={`${variableText} absolute right-3 top-3 opacity-40 group-hover:opacity-100 transition-opacity`}
           >
-            <Icon
-              icon={showIcon}
-              stroke="currentColor"
-              styles="w-5 h-5 ml-2 opacity-60"
-            />
+            <Icon icon={showIcon} stroke="currentColor" styles="w-4 h-4" />
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Card from "./Card";
 import ServiceCard from "./ServiceCard";
 import NavTabs from "./NavTabs";
 import ShowCase from "./ShowCase";
+import PaginatedTable from "./PaginatedTable";
 
 export {
   Footer,
@@ -18,4 +19,5 @@ export {
   ServiceCard,
   NavTabs,
   ShowCase,
+  PaginatedTable,
 };
