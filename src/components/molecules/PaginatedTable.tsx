@@ -1,5 +1,10 @@
 "use client";
-import { variableText } from "@/utils/constants";
+import Icon from "@/components/atoms/Icon";
+import {
+  chevronLeftIcon,
+  chevronRightIcon,
+  variableText,
+} from "@/utils/constants";
 import { useState, ReactNode } from "react";
 
 type PaginatedTableProps<T> = {
@@ -22,20 +27,20 @@ export default function PaginatedTable<T>({
   const currentData = data.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-col justify-between min-h-[320px] mb-6">
+    <div className="flex flex-col w-full mt-5">
+      <div className="flex flex-col justify-between min-h-[210px] mb-4">
         <table className={`${variableText} table w-full text-left`}>
           <thead>
             <tr className="pb-2 border-b border-b-secondaryText-light/30 dark:border-b-secondaryText-dark/30">
               {headers.map((header, idx) => (
                 <th
                   key={idx}
-                  className={`text-sm opacity-80 font-normal pb-2 ${
+                  className={`text-sm font-normal opacity-80 pb-2 ${
                     idx === 0
                       ? "w-24"
                       : idx === headers.length - 1 && headers.length === 3
-                      ? "max-w-[44px]"
-                      : "px-1"
+                        ? "max-w-[44px]"
+                        : "px-1"
                   }`}
                 >
                   {header}
@@ -50,23 +55,33 @@ export default function PaginatedTable<T>({
       </div>
 
       {totalPages > 1 && (
-        <div className="flex flex-row items-center justify-between w-full mb-8 text-sm">
+        <div className="flex flex-row items-center justify-center w-full space-x-4 mb-8 text-sm">
           <button
             onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
             disabled={currentPage === 1}
-            className={`${variableText} px-3 py-1.5 rounded border border-secondaryText-light/30 dark:border-secondaryText-dark/30 disabled:opacity-30 hover:bg-secondary-light dark:hover:bg-secondary-dark transition-colors`}
+            aria-label="Previous Page"
+            className={`${variableText} p-1 opacity-60 hover:opacity-100 disabled:opacity-20 transition-opacity flex items-center justify-center`}
           >
-            Previous
+            <Icon
+              icon={chevronLeftIcon}
+              stroke="currentColor"
+              styles="w-4 h-4"
+            />
           </button>
-          <span className={`${variableText} opacity-70 text-xs`}>
-            Page {currentPage} of {totalPages}
+          <span className={`${variableText} opacity-50 text-xs`}>
+            {currentPage} / {totalPages}
           </span>
           <button
             onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className={`${variableText} px-3 py-1.5 rounded border border-secondaryText-light/30 dark:border-secondaryText-dark/30 disabled:opacity-30 hover:bg-secondary-light dark:hover:bg-secondary-dark transition-colors`}
+            aria-label="Next Page"
+            className={`${variableText} p-1 opacity-60 hover:opacity-100 disabled:opacity-20 transition-opacity flex items-center justify-center`}
           >
-            Next
+            <Icon
+              icon={chevronRightIcon}
+              stroke="currentColor"
+              styles="w-4 h-4"
+            />
           </button>
         </div>
       )}

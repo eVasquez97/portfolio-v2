@@ -23,8 +23,9 @@ export default function Projects() {
     <div className="flex flex-col w-full">
       <Quote
         quote="In my experience, there’s no such thing as luck. - Obi Wan Kenobi"
-        style="mb-5"
+        style="my-4"
       />
+
       <PaginatedTable
         headers={["Platform", "Description"]}
         data={projects}

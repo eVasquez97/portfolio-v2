@@ -10,10 +10,11 @@ export default function CoursesPage() {
 
   return (
     <div className="flex flex-col w-full">
-      <Quote quote="Do or do not, there is no try. - Yoda" style="mb-5" />
+      <Quote quote="Do or do not, there is no try. - Yoda" style="my-6" />
       <PaginatedTable
         headers={["Date", "Title", ""]}
         data={courses}
+        itemsPerPage={5}
         renderRow={(course) => (
           <tr
             key={course.certificationID}

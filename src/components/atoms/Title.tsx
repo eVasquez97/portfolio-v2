@@ -10,7 +10,7 @@ export default function Title({
   const textSize = getTextSize(size);
   return (
     <h1
-      className={`font-[500] ${textSize} ${styles} ${textColor} border-b-2 opacity-80 w-full`}
+      className={`font-[500] ${textSize} ${styles} ${textColor} opacity-80 w-full border-b`}
     >
       {text}
     </h1>

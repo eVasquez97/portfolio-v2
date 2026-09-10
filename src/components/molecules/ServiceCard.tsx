@@ -1,5 +1,8 @@
-import { variableText } from "@/utils/constants";
+"use client";
+import { variableBg } from "@/utils/constants";
 import { Title } from "../atoms";
+import Image from "next/image";
+import { useState } from "react";
 
 type Service = {
   service: string;
@@ -14,23 +17,40 @@ export default function ServiceCard({
   benefits,
   logo,
 }: Service) {
-  return (
-    <div className="w-full mb-11">
-      <Title
-        text={service}
-        size="lg"
-        styles="font-normal mt-2"
-        textColor="text-highlight"
-      />
+  const [imgError, setImgError] = useState(false);
 
-      <p className={`mt-1 mb-2 ${variableText} font-sm`}>{description}</p>
-      {benefits?.map((b) => {
-        return (
-          <p className={`list-item ${variableText} mb-2 ml-6 font-sm`} key={b}>
-            {b}
-          </p>
-        );
-      })}
+  return (
+    <div
+      className={`w-full ${variableBg} border border-secondaryText-light/30 dark:border-secondaryText-dark/30 rounded-lg p-4 mb-3`}
+    >
+      <div className="flex items-center space-x-3 mb-2">
+        {logo && !imgError && (
+          <Image
+            src={logo}
+            alt={service}
+            width={28}
+            height={28}
+            className="object-contain flex-shrink-0"
+            onError={() => setImgError(true)}
+          />
+        )}
+        <Title
+          text={service}
+          size="base"
+          styles="font-semibold text-highlight"
+        />
+      </div>
+      <p className="text-sm opacity-90 mb-3">{description}</p>
+      {benefits && benefits.length > 0 && (
+        <ul className="space-y-1.5 text-xs opacity-80 border-t border-secondaryText-light/20 dark:border-secondaryText-dark/20 pt-2.5">
+          {benefits.map((b) => (
+            <li key={b} className="flex items-start">
+              <span className="text-highlight mr-2 select-none">•</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

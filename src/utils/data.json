@@ -261,12 +261,6 @@
       "logo": "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
     },
     {
-      "name": "Mobile",
-      "experience": "2 years",
-      "description": "React Native + Python + MongoDB",
-      "logo": "https://cdn.worldvectorlogo.com/logos/react-native-1.svg"
-    },
-    {
       "name": "Web",
       "experience": "3+ years",
       "description": "TypeScript + Python + MongoDB",
@@ -274,9 +268,9 @@
     },
     {
       "name": "Mobile",
-      "experience": "2 years",
+      "experience": "4+ years",
       "description": "React Native + Python + MongoDB",
-      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     }
   ],
   "socialMedia": [

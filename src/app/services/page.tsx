@@ -1,77 +1,68 @@
+"use client";
 import { Quote } from "@/components/organisms";
 import data from "../../utils/data.json";
-import { ServiceCard, Skill } from "@/components/molecules";
+import { ServiceCard, PaginatedTable } from "@/components/molecules";
 import { Title } from "@/components/atoms";
 import { variableText } from "@/utils/constants";
-import { EducationType } from "../about/EducationType";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Services() {
-  const { techStacks, services, education } = data;
-  const gridStyle = "grid grid-cols-1 md:grid-cols-2 min-w-full gap-2 md:gap-3";
-
-  function getEducationInfo(ed: EducationType) {
-    return (
-      <Link
-        key={ed.title}
-        href={ed.url}
-        className="hover:font-normal"
-        target="_blank"
-      >
-        <div className="flex w-full my-4" key={ed.title}>
-          <div className="w-[90] mr-2 bg-transparent rounded">
-            <Image src={ed.image} alt={ed.title} width={90} height={90} />
-          </div>
-          <div className="flex flex-col w-full">
-            <div className={`${variableText} text-left flex-wrap`}>
-              <p className="font-normal text-highlight">{ed.title}</p>
-              <p className="text-sm flex-wrap mb-2">{ed.institute}</p>
-              <p className="text-xs opacity-80">{ed.time}</p>
-            </div>
-          </div>
-        </div>
-      </Link>
-    );
-  }
+  const { techStacks, services } = data;
 
   return (
     <div className="w-full flex flex-col">
-      <div className="mb-5">
-        <Title
-          text="Education"
-          styles="font-normal"
-          textColor="text-highlight"
-        />
-        <div className="flex flex-col w-full my-2">
-          {education.map((ed) => {
-            return getEducationInfo(ed);
-          })}
-        </div>
-      </div>
-      <Title
-        text="Most used tech stacks"
-        styles="my-5 font-normal"
-        textColor="text-highlight"
-      />
-      <div className={`${gridStyle} mb-11`}>
-        {techStacks.map((ts) => {
-          return (
-            <Skill
+      <div className="mb-6">
+        <Title text="Most used tech stacks" styles="text-lg mb-3" />
+        <PaginatedTable
+          headers={["", "Technology & Experience"]}
+          data={techStacks}
+          itemsPerPage={4}
+          renderRow={(ts) => (
+            <tr
               key={ts.name}
-              name={ts.name}
-              experience={ts.experience}
-              logo={ts.logo}
-              description={ts.description}
-            />
-          );
-        })}
+              className="px-2 border-t-[1px] border-t-secondaryText-light/30 dark:border-t-secondaryText-dark/30 group hover:bg-secondary-light/40 dark:hover:bg-secondary-dark/40 transition-colors"
+            >
+              <td className="py-3.5 pr-3 align-middle w-16">
+                {ts.logo && (
+                  <Image
+                    src={ts.logo}
+                    alt={ts.name}
+                    width={36}
+                    height={36}
+                    className="object-contain"
+                  />
+                )}
+              </td>
+              <td className="px-1 py-3.5 align-middle">
+                <div className="flex flex-col">
+                  <p className="font-semibold text-sm text-highlight flex items-baseline flex-wrap">
+                    <span>{ts.name}</span>
+                    {ts.experience && (
+                      <span
+                        className={`${variableText} text-xs font-normal opacity-70 ml-2`}
+                      >
+                        ({ts.experience})
+                      </span>
+                    )}
+                  </p>
+                  {ts.description && (
+                    <p className="text-xs opacity-75 mt-0.5">
+                      {ts.description}
+                    </p>
+                  )}
+                </div>
+              </td>
+            </tr>
+          )}
+        />
       </div>
-      <div>
-        <p className={`${variableText} `}>
-          Some of the main services I provide are:
+
+      <div className="mb-6">
+        <Title text="Services" styles="text-lg mb-3" />
+        <p className={`${variableText} text-sm opacity-80 mb-4`}>
+          Some of the main engineering services I provide:
         </p>
-        <div className="min-w-full my-6">
+        <div className="min-w-full mb-8">
           {services?.map((sr) => {
             return (
               <ServiceCard

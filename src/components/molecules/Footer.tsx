@@ -1,5 +1,3 @@
-import { variableText } from "@/utils/constants";
-import Link from "next/link";
 import data from "../../utils/data.json";
 import SocialButton from "./SocialButton";
 
@@ -17,11 +15,8 @@ export default function Footer() {
   ));
 
   return (
-    <footer className="my-12 w-full inset-x-0 bottom-0 flex flex-row justify-between items-center opacity-60 border-t border-t-secondaryText-light dark:border-t-secondaryText-dark pt-3">
-      <Link href="/" className={`${variableText} w-full text-left`}>
-        Eduardo Vásquez
-      </Link>
-      <div className="flex flex-row">{socialButtons}</div>
+    <footer className="my-4 w-full inset-x-0 bottom-0 flex flex-row justify-end items-center opacity-70 border-t border-t-secondaryText-light/30 dark:border-t-secondaryText-dark/30 pt-4">
+      <div className="flex flex-row space-x-2">{socialButtons}</div>
     </footer>
   );
 }

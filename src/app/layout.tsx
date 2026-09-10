@@ -2,7 +2,7 @@ import { Footer, NavTabs } from "@/components/molecules";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ubuntu } from "./fonts";
+import { inter, jetbrainsMono } from "./fonts";
 import "./globals.css";
 import Loading from "./loading";
 
@@ -42,14 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ubuntu.className} flex min-h-screen bg-primary-light dark:bg-primary-dark w-full p-5`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans flex items-center justify-center h-screen bg-primary-light dark:bg-primary-dark w-full overflow-hidden p-4`}
       >
-        <main className="flex flex-col mx-auto max-w-xl w-full dark:opacity-90">
+        <main className="flex flex-col justify-between mx-auto max-w-xl w-full h-[90vh] max-h-[840px] overflow-hidden">
           <NavTabs />
-          <Suspense fallback={<Loading />}>
-            {children}
-            <Footer />
-          </Suspense>
+          <div className="flex-1 overflow-y-auto pr-1 my-2">
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </div>
+          <Footer />
           <Analytics />
         </main>
       </body>

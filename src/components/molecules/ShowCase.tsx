@@ -9,6 +9,7 @@ type ShowCaseType = {
 export default function ShowCase({ items, columns = 3 }: ShowCaseType) {
   const numCols = columns || 3;
 
+  // Distribute items across columns
   const colsData: string[][] = Array.from({ length: numCols }, () => []);
   items.forEach((item, index) => {
     if (numCols === 2 && items.length === 3) {
@@ -19,8 +20,15 @@ export default function ShowCase({ items, columns = 3 }: ShowCaseType) {
     }
   });
 
+  const gridColsClass =
+    numCols === 3
+      ? "md:grid-cols-3"
+      : numCols === 2
+        ? "md:grid-cols-2"
+        : "md:grid-cols-1";
+
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-${numCols} gap-2 w-full`}>
+    <div className={`grid grid-cols-1 ${gridColsClass} gap-2 w-full`}>
       {colsData.map((colItems, colIdx) => (
         <div className="flex flex-col gap-2 w-full" key={colIdx}>
           {colItems.map((itm, itemIdx) => (

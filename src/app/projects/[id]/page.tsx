@@ -7,6 +7,7 @@ import data from "../../../utils/projects.json";
 import tech from "../../../utils/data.json";
 import { variableText } from "@/utils/constants";
 import DetailedBadge from "@/components/molecules/DetailedBadge";
+import { Quote } from "@/components/organisms";
 
 function getProjectData(id: string) {
   return data.find((x) => x.id === id);
@@ -70,7 +71,7 @@ export default function ProjectInfo() {
         <div className="flex self-center">{getProjectUrl()}</div>
       </div>
 
-      <div className="w-full mb-5 -mt-2">
+      <div className="w-full mb-5 -mt-4">
         <div className="flex flex-row flex-wrap my-2 ">
           {project?.techStack.map((ts) => {
             const tech = allTech.find((t) => t.name === ts);
@@ -92,43 +93,21 @@ export default function ProjectInfo() {
         alt={project?.id || "img"}
         width={2000}
         height={2000}
-        className="w-full h-[180px] object-cover object-center mb-5 opacity-95 hover:opacity-100 rounded"
+        className="w-full h-[120px] object-cover object-center mb-5 opacity-95 hover:opacity-100"
       />
 
-      <div className="my-8">
-        <Title
-          text="Description"
-          size="base"
-          styles="font-normal"
-          textColor="text-highlight"
-        />
-        <p className={`${variableText} my-5 `}>
+      <div className="my-4">
+        <Title text="Description" size="base" styles="font-bold" />
+        <p className={`${variableText} my-4 `}>
           {project?.intro} {project?.fullDesc}
         </p>
       </div>
 
       <div className="flex flex-col w-full">
         <div className="flex w-full items-center my-5">
-          <div className="flex-full md:mr-5 mr-2 items-center">
-            <Image
-              className="border border-secondaryText-light dark:border-secondaryText-dark h-40 w-40 mb-4 md:pb-0 md:w-20 md:h-20 rounded object-cover object-right"
-              src={project.companyLogo || "/img/banner1.jpg"}
-              alt=""
-              width={1000}
-              height={1000}
-            />
-          </div>
-          <div className="flex flex-col -mt-4">
-            <p className="text-highlight font-bold mb-1">{project?.role}</p>
-            <p className={`${variableText} mb-1`}>
-              {project?.company} - {project?.time}
-            </p>
-            <p
-              className={`${variableText} italic capitalize opacity-60 text-sm `}
-            >
-              {project?.jobType} - {project?.location}
-            </p>
-          </div>
+          <Quote
+            quote={`${project?.company} - ${project?.time}\n${project?.location} (${project?.jobType})`}
+          />
         </div>
 
         {/* Second column */}
@@ -137,8 +116,7 @@ export default function ProjectInfo() {
             <Title
               text="Main responsibilities"
               size="base"
-              styles="font-normal"
-              textColor="text-highlight"
+              styles="font-bold"
             />
             <div className="p-6">
               {project?.responsibilities.map((res) => {

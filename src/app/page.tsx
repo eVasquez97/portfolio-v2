@@ -22,7 +22,7 @@ export default function Home() {
         opportunities to contribute to high-impact engineering teams. My most
         recent projects include:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mt-2">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-2 md:gap-2 mt-2">
         {showCase.map((pro) => {
           return (
             <ProjectCard
