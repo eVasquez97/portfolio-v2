@@ -6,6 +6,7 @@ export const statContainer = "mb-12 md:mb-0";
 export const routes = [
   { name: "Projects", url: "/projects" },
   { name: "Experience", url: "/services" },
+  { name: "Courses", url: "/courses" },
 ];
 
 enum TextSize {

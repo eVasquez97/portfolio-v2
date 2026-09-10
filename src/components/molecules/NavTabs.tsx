@@ -12,8 +12,10 @@ export default function NavTabs() {
       <Link
         href="/"
         className={`${
-          isHome && "opacity-100"
-        } ${variableText} text-left w-full opacity-60`}
+          isHome
+            ? "font-bold text-highlight opacity-100"
+            : "opacity-60 hover:opacity-90"
+        } ${variableText} text-left w-full transition-opacity`}
       >
         Eduardo Vásquez
       </Link>
@@ -24,8 +26,10 @@ export default function NavTabs() {
             href={route.url}
             key={route.name}
             className={`${
-              isActive && "font-normal opacity-100"
-            } ${variableText} mx-2 first:ml-0 last:mr-0 opacity-60`}
+              isActive
+                ? "font-bold text-highlight opacity-100"
+                : "opacity-60 hover:opacity-90"
+            } ${variableText} mx-2 first:ml-0 last:mr-0 transition-opacity whitespace-nowrap`}
           >
             {route.name}
           </Link>

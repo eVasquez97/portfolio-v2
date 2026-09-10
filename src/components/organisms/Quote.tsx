@@ -1,4 +1,4 @@
-import { variableText } from "@/utils/constants";
+import { variableText, variableBg } from "@/utils/constants";
 
 type QuoteYpes = {
   quote: string;
@@ -8,12 +8,12 @@ type QuoteYpes = {
 export default function Quote({ quote, style }: QuoteYpes) {
   return (
     <div
-      className={`${style} ${variableText} flex p-4 w-full rounded bg-secondaryText-light dark:bg-secondaryText-dark opacity-60 dark:opacity-80`}
+      className={`${style} ${variableText} ${variableBg} flex p-4 w-full rounded-lg border border-secondaryText-light/30 dark:border-secondaryText-dark/30`}
     >
       <div className="mb-2 w-full">
-        <div className="h-3 text-3xl text-left italic">“</div>
+        <div className="h-3 text-3xl text-left italic opacity-60">“</div>
         <p className="px-6 italic">{quote}</p>
-        <div className="h-3 text-3xl text-right italic">”</div>
+        <div className="h-3 text-3xl text-right italic opacity-60">”</div>
       </div>
     </div>
   );

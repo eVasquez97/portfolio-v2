@@ -13,17 +13,17 @@ const config: Config = {
         dark: "#000000",
       },
       secondary: {
-        light: "#fafafa",
-        dark: "#262626",
+        light: "#f5f5f7",
+        dark: "#1c1c1e",
       },
-      highlight: "#007acc",
+      highlight: "#0071e3",
       text: {
-        light: "#000000",
+        light: "#1d1d1f",
         dark: "#fbfbfb",
       },
       secondaryText: {
-        light: "#E5E5E5",
-        dark: "#404040",
+        light: "#86868b",
+        dark: "#98989d",
       },
       saberBase: "#BFC9CA",
       saberTop: "#F5B041",

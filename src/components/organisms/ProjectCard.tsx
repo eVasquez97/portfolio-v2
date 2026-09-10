@@ -39,12 +39,12 @@ export default function ProjectCard({
       className="hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >
       <div
-        className={`${style} ${variableBg} border border-secondaryText-light dark:border-secondaryText-dark rounded md:w-full relative justify-start p-2.5 min-h-full`}
+        className={`${style} ${variableBg} border border-secondaryText-light/40 dark:border-secondaryText-dark/40 rounded-lg md:w-full relative justify-start p-3 min-h-full`}
       >
         <div className="flex flex-row items-center">
           <div className="flex rounded-full mr-1.5">
             <Image
-              className="border border-secondaryText-light dark:border-secondaryText-dark w-12 h-12 rounded mr-3 object-cover opacity-90 hover:opacity-100"
+              className="border border-secondaryText-light/40 dark:border-secondaryText-dark/40 w-20 h-20 rounded mr-3 object-cover opacity-90 hover:opacity-100"
               src={comapanyLogo || img || "/img/banner1.jpg"}
               alt=""
               width={1000}
@@ -67,9 +67,27 @@ export default function ProjectCard({
                 {company} - {jobType}
               </span>
             </div>
+            <div className="flex flex-row flex-wrap w-full">
+              {techStack && (
+                <div className="flex flex-row flex-wrap w-full">
+                  {techStack.map((ts) => {
+                    const tech = techs.find((t) => t.name === ts);
+                    return (
+                      tech && (
+                        <DetailedBadge
+                          key={tech.name}
+                          logo={tech.logo}
+                          name={tech.name}
+                        />
+                      )
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
           <div
-            className={`${variableText} z-[1] float-right absolute block right-2`}
+            className={`${variableText} z-[1] float-right absolute block right-4`}
           >
             <Icon
               icon={showIcon}
@@ -78,31 +96,6 @@ export default function ProjectCard({
             />
           </div>
         </div>
-
-        {intro && (
-          <div className="mt-5">
-            <span className={`${variableText} text-sm ml-1 font-light`}>
-              {intro}
-            </span>
-
-            {techStack && (
-              <div className="flex flex-row flex-wrap w-full mt-4">
-                {techStack.map((ts) => {
-                  const tech = techs.find((t) => t.name === ts);
-                  return (
-                    tech && (
-                      <DetailedBadge
-                        key={tech.name}
-                        logo={tech.logo}
-                        name={tech.name}
-                      />
-                    )
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </Link>
   );

@@ -1,17 +1,12 @@
+import { variableText } from "@/utils/constants";
+
 export default function Loading() {
   return (
-    <div className="w-full h-full relative flex items-center justify-center">
-      <iframe
-        src="https://giphy.com/embed/RhGbWYqUJdPWM18zI6"
-        width="100%"
-        height="100%"
-        className="absolute self-center"
-        allowFullScreen
-      >
-        <h1 className="text-center text-secondaryText-light font-semibold text-lg">
-          Loading...
-        </h1>
-      </iframe>
+    <div className="flex flex-col items-center justify-center w-full py-20 text-center">
+      <div className="w-6 h-6 border-2 border-highlight border-t-transparent rounded-full animate-spin mb-3"></div>
+      <p className={`${variableText} text-sm opacity-60 font-light`}>
+        Loading...
+      </p>
     </div>
   );
 }

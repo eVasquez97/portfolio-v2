@@ -142,13 +142,13 @@
       "name": "React JS",
       "experience": "5+ years",
       "description": "Experience with TypeScript and Next JS.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
       "name": "React Native",
       "experience": "4.5 years",
       "description": "Over 6 mobile apps published.",
-      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-native-1.svg"
     },
     {
       "name": "Next JS",
@@ -262,9 +262,9 @@
     },
     {
       "name": "Mobile",
-      "experience": "5+ years",
-      "description": "React Native + C# + MongoDB",
-      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+      "experience": "2 years",
+      "description": "React Native + Python + MongoDB",
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-native-1.svg"
     },
     {
       "name": "Web",
