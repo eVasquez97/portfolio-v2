@@ -79,16 +79,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans h-screen bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 flex flex-col items-center justify-center p-3 sm:p-6 md:p-8 overflow-hidden antialiased selection:bg-highlight selection:text-white`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans min-h-[100dvh] h-[100dvh] bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 flex flex-col items-center justify-between p-3 sm:p-6 gap-3 sm:gap-5 overflow-hidden antialiased selection:bg-highlight selection:text-white`}
       >
-        <main className="w-full max-w-2xl sm:max-w-3xl mx-auto h-[88vh] sm:h-[90vh] max-h-[920px] flex flex-col my-auto pb-12 sm:pb-14">
+        <main className="w-full max-w-2xl sm:max-w-3xl mx-auto flex-1 min-h-0 flex flex-col">
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <div className="card-container flex-1 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] w-full shadow-2xl shadow-black/5 dark:shadow-black/40 bg-white/95 dark:bg-neutral-900/95 border border-neutral-200/80 dark:border-neutral-800/80 backdrop-blur-xl animate-fade-in min-h-0 flex flex-col">
-            <div className="flex-1 overflow-y-auto p-5 sm:p-8">
-              <div className="pb-6 sm:pb-8">
+            <div className="flex-1 overflow-y-auto p-4 sm:p-8">
+              <div className="pb-4 sm:pb-16">
                 <Suspense fallback={<Loading />}>{children}</Suspense>
               </div>
             </div>

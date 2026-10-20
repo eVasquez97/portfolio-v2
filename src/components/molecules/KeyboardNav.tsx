@@ -25,22 +25,22 @@ export default function KeyboardNav() {
   ];
 
   const keycapBase =
-    "relative inline-flex items-center justify-center font-semibold text-xs sm:text-sm tracking-tight transition-all duration-150 rounded-xl px-3 sm:px-3.5 py-1.5 sm:py-2 cursor-pointer select-none border border-b-2";
+    "relative inline-flex items-center justify-center font-semibold text-xs sm:text-xs tracking-tight transition-all duration-150 rounded-xl px-3 sm:px-3.5 py-2 sm:py-2 cursor-pointer select-none border border-b-2 flex-shrink-0";
 
   const getNavKeyStyle = (isActive: boolean) =>
     isActive
       ? `${keycapBase} bg-highlight text-white border-highlight shadow-md shadow-highlight/20 active:translate-y-[1px]`
       : `${keycapBase} bg-neutral-100/90 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700/80 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 hover:text-neutral-900 dark:hover:text-white active:translate-y-[1px]`;
 
-  const socialKeyStyle = `${keycapBase} bg-neutral-100/90 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700/80 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 hover:text-neutral-900 dark:hover:text-white active:translate-y-[1px] p-2 sm:p-2 min-w-[36px] sm:min-w-[40px]`;
+  const socialKeyStyle = `${keycapBase} bg-neutral-100/90 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700/80 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 hover:text-neutral-900 dark:hover:text-white active:translate-y-[1px] p-2.5 sm:p-2 min-w-[40px] sm:min-w-[40px]`;
 
   return (
     <nav
       aria-label="Main Navigation"
-      className="fixed bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] sm:w-auto max-w-2xl"
+      className="w-full max-w-[90%] sm:max-w-2xl mx-auto flex-shrink-0 z-10"
     >
-      <div className="bg-white/85 dark:bg-neutral-900/85 backdrop-blur-2xl border border-neutral-200/80 dark:border-neutral-800/80 rounded-2xl p-1.5 sm:p-2 shadow-2xl shadow-black/10 dark:shadow-black/50 flex flex-wrap sm:flex-nowrap items-center justify-center gap-1 sm:gap-1.5">
-        <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap sm:flex-nowrap justify-center w-full sm:w-auto">
+      <div className="bg-white/90 dark:bg-neutral-900/90 backdrop-blur-2xl border border-neutral-200/80 dark:border-neutral-800/80 rounded-2xl p-2.5 sm:p-2 shadow-2xl shadow-black/10 dark:shadow-black/50 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-1.5">
+        <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-1 sm:gap-1.5 w-full sm:w-auto">
           {navItems.map((item) => {
             const isActive = pathname === item.url;
             return (
@@ -68,7 +68,7 @@ export default function KeyboardNav() {
 
         <div className="hidden sm:block h-5 w-px bg-neutral-200 dark:bg-neutral-800 mx-0.5 flex-shrink-0" />
 
-        <div className="flex items-center gap-1 sm:gap-1.5 justify-center mt-1 sm:mt-0">
+        <div className="flex items-center gap-1.5 sm:gap-1.5 justify-center w-full sm:w-auto">
           {linkedIn && (
             <a
               href={linkedIn.url}
