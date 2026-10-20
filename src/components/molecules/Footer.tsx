@@ -15,7 +15,7 @@ export default function Footer() {
   ));
 
   return (
-    <footer className="my-4 w-full inset-x-0 bottom-0 flex flex-row justify-end items-center opacity-70 border-t border-t-secondaryText-light/30 dark:border-t-secondaryText-dark/30 pt-4">
+    <footer className="my-4 w-full inset-x-0 bottom-0 flex flex-row justify-end items-center opacity-70 border-t app-border pt-4">
       <div className="flex flex-row space-x-2">{socialButtons}</div>
     </footer>
   );

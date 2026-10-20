@@ -1,4 +1,3 @@
-import { variableText } from "@/utils/constants";
 import Icon from "../atoms/Icon";
 
 type MediaButton = {
@@ -19,7 +18,7 @@ export default function SocialButton({
       href={url}
       target="_blank"
       aria-label={name}
-      className={` ${variableText} mx-2 hover:scale-105`}
+      className="mx-2 hover:scale-105"
     >
       <Icon
         icon={icon}

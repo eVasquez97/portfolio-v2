@@ -1,7 +1,5 @@
 import Title from "./Title";
-import Badge from "./Badge";
-import ContactMe from "./ContactMe";
-import LightSaber from "./Lightsaber";
+import Icon from "./Icon";
 import MandoSticker from "./MandoSticker";
 
-export { Title, Badge, ContactMe, LightSaber, MandoSticker };
+export { Title, Icon, MandoSticker };

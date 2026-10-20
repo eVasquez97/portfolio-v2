@@ -1,8 +1,3 @@
-export const variableText = "dark:text-primary-light text-primary-dark";
-export const variableBg = "bg-secondary-light dark:bg-secondary-dark ";
-export const statDetail = `${variableText} mb-4 font-medium`;
-export const statContainer = "mb-12 md:mb-0";
-
 export const routes = [
   { name: "Projects", url: "/projects" },
   { name: "Experience", url: "/services" },

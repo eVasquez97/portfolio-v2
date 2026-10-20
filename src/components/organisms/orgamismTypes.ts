@@ -8,5 +8,6 @@ export type ProjectProps = {
   techStack?: string[];
   intro?: string;
   style?: string;
+  companyLogo?: string;
   comapanyLogo?: string;
 };

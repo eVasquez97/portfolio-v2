@@ -1,5 +1,5 @@
 "use client";
-import { routes, variableText } from "@/utils/constants";
+import { routes } from "@/utils/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -8,14 +8,14 @@ export default function NavTabs() {
   const isHome = pathname === "/";
 
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full my-4 pb-3 border-b border-b-secondaryText-light/30 dark:border-b-secondaryText-dark/30 gap-2 sm:gap-0">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full my-4 pb-3 border-b app-border gap-2 sm:gap-0">
       <Link
         href="/"
         className={`${
           isHome
             ? "font-bold text-highlight opacity-100"
             : "opacity-60 hover:opacity-90"
-        } ${variableText} text-left transition-opacity`}
+        } text-left transition-opacity`}
       >
         Eduardo Vásquez
       </Link>
@@ -30,7 +30,7 @@ export default function NavTabs() {
                 isActive
                   ? "font-bold text-highlight opacity-100"
                   : "opacity-60 hover:opacity-90"
-              } ${variableText} transition-opacity whitespace-nowrap text-sm`}
+              } transition-opacity whitespace-nowrap text-sm`}
             >
               {route.name}
             </Link>

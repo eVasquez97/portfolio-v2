@@ -6,6 +6,7 @@ export default function Icon({
   styles,
   fill,
   stroke,
+  strokeWidth,
   color,
   viewBox,
 }: IconType) {
@@ -16,7 +17,7 @@ export default function Icon({
       height="24"
       xmlns="http://www.w3.org/2000/svg"
       fill={fill || "none"}
-      strokeWidth="1.5"
+      strokeWidth={strokeWidth || "1.5"}
       stroke={stroke || color || "currentColor"}
       className={styles}
     >
