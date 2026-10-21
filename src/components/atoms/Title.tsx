@@ -6,13 +6,14 @@ export default function Title({
   size = "lg",
   styles = "",
   textColor = "",
+  as: Tag = "h2",
 }: TitleType) {
   const textSize = getTextSize(size);
   return (
-    <h1
-      className={`font-[500] ${textSize} ${styles} ${textColor} opacity-80 w-full border-b app-border`}
+    <Tag
+      className={`font-[600] ${textSize} ${styles} ${textColor} app-border w-full border-b pb-1 opacity-90`}
     >
       {text}
-    </h1>
+    </Tag>
   );
 }

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { showIcon } from "@/utils/constants";
 import { ProjectProps } from "./orgamismTypes";
-import Icon from "../atoms/Icon";
 import data from "@/utils/data.json";
 
 export default function ProjectCard({
@@ -35,41 +33,41 @@ export default function ProjectCard({
         pathname: `/projects/${name}`,
         query: { id: id },
       }}
-      className="group block"
+      className="group block h-full"
     >
-      <div
-        className={`card-interactive p-3.5 sm:p-4 rounded-xl border border-neutral-200/80 dark:border-neutral-800/80 bg-neutral-50/50 dark:bg-neutral-900/40 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/50 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-200 shadow-sm hover:shadow ${style}`}
+      <article
+        className={`card-interactive flex h-full flex-col justify-between p-4 ${style}`}
       >
-        <div className="flex flex-row items-center justify-between gap-3">
-          <div className="flex flex-row items-center space-x-3.5 min-w-0 flex-1">
-            <div className="relative w-11 h-11 rounded-lg border border-neutral-200 dark:border-neutral-700/80 overflow-hidden bg-white dark:bg-neutral-800 flex-shrink-0 shadow-sm p-0.5">
+        <div className="flex flex-row items-start justify-between gap-3">
+          <div className="flex min-w-0 flex-1 flex-row items-start space-x-3.5">
+            <div className="relative h-11 w-11 flex-shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-0.5 dark:border-neutral-700/80 dark:bg-neutral-800">
               <Image
                 src={logoSrc}
                 alt={company || name}
                 fill
                 sizes="44px"
-                className="object-cover rounded-md group-hover:scale-105 transition-transform duration-200"
+                className="rounded-xl object-cover transition-transform duration-200 group-hover:scale-105"
               />
             </div>
 
-            <div className="flex flex-col min-w-0 flex-1">
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="font-semibold text-base text-neutral-900 dark:text-neutral-100 group-hover:text-highlight transition-colors truncate">
+            <div className="flex min-w-0 flex-1 flex-col">
+              <div className="flex flex-wrap items-center gap-1.5">
+                <h3 className="truncate text-base font-semibold text-neutral-900 transition-colors group-hover:text-highlight dark:text-neutral-100">
                   {name}
-                </span>
+                </h3>
                 {platform && (
-                  <span className="px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded-full bg-highlight/10 text-highlight border border-highlight/20 flex-shrink-0">
+                  <span className="flex-shrink-0 rounded-full border border-highlight/20 bg-highlight/15 px-1.5 py-[1px] text-[9px] font-semibold uppercase leading-tight tracking-wider text-highlight">
                     {platform}
                   </span>
                 )}
               </div>
 
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 capitalize mt-0.5 truncate">
+              <p className="mt-0.5 truncate text-xs capitalize text-neutral-600 dark:text-neutral-400">
                 {company} {jobType ? `· ${jobType}` : ""}
               </p>
 
               {techStack && techStack.length > 0 && (
-                <div className="flex flex-row flex-wrap gap-1.5 mt-2.5">
+                <div className="mt-3 flex flex-row flex-wrap gap-1.5">
                   {techStack.map((ts) => {
                     const tech = techs.find(
                       (t) => t.name.toLowerCase() === ts.toLowerCase(),
@@ -77,7 +75,7 @@ export default function ProjectCard({
                     return (
                       <span
                         key={ts}
-                        className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-neutral-100 dark:bg-neutral-800/90 text-neutral-700 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-700/60 flex items-center gap-1.5 shadow-2xs"
+                        className="flex items-center gap-1.5 rounded-full border border-neutral-200/80 bg-neutral-100/80 px-2.5 py-0.5 text-[11px] font-medium text-neutral-800 dark:border-neutral-800/80 dark:bg-neutral-800/50 dark:text-neutral-200"
                       >
                         {tech?.logo && (
                           <Image
@@ -85,7 +83,7 @@ export default function ProjectCard({
                             alt={ts}
                             width={13}
                             height={13}
-                            className="w-3.5 h-3.5 object-contain flex-shrink-0"
+                            className="h-3.5 w-3.5 flex-shrink-0 object-contain"
                           />
                         )}
                         <span>{ts}</span>
@@ -96,12 +94,8 @@ export default function ProjectCard({
               )}
             </div>
           </div>
-
-          <div className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 text-neutral-400 group-hover:text-highlight transition-all flex-shrink-0 self-center">
-            <Icon icon={showIcon} stroke="currentColor" styles="w-4 h-4" />
-          </div>
         </div>
-      </div>
+      </article>
     </Link>
   );
 }

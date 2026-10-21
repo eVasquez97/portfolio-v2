@@ -1,6 +1,5 @@
 export const routes = [
   { name: "Projects", url: "/projects" },
-  { name: "Experience", url: "/services" },
   { name: "Courses", url: "/courses" },
   { name: "About", url: "/about" },
 ];

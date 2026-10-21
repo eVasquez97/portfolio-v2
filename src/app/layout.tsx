@@ -2,14 +2,14 @@ import { KeyboardNav } from "@/components/molecules";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { inter, jetbrainsMono, spaceGrotesk } from "./fonts";
+import { inter, jetbrainsMono, plusJakartaSans, spaceGrotesk } from "./fonts";
 import "./globals.css";
 import Loading from "./loading";
 
-const siteUrl = "https://evasquez97.vercel.app";
-const title = "Eduardo Vásquez - Full Stack & Mobile Engineer";
+const siteUrl = "https://evasquez97.vercel.app/";
+const title = "Eduardo Vásquez | Desarrollador Web Frontend & Fullstack";
 const description =
-  "Portfolio of Eduardo Vásquez showcasing projects and experience in full-stack web, mobile (React Native/Expo), and software engineering.";
+  "Desarrollador Web Frontend y Fullstack con +6 años de experiencia creando aplicaciones web y móviles escalables con React, Next.js, React Native y TypeScript. Disponible para nuevos proyectos y oportunidades.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -18,16 +18,17 @@ export const metadata: Metadata = {
     template: "%s | Eduardo Vásquez",
   },
   description,
-  authors: [{ name: "Eduardo Vásquez" }],
+  authors: [{ name: "Eduardo Vásquez", url: siteUrl }],
   keywords: [
     "Eduardo Vásquez",
-    "software engineer",
-    "full stack developer",
-    "react",
-    "react native",
-    "nextjs",
-    "typescript",
-    "tailwindcss",
+    "Desarrollador Web Frontend",
+    "Desarrollador Fullstack",
+    "Software Engineer",
+    "React",
+    "React Native",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
   ],
   alternates: {
     canonical: siteUrl,
@@ -38,9 +39,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Eduardo Vásquez Portfolio",
     images: [
-      { url: "/perfil.JPG", width: 1200, height: 630, alt: "Eduardo Vásquez" },
+      {
+        url: "/perfil.JPG",
+        width: 1200,
+        height: 630,
+        alt: "Eduardo Vásquez | Desarrollador Web Frontend & Fullstack",
+      },
     ],
-    locale: "en_US",
+    locale: "es_HN",
     type: "website",
   },
   twitter: {
@@ -56,18 +62,29 @@ const jsonLd = {
   "@type": "Person",
   name: "Eduardo Vásquez",
   url: siteUrl,
-  jobTitle: "Software Engineer",
+  image: `${siteUrl}perfil.JPG`,
+  jobTitle: "Desarrollador Web Frontend & Fullstack",
+  description,
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Universidad Católica de Honduras",
+  },
   sameAs: [
     "https://github.com/evasquez97",
-    "https://linkedin.com/in/evasquez97",
+    "https://www.linkedin.com/in/eduardovasquez97/",
+    "https://twitter.com/evasquez97_",
   ],
   knowsAbout: [
     "React",
-    "React Native",
     "Next.js",
+    "React Native",
     "TypeScript",
+    "JavaScript",
     "Node.js",
+    "Python",
     "Tailwind CSS",
+    "SQL",
+    "Azure",
   ],
 };
 
@@ -79,16 +96,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans min-h-[100dvh] h-[100dvh] bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 flex flex-col items-center justify-between p-3 sm:p-6 gap-3 sm:gap-5 overflow-hidden antialiased selection:bg-highlight selection:text-white`}
+        className={`${plusJakartaSans.variable} ${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} flex h-dvh min-h-dvh flex-col items-center justify-between gap-3 overflow-hidden bg-neutral-50 p-3 font-sans text-base leading-relaxed text-neutral-900 antialiased selection:bg-highlight selection:text-white dark:bg-neutral-950 dark:text-neutral-100 sm:gap-5 sm:p-6`}
       >
-        <main className="w-full max-w-2xl sm:max-w-3xl mx-auto flex-1 min-h-0 flex flex-col">
+        <main className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col sm:max-w-3xl">
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
-          <div className="card-container flex-1 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] w-full shadow-2xl shadow-black/5 dark:shadow-black/40 bg-white/95 dark:bg-neutral-900/95 border border-neutral-200/80 dark:border-neutral-800/80 backdrop-blur-xl animate-fade-in min-h-0 flex flex-col">
-            <div className="flex-1 overflow-y-auto p-4 sm:p-8">
-              <div className="pb-4 sm:pb-16">
+          <div className="card-container animate-fade-in flex min-h-0 w-full flex-1 flex-col overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white/95 shadow-2xl shadow-black/5 backdrop-blur-xl dark:border-neutral-800/80 dark:bg-neutral-900/95 dark:shadow-black/40">
+            <div className="flex-1 overflow-y-auto scroll-smooth p-4 sm:p-8">
+              <div className="pb-4 sm:pb-8">
                 <Suspense fallback={<Loading />}>{children}</Suspense>
               </div>
             </div>

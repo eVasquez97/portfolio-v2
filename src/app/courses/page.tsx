@@ -70,18 +70,70 @@ const defaultConfig: ProviderConfig = {
 
 export default function CoursesPage() {
   const { courses } = data;
+  const [selectedProvider, setSelectedProvider] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
-  const totalPages = Math.ceil(courses.length / itemsPerPage);
+  const itemsPerPage = 6;
 
+  const providers = [
+    "All",
+    ...Array.from(new Set(courses.map((c) => c.company))),
+  ];
+
+  const filteredCourses =
+    selectedProvider === "All"
+      ? courses
+      : courses.filter((c) => c.company === selectedProvider);
+
+  const totalPages = Math.ceil(filteredCourses.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentCourses = courses.slice(startIndex, startIndex + itemsPerPage);
+  const currentCourses = filteredCourses.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
+
+  const handleProviderChange = (provider: string) => {
+    setSelectedProvider(provider);
+    setCurrentPage(1);
+  };
 
   return (
-    <div className="flex flex-col w-full space-y-4">
-      <Quote quote="Do or do not, there is no try. - Yoda" style="mb-2" />
+    <div className="flex w-full flex-col space-y-5">
+      <Quote quote="Do or do not, there is no try. - Yoda" />
 
-      <div className="flex flex-col gap-3">
+      <header className="space-y-3">
+        <div className="space-y-1">
+          <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
+            Courses &amp; Certifications
+          </h1>
+          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 sm:text-base">
+            Continuous learning and verified technical credentials.
+          </p>
+        </div>
+
+        {/* Provider Filter Pills */}
+        <div className="flex flex-wrap gap-1.5">
+          {providers.map((provider) => {
+            const isSelected = selectedProvider === provider;
+            return (
+              <button
+                key={provider}
+                type="button"
+                onClick={() => handleProviderChange(provider)}
+                className={`rounded-full border px-3 py-1 text-xs font-semibold transition-all ${
+                  isSelected
+                    ? "border-highlight bg-highlight text-white"
+                    : "border-neutral-200/80 bg-neutral-100/80 text-neutral-800 hover:bg-neutral-200/70 dark:border-neutral-800/80 dark:bg-neutral-800/50 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                }`}
+              >
+                {provider}
+              </button>
+            );
+          })}
+        </div>
+      </header>
+
+      {/* 2-Column Credential Cards Grid */}
+      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
         {currentCourses.map((course) => {
           const config = providerConfigs[course.company] || defaultConfig;
 
@@ -91,83 +143,86 @@ export default function CoursesPage() {
               href={course.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block"
+              className="group block h-full"
             >
-              <div className="card-interactive p-3.5 sm:p-4 rounded-xl border border-neutral-200/80 dark:border-neutral-800/80 bg-neutral-50/50 dark:bg-neutral-900/40 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/50 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 shadow-sm hover:shadow">
-                <div className="flex items-center space-x-3.5 min-w-0 flex-1 w-full">
-                  {/* Brand / Provider Avatar Badge */}
-                  <div
-                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl ${config.bg} border ${config.border} flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform duration-200`}
-                  >
-                    <svg
-                      className={`w-5 h-5 sm:w-6 sm:h-6 ${config.text}`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1.8}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d={config.iconPath}
-                      />
-                    </svg>
-                  </div>
-
-                  {/* Course Metadata */}
-                  <div className="flex flex-col min-w-0 flex-1 space-y-1">
-                    <div className="flex items-center gap-2 flex-wrap">
+              <article className="card-interactive flex h-full flex-col justify-between gap-3.5 p-4">
+                <div className="space-y-2.5">
+                  {/* Top Row: Provider Badge & Date */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <div
+                        className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xl border ${config.bg} ${config.border}`}
+                      >
+                        <svg
+                          className={`h-4 w-4 ${config.text}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1.8}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d={config.iconPath}
+                          />
+                        </svg>
+                      </div>
                       <span
-                        className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-md border ${config.badgeBg}`}
+                        className={`rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${config.badgeBg}`}
                       >
                         {course.company}
                       </span>
-                      <span className="text-[11px] font-medium opacity-60">
-                        {course.time}
-                      </span>
-                      <span
-                        className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-neutral-200/50 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 opacity-80 truncate max-w-[130px] sm:max-w-[180px]"
-                        title={`ID: ${course.certificationID}`}
-                      >
-                        #
-                        {course.certificationID.length > 12
-                          ? `${course.certificationID.slice(0, 12)}...`
-                          : course.certificationID}
-                      </span>
                     </div>
 
-                    <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-highlight transition-colors line-clamp-2">
-                      {course.name}
-                    </p>
+                    <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                      {course.time}
+                    </span>
                   </div>
+
+                  {/* Course Title */}
+                  <h2 className="line-clamp-2 text-sm font-bold leading-snug text-neutral-900 transition-colors group-hover:text-highlight dark:text-neutral-100 sm:text-base">
+                    {course.name}
+                  </h2>
                 </div>
 
-                {/* Action Link */}
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-highlight opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all flex-shrink-0 self-end sm:self-center bg-highlight/10 px-2.5 py-1 rounded-lg border border-highlight/20">
-                  <span>Verify</span>
-                  <Icon
-                    icon={showIcon}
-                    stroke="currentColor"
-                    styles="w-3.5 h-3.5"
-                  />
+                {/* Footer Row: Credential ID & Verify Action */}
+                <div className="flex items-center justify-between gap-2 border-t border-neutral-200/60 pt-2.5 text-[11px] dark:border-neutral-800/60">
+                  <span
+                    className="truncate font-mono text-neutral-500 dark:text-neutral-400"
+                    title={`ID: ${course.certificationID}`}
+                  >
+                    ID:{" "}
+                    {course.certificationID.length > 14
+                      ? `${course.certificationID.slice(0, 14)}...`
+                      : course.certificationID}
+                  </span>
+
+                  <span className="inline-flex flex-shrink-0 items-center gap-1 font-semibold text-highlight transition-transform group-hover:translate-x-0.5">
+                    <span>Verify</span>
+                    <Icon
+                      icon={showIcon}
+                      stroke="currentColor"
+                      styles="w-3 h-3"
+                    />
+                  </span>
                 </div>
-              </div>
+              </article>
             </Link>
           );
         })}
       </div>
 
       {totalPages > 1 && (
-        <div className="flex flex-row items-center justify-between w-full pt-3 border-t border-neutral-100 dark:border-neutral-800/80 text-xs">
-          <span className="opacity-60 font-medium">
-            Page {currentPage} of {totalPages}
+        <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-3 text-xs dark:border-neutral-800/80">
+          <span className="font-medium opacity-75">
+            Page {currentPage} of {totalPages} ({filteredCourses.length} total)
           </span>
           <div className="flex flex-row items-center space-x-1.5">
             <button
               onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={currentPage === 1}
               aria-label="Previous Page"
-              className="px-2.5 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-700/80 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 disabled:opacity-30 disabled:pointer-events-none transition-all flex items-center font-medium"
+              className="flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-30 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
             >
               <Icon
                 icon={chevronLeftIcon}
@@ -180,7 +235,7 @@ export default function CoursesPage() {
               onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
               disabled={currentPage === totalPages}
               aria-label="Next Page"
-              className="px-2.5 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-700/80 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 disabled:opacity-30 disabled:pointer-events-none transition-all flex items-center font-medium"
+              className="flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-30 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
             >
               Next
               <Icon

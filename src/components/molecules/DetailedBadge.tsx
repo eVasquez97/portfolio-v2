@@ -1,5 +1,11 @@
-import { DetailedBadgeType } from "@/app/services/DetailedBadgeType";
 import Image from "next/image";
+
+export type DetailedBadgeType = {
+  name: string;
+  experience?: string;
+  logo: string;
+  description?: string;
+};
 
 export default function DetailedBadge({
   name,

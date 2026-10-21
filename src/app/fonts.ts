@@ -1,4 +1,15 @@
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import {
+  Inter,
+  JetBrains_Mono,
+  Plus_Jakarta_Sans,
+  Space_Grotesk,
+} from "next/font/google";
+
+export const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-plus-jakarta",
+});
 
 export const inter = Inter({
   subsets: ["latin"],
