@@ -1,6 +1,6 @@
 import { Title } from "@/components/atoms";
-import { ShowCase } from "@/components/molecules";
 import { Quote } from "@/components/organisms";
+import Image from "next/image";
 import Link from "next/link";
 import data from "../../utils/data.json";
 
@@ -16,42 +16,69 @@ const serviceIcons: Record<string, string> = {
 
 export default function About() {
   const { volunteering, services } = data;
-  const galleryImages = [
-    "/perfil.JPG",
-    "/img/banner1.jpg",
-    "/img/gallery/random.jpg",
-  ];
+  const numLobes = 12;
+  const baseRadius = 0.46;
+  const waveAmplitude = 0.028;
+  const numPoints = 360;
+  const scallopPolygon = `polygon(${Array.from(
+    { length: numPoints },
+    (_, i) => {
+      const theta = (2 * Math.PI * i) / numPoints;
+      const r =
+        baseRadius + waveAmplitude * Math.sin(numLobes * theta - Math.PI / 4);
+      const x = (0.5 + r * Math.cos(theta)) * 100;
+      const y = (0.5 + r * Math.sin(theta)) * 100;
+      return `${x.toFixed(3)}% ${y.toFixed(3)}%`;
+    },
+  ).join(", ")})`;
 
   return (
     <div className="flex w-full flex-col space-y-8 sm:space-y-10">
       <Quote quote="In my experience, there’s no such thing as luck. - Obi Wan Kenobi" />
 
-      {/* Visual Header / Photo Gallery */}
-      <section aria-label="Photo Gallery" className="flex flex-col space-y-3">
-        <div className="overflow-hidden rounded-[28px] border border-neutral-200/80 bg-neutral-100/50 p-1.5 dark:border-neutral-800/80 dark:bg-neutral-900/30 sm:p-2">
-          <ShowCase items={galleryImages} />
+      {/* Community & Beyond Code + Pixel Scallop Photo Widget */}
+      <section className="flex flex-col-reverse items-center gap-6 md:grid md:grid-cols-2 md:items-center md:gap-8">
+        <div className="w-full space-y-3">
+          <Title
+            text="Community & Beyond Code"
+            styles="text-lg sm:text-xl font-bold"
+          />
+
+          <div className="space-y-3 text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
+            <p>
+              Since {volunteering?.start || "2007"}, I have actively volunteered
+              as a translator and interpreter for annual medical and
+              construction missions from the Episcopal Church in the United
+              States, supporting local communities across Honduras.
+            </p>
+            <p>
+              Outside of software engineering, I stay energized through
+              consistent fitness routines, continuous non-fiction reading, and
+              exploring culinary recipes — fried chicken being my absolute
+              specialty.
+            </p>
+          </div>
         </div>
-      </section>
 
-      {/* Community & Beyond Code */}
-      <section className="space-y-3">
-        <Title
-          text="Community & Beyond Code"
-          styles="text-lg sm:text-xl font-bold"
-        />
-
-        <div className="space-y-3 text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
-          <p>
-            Since {volunteering?.start || "2007"}, I have actively volunteered
-            as a translator and interpreter for annual medical and construction
-            missions from the Episcopal Church in the United States, supporting
-            local communities across Honduras.
-          </p>
-          <p>
-            Outside of software engineering, I stay energized through consistent
-            fitness routines, continuous non-fiction reading, and exploring
-            culinary recipes — fried chicken being my absolute specialty.
-          </p>
+        <div className="flex w-full items-center justify-center">
+          <div className="relative h-72 w-72 flex-shrink-0 drop-shadow-sm transition-transform duration-300 hover:scale-[1.03] sm:h-80 sm:w-80">
+            <div
+              className="relative h-full w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+              style={{
+                clipPath: scallopPolygon,
+                WebkitClipPath: scallopPolygon,
+              }}
+            >
+              <Image
+                src="/perfil.JPG"
+                alt="Eduardo Vásquez"
+                fill
+                sizes="(max-width: 768px) 288px, 320px"
+                priority
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

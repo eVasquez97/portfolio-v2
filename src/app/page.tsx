@@ -19,7 +19,7 @@ export default function Home() {
           <Link className="app-link mx-0.5" href="/about">
             Full Stack Engineer
           </Link>{" "}
-          with 6+ years of experience building scalable web and mobile apps.
+          with 7+ years of experience building scalable web and mobile apps.
           Skilled in modern frameworks and cloud platforms, with a focus on
           real-time systems and clean architecture. Eager to learn, grow, and
           contribute to impactful engineering teams.
