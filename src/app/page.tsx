@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import data from "../utils/data.json";
 import projects from "../utils/projects.json";
+import Loading from "./loading";
 
 export default function Home() {
   const showCase = projects?.slice(0, 2);
