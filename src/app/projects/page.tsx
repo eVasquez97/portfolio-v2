@@ -121,7 +121,7 @@ export default function Projects() {
 
   return (
     <section className="flex w-full flex-col space-y-5">
-      <header className="space-y-1.5">
+      <header className="animate-fade-in space-y-1.5">
         <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
           Projects &amp; Tech Stack
         </h1>
@@ -132,8 +132,11 @@ export default function Projects() {
       </header>
 
       {/* Tech Stacks Pill Chips Section */}
-      <section aria-labelledby="tech-stacks-heading" className="space-y-2.5">
-        <div className="flex flex-wrap gap-2">
+      <section
+        aria-label="Filter projects by technology"
+        className="animate-fade-in stagger-1 space-y-2.5"
+      >
+        <div className="flex flex-wrap gap-2" role="group">
           {allTechStacks.map((tech) => {
             const isSelected =
               searchTerm.trim().toLowerCase() === tech.name.toLowerCase();
@@ -141,18 +144,19 @@ export default function Projects() {
               <button
                 key={tech.name}
                 type="button"
+                aria-pressed={isSelected}
                 onClick={() => handleTechChipClick(tech.name)}
                 title={`${tech.name} (${tech.experience})`}
-                className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all ${
+                className={`focus-ring inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all duration-200 active:scale-95 ${
                   isSelected
-                    ? "border-highlight bg-highlight text-white"
+                    ? "border-highlight bg-highlight text-white shadow-sm shadow-highlight/20"
                     : "border-neutral-200/80 bg-neutral-100/80 text-neutral-800 hover:bg-neutral-200/70 dark:border-neutral-800/80 dark:bg-neutral-800/50 dark:text-neutral-200 dark:hover:bg-neutral-800"
                 }`}
               >
                 {tech.logo && (
                   <Image
                     src={tech.logo}
-                    alt={tech.name}
+                    alt=""
                     width={15}
                     height={15}
                     className="h-3.5 w-3.5 flex-shrink-0 object-contain"
@@ -166,7 +170,10 @@ export default function Projects() {
       </section>
 
       {/* Search & Filter Controls */}
-      <section aria-labelledby="projects-list-heading" className="space-y-4">
+      <section
+        aria-labelledby="projects-list-heading"
+        className="animate-fade-in stagger-2 space-y-4"
+      >
         <h2 id="projects-list-heading" className="sr-only">
           Project Directory
         </h2>
@@ -174,13 +181,20 @@ export default function Projects() {
         <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center">
           {/* Search Input */}
           <div className="relative flex-1">
-            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-neutral-400 dark:text-neutral-500">
+            <label htmlFor="project-search" className="sr-only">
+              Search projects by technology, role, or name
+            </label>
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-neutral-400 dark:text-neutral-500"
+            >
               <svg
                 className="h-4 w-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2}
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -190,7 +204,8 @@ export default function Projects() {
               </svg>
             </div>
             <input
-              type="text"
+              id="project-search"
+              type="search"
               value={searchTerm}
               onChange={handleSearchChange}
               placeholder="Search projects (React, Python, Mobile...)"
@@ -198,12 +213,13 @@ export default function Projects() {
             />
             {searchTerm && (
               <button
+                type="button"
                 onClick={() => {
                   setSearchTerm("");
                   setCurrentPage(1);
                 }}
                 aria-label="Clear search text"
-                className="absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 transition-colors hover:text-neutral-600 dark:hover:text-neutral-200"
+                className="focus-ring absolute inset-y-0 right-1 my-auto flex h-7 w-7 items-center justify-center rounded-full text-neutral-500 transition-colors hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200"
               >
                 <svg
                   className="h-4 w-4"
@@ -211,6 +227,7 @@ export default function Projects() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -223,15 +240,21 @@ export default function Projects() {
           </div>
 
           {/* Platform Pills */}
-          <div className="flex shrink-0 items-center gap-1 self-start rounded-full border border-neutral-200/80 bg-neutral-100/80 p-1 dark:border-neutral-700/80 dark:bg-neutral-800/60 sm:self-auto">
+          <div
+            role="group"
+            aria-label="Filter projects by platform"
+            className="flex shrink-0 items-center gap-1 self-start rounded-full border border-neutral-200/80 bg-neutral-100/80 p-1 dark:border-neutral-700/80 dark:bg-neutral-800/60 sm:self-auto"
+          >
             {(["all", "web", "mobile"] as const).map((plat) => (
               <button
                 key={plat}
+                type="button"
+                aria-pressed={selectedPlatform === plat}
                 onClick={() => handlePlatformChange(plat)}
-                className={`rounded-full px-3.5 py-1.5 text-xs font-semibold capitalize transition-all ${
+                className={`focus-ring rounded-full px-3.5 py-1.5 text-xs font-semibold capitalize transition-all ${
                   selectedPlatform === plat
-                    ? "bg-highlight text-white"
-                    : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                    ? "bg-highlight text-white shadow-sm"
+                    : "text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
                 }`}
               >
                 {plat}
@@ -241,50 +264,57 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid: Full width */}
-        {currentProjects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-3.5">
-            {currentProjects.map((pro) => (
-              <ProjectCard
-                key={pro.id}
-                id={pro.id}
-                name={pro.name}
-                platform={pro.platform}
-                jobType={pro.jobType}
-                company={pro.company}
-                img={pro.img}
-                companyLogo={pro.companyLogo}
-                techStack={pro.techStack}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="flex flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-neutral-200 bg-neutral-50/50 px-4 py-10 text-center dark:border-neutral-800 dark:bg-neutral-900/30">
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              No projects found matching &ldquo;{searchTerm}&rdquo;
-              {selectedPlatform !== "all" ? ` in ${selectedPlatform}` : ""}
-            </p>
-            <button
-              onClick={handleClear}
-              className="text-xs font-semibold text-highlight hover:underline"
+        <div aria-live="polite">
+          {currentProjects.length > 0 ? (
+            <div
+              key={`${selectedPlatform}-${searchTerm}-${currentPage}`}
+              className="animate-fade-in grid grid-cols-1 gap-3.5"
             >
-              Clear filters and view all
-            </button>
-          </div>
-        )}
+              {currentProjects.map((pro) => (
+                <ProjectCard
+                  key={pro.id}
+                  id={pro.id}
+                  name={pro.name}
+                  platform={pro.platform}
+                  jobType={pro.jobType}
+                  company={pro.company}
+                  img={pro.img}
+                  companyLogo={pro.companyLogo}
+                  techStack={pro.techStack}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="animate-fade-in flex flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-neutral-200 bg-neutral-50/50 px-4 py-10 text-center dark:border-neutral-800 dark:bg-neutral-900/30">
+              <p className="text-sm text-neutral-600 dark:text-neutral-300">
+                No projects found matching &ldquo;{searchTerm}&rdquo;
+                {selectedPlatform !== "all" ? ` in ${selectedPlatform}` : ""}
+              </p>
+              <button
+                type="button"
+                onClick={handleClear}
+                className="app-link text-xs font-semibold"
+              >
+                Clear filters and view all
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-3.5 text-xs dark:border-neutral-800/80">
-            <span className="font-medium opacity-75">
+            <span className="font-medium text-neutral-600 dark:text-neutral-300">
               Page {currentPage} of {totalPages} ({filteredProjects.length}{" "}
               total)
             </span>
             <div className="flex flex-row items-center space-x-1.5">
               <button
+                type="button"
                 onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
                 disabled={currentPage === 1}
                 aria-label="Previous Page"
-                className="flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-30 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
+                className="focus-ring flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 active:scale-95 disabled:pointer-events-none disabled:opacity-40 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
               >
                 <Icon
                   icon={chevronLeftIcon}
@@ -294,12 +324,13 @@ export default function Projects() {
                 Prev
               </button>
               <button
+                type="button"
                 onClick={() =>
                   setCurrentPage((p) => Math.min(p + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
                 aria-label="Next Page"
-                className="flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-30 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
+                className="focus-ring flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 active:scale-95 disabled:pointer-events-none disabled:opacity-40 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
               >
                 Next
                 <Icon

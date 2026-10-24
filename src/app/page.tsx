@@ -29,7 +29,7 @@ export default function Home() {
     <section className="flex w-full flex-col space-y-5 sm:space-y-5">
       <Quote quote="This is the way. - Din Djarin" style="mb-0" />
 
-      <header className="flex flex-col-reverse items-center gap-4 md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8">
+      <header className="animate-fade-in stagger-1 flex flex-col-reverse items-center gap-4 md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8">
         <div className="w-full space-y-2">
           <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
             Eduardo Vásquez — Fullstack Engineer
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
 
         <div className="flex items-center justify-center">
-          <div className="relative h-48 w-48 flex-shrink-0 drop-shadow-sm transition-transform duration-300 hover:scale-[1.03] sm:h-52 sm:w-52">
+          <div className="animate-scale-in stagger-2 relative h-48 w-48 flex-shrink-0 drop-shadow-sm transition-transform duration-300 ease-out hover:scale-[1.03] sm:h-52 sm:w-52">
             <div
               className="relative h-full w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800"
               style={{
@@ -60,7 +60,7 @@ export default function Home() {
             >
               <Image
                 src="/perfil.JPG"
-                alt="Eduardo Vásquez"
+                alt="Portrait of Eduardo Vásquez"
                 fill
                 sizes="(max-width: 768px) 192px, 208px"
                 priority
@@ -73,7 +73,7 @@ export default function Home() {
 
       <section
         aria-labelledby="featured-projects-heading"
-        className="space-y-5"
+        className="animate-fade-in stagger-2 space-y-5"
       >
         <div className="flex items-center justify-between">
           <h2
@@ -84,7 +84,8 @@ export default function Home() {
           </h2>
           <Link
             href="/projects"
-            className="rounded-full bg-highlight/10 px-3 py-1 text-xs font-semibold text-highlight transition-colors hover:bg-highlight/20"
+            aria-label="View all projects"
+            className="focus-ring rounded-full bg-highlight/10 px-3 py-1 text-xs font-semibold text-highlight transition-all hover:bg-highlight/20 active:scale-95"
           >
             View all
           </Link>

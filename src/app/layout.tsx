@@ -98,7 +98,17 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} flex h-dvh min-h-dvh flex-col items-center justify-between gap-3 overflow-hidden bg-neutral-50 p-3 font-sans text-base leading-relaxed text-neutral-900 antialiased selection:bg-highlight selection:text-white dark:bg-neutral-950 dark:text-neutral-100 sm:gap-5 sm:p-6`}
       >
-        <main className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col sm:max-w-3xl">
+        <a
+          href="#main-content"
+          className="focus-ring sr-only z-50 rounded-full bg-highlight px-4 py-2 text-xs font-semibold text-white shadow-lg focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        >
+          Skip to main content
+        </a>
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col focus:outline-none sm:max-w-3xl"
+        >
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

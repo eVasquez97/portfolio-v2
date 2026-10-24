@@ -33,7 +33,8 @@ export default function ProjectCard({
         pathname: `/projects/${name}`,
         query: { id: id },
       }}
-      className="group block h-full"
+      aria-label={`View details for ${name}${company ? ` at ${company}` : ""}`}
+      className="focus-ring group block h-full rounded-[28px]"
     >
       <article
         className={`card-interactive flex h-full flex-col justify-between p-4 ${style}`}
@@ -46,7 +47,7 @@ export default function ProjectCard({
                 alt={company || name}
                 fill
                 sizes="64px"
-                className="rounded-xl object-cover transition-transform duration-200 group-hover:scale-105"
+                className="rounded-xl object-cover transition-transform duration-300 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -56,13 +57,13 @@ export default function ProjectCard({
                   {name}
                 </h3>
                 {platform && (
-                  <span className="flex-shrink-0 rounded-full border border-highlight/20 bg-highlight/15 px-1.5 py-[1px] text-[9px] font-semibold uppercase leading-tight tracking-wider text-highlight">
+                  <span className="flex-shrink-0 rounded-full border border-highlight/20 bg-highlight/15 px-2 py-0.5 text-[10px] font-semibold uppercase leading-tight tracking-wider text-highlight">
                     {platform}
                   </span>
                 )}
               </div>
 
-              <span className="mt-0.5 truncate text-xs capitalize text-neutral-600 dark:text-neutral-400">
+              <span className="mt-0.5 truncate text-xs font-medium capitalize text-neutral-600 dark:text-neutral-300">
                 {company} {jobType ? `· ${jobType}` : ""}
               </span>
 

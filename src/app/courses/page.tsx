@@ -100,7 +100,7 @@ export default function CoursesPage() {
     <div className="flex w-full flex-col space-y-6">
       <Quote quote="Do or do not, there is no try. - Yoda" />
 
-      <header className="space-y-4">
+      <header className="animate-fade-in stagger-1 space-y-4">
         <div className="space-y-1.5">
           <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
             Courses &amp; Certifications
@@ -111,17 +111,22 @@ export default function CoursesPage() {
         </div>
 
         {/* Provider Filter Pills */}
-        <div className="flex flex-wrap gap-2">
+        <div
+          role="group"
+          aria-label="Filter courses by provider"
+          className="flex flex-wrap gap-2"
+        >
           {providers.map((provider) => {
             const isSelected = selectedProvider === provider;
             return (
               <button
                 key={provider}
                 type="button"
+                aria-pressed={isSelected}
                 onClick={() => handleProviderChange(provider)}
-                className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all ${
+                className={`focus-ring rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all duration-200 active:scale-95 ${
                   isSelected
-                    ? "border-highlight bg-highlight text-white"
+                    ? "border-highlight bg-highlight text-white shadow-sm shadow-highlight/20"
                     : "border-neutral-200/80 bg-neutral-100/80 text-neutral-800 hover:bg-neutral-200/70 dark:border-neutral-800/80 dark:bg-neutral-800/50 dark:text-neutral-200 dark:hover:bg-neutral-800"
                 }`}
               >
@@ -133,7 +138,11 @@ export default function CoursesPage() {
       </header>
 
       {/* 2-Column Credential Cards Grid */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div
+        key={`${selectedProvider}-${currentPage}`}
+        aria-live="polite"
+        className="animate-fade-in stagger-2 grid grid-cols-1 gap-4 sm:grid-cols-2"
+      >
         {currentCourses.map((course) => {
           const config = providerConfigs[course.company] || defaultConfig;
 
@@ -143,7 +152,8 @@ export default function CoursesPage() {
               href={course.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block h-full"
+              aria-label={`Verify ${course.name} certificate from ${course.company} (opens in new tab)`}
+              className="focus-ring group block h-full rounded-[28px]"
             >
               <article className="card-interactive flex h-full flex-col justify-between gap-4 p-5">
                 <div className="space-y-3">
@@ -151,6 +161,7 @@ export default function CoursesPage() {
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
                       <div
+                        aria-hidden="true"
                         className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xl border ${config.bg} ${config.border}`}
                       >
                         <svg
@@ -159,6 +170,7 @@ export default function CoursesPage() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeWidth={1.8}
+                          aria-hidden="true"
                         >
                           <path
                             strokeLinecap="round"
@@ -174,7 +186,7 @@ export default function CoursesPage() {
                       </span>
                     </div>
 
-                    <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                    <span className="text-xs font-medium text-neutral-600 dark:text-neutral-400">
                       {course.time}
                     </span>
                   </div>
@@ -188,7 +200,7 @@ export default function CoursesPage() {
                 {/* Footer Row: Credential ID & Verify Action */}
                 <div className="flex items-center justify-between gap-2 border-t border-neutral-200/60 pt-2.5 text-[11px] dark:border-neutral-800/60">
                   <span
-                    className="truncate font-mono text-neutral-500 dark:text-neutral-400"
+                    className="truncate font-mono text-neutral-600 dark:text-neutral-400"
                     title={`ID: ${course.certificationID}`}
                   >
                     ID:{" "}
@@ -214,15 +226,16 @@ export default function CoursesPage() {
 
       {totalPages > 1 && (
         <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-4 text-xs dark:border-neutral-800/80">
-          <span className="font-medium opacity-75">
+          <span className="font-medium text-neutral-600 dark:text-neutral-300">
             Page {currentPage} of {totalPages} ({filteredCourses.length} total)
           </span>
           <div className="flex flex-row items-center space-x-1.5">
             <button
+              type="button"
               onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={currentPage === 1}
               aria-label="Previous Page"
-              className="flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-30 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
+              className="focus-ring flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 active:scale-95 disabled:pointer-events-none disabled:opacity-40 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
             >
               <Icon
                 icon={chevronLeftIcon}
@@ -232,10 +245,11 @@ export default function CoursesPage() {
               Prev
             </button>
             <button
+              type="button"
               onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
               disabled={currentPage === totalPages}
               aria-label="Next Page"
-              className="flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-30 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
+              className="focus-ring flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1.5 font-medium text-neutral-800 transition-all hover:bg-neutral-200 active:scale-95 disabled:pointer-events-none disabled:opacity-40 dark:border-neutral-700/80 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
             >
               Next
               <Icon

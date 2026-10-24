@@ -20,6 +20,8 @@ export default function Icon({
       strokeWidth={strokeWidth || "1.5"}
       stroke={stroke || color || "currentColor"}
       className={styles}
+      aria-hidden="true"
+      focusable="false"
     >
       <path d={icon} />
     </svg>

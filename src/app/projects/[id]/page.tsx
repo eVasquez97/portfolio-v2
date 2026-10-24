@@ -79,9 +79,9 @@ export default function ProjectInfo({ params, searchParams }: PageProps) {
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="View live project"
+        aria-label={`Visit live project ${project.name} (opens in new tab)`}
         title="View live project"
-        className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-neutral-200/80 dark:border-neutral-700/80 bg-neutral-100/90 dark:bg-neutral-800/90 text-neutral-700 dark:text-neutral-200 hover:text-highlight hover:border-highlight/40 hover:bg-highlight/10 transition-all shadow-xs"
+        className="focus-ring inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200/80 bg-neutral-100/90 text-neutral-700 shadow-xs transition-all hover:border-highlight/40 hover:bg-highlight/10 hover:text-highlight active:scale-95 dark:border-neutral-700/80 dark:bg-neutral-800/90 dark:text-neutral-200 sm:h-10 sm:w-10"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,8 @@ export default function ProjectInfo({ params, searchParams }: PageProps) {
           viewBox="0 0 24 24"
           strokeWidth="2"
           stroke="currentColor"
-          className="w-4 h-4"
+          aria-hidden="true"
+          className="h-4 w-4"
         >
           <path
             strokeLinecap="round"
@@ -102,22 +103,22 @@ export default function ProjectInfo({ params, searchParams }: PageProps) {
   }
 
   return project ? (
-    <div className="w-full pb-8 sm:pb-12">
+    <article className="animate-fade-in w-full pb-8 sm:pb-12">
       {/* Header section */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 my-4">
-        <div className="flex items-center gap-2.5 flex-wrap">
-          <h1 className="font-bold capitalize text-2xl sm:text-3xl text-neutral-900 dark:text-neutral-100 tracking-tight">
+      <header className="my-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <h1 className="text-2xl font-bold capitalize tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl">
             {project.name}
           </h1>
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800/90 text-neutral-700 dark:text-neutral-300 border border-neutral-200/80 dark:border-neutral-700/60 capitalize">
+          <span className="rounded-full border border-neutral-200/80 bg-neutral-100 px-3 py-1 text-xs font-medium capitalize text-neutral-700 dark:border-neutral-700/60 dark:bg-neutral-800/90 dark:text-neutral-300">
             {project.platform}
           </span>
         </div>
         <div>{getProjectUrl()}</div>
-      </div>
+      </header>
 
       {/* Tech stack badges */}
-      <div className="w-full mb-5">
+      <div className="mb-5 w-full" aria-label="Technologies used">
         <div className="flex flex-row flex-wrap gap-2">
           {project?.techStack.map((ts) => {
             const techItem = allTech.find((t) => t.name === ts);
@@ -135,10 +136,10 @@ export default function ProjectInfo({ params, searchParams }: PageProps) {
       </div>
 
       {/* Banner image */}
-      <div className="relative w-full h-44 sm:h-52 max-h-[200px] sm:max-h-[220px] rounded-2xl sm:rounded-3xl overflow-hidden border border-neutral-200/80 dark:border-neutral-800 shadow-sm mb-6 bg-neutral-100 dark:bg-neutral-900">
+      <div className="animate-scale-in stagger-1 relative mb-6 h-44 max-h-[200px] w-full overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-100 shadow-sm dark:border-neutral-800 dark:bg-neutral-900 sm:h-52 sm:max-h-[220px] sm:rounded-3xl">
         <Image
           src={project?.img || "/img/banner1.jpg"}
-          alt={project?.name || "Project banner"}
+          alt={`${project?.name || "Project"} preview banner`}
           fill
           priority
           className="object-cover object-center"
@@ -146,66 +147,69 @@ export default function ProjectInfo({ params, searchParams }: PageProps) {
       </div>
 
       {/* Project Metadata Card */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 sm:p-5 rounded-2xl border border-neutral-200/70 dark:border-neutral-800/70 bg-neutral-100/70 dark:bg-neutral-800/40 mb-6">
-        <div className="flex flex-col min-w-0">
-          <span className="text-[10px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+      <dl className="animate-fade-in stagger-2 mb-6 grid grid-cols-2 gap-4 rounded-2xl border border-neutral-200/70 bg-neutral-100/70 p-4 dark:border-neutral-800/70 dark:bg-neutral-800/40 sm:grid-cols-4 sm:p-5">
+        <div className="flex min-w-0 flex-col">
+          <dt className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             Company
-          </span>
-          <span className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5 truncate">
+          </dt>
+          <dd className="mt-0.5 truncate text-xs font-semibold text-neutral-900 dark:text-neutral-100 sm:text-sm">
             {project.company}
-          </span>
+          </dd>
         </div>
-        <div className="flex flex-col min-w-0">
-          <span className="text-[10px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+        <div className="flex min-w-0 flex-col">
+          <dt className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             Role
-          </span>
-          <span className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5 truncate">
+          </dt>
+          <dd className="mt-0.5 truncate text-xs font-semibold text-neutral-900 dark:text-neutral-100 sm:text-sm">
             {project.role || "Developer"}
-          </span>
+          </dd>
         </div>
-        <div className="flex flex-col min-w-0">
-          <span className="text-[10px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+        <div className="flex min-w-0 flex-col">
+          <dt className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             Timeline
-          </span>
-          <span className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5 truncate">
+          </dt>
+          <dd className="mt-0.5 truncate text-xs font-semibold text-neutral-900 dark:text-neutral-100 sm:text-sm">
             {project.time}
-          </span>
+          </dd>
         </div>
-        <div className="flex flex-col min-w-0">
-          <span className="text-[10px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+        <div className="flex min-w-0 flex-col">
+          <dt className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             Location / Type
-          </span>
-          <span className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mt-0.5 truncate">
+          </dt>
+          <dd className="mt-0.5 truncate text-xs font-semibold text-neutral-900 dark:text-neutral-100 sm:text-sm">
             {project.location} ({project.jobType})
-          </span>
+          </dd>
         </div>
-      </div>
+      </dl>
 
       {/* Overview section */}
-      <div className="mb-6 space-y-2">
+      <section className="animate-fade-in stagger-2 mb-6 space-y-2">
         <Title text="Overview" size="base" styles="font-bold" />
-        <p className="text-xs sm:text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+        <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300 sm:text-base">
           {project?.intro} {project?.fullDesc}
         </p>
-      </div>
+      </section>
 
       {/* Responsibilities section */}
       {project?.responsibilities && project.responsibilities.length > 0 && (
-        <div className="mb-6 space-y-3">
+        <section className="animate-fade-in stagger-3 mb-6 space-y-3">
           <Title text="Main Responsibilities" size="base" styles="font-bold" />
           <ul className="space-y-2.5">
             {project.responsibilities.map((res, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 p-3.5 sm:p-4 rounded-2xl bg-neutral-100/70 dark:bg-neutral-800/40 border border-neutral-200/70 dark:border-neutral-800/70 text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 leading-relaxed"
+                className="flex items-start gap-3 rounded-2xl border border-neutral-200/70 bg-neutral-100/70 p-3.5 text-sm leading-relaxed text-neutral-800 dark:border-neutral-800/70 dark:bg-neutral-800/40 dark:text-neutral-200 sm:p-4 sm:text-base"
               >
-                <span className="w-2 h-2 rounded-full bg-highlight shrink-0 mt-1.5" />
+                <span
+                  aria-hidden="true"
+                  className="mt-2 h-2 w-2 shrink-0 rounded-full bg-highlight"
+                />
                 <span>{res}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       )}
-    </div>
+    </article>
   ) : null;
 }

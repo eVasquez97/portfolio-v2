@@ -1,8 +1,17 @@
 export default function Loading() {
   return (
-    <div className="flex flex-col items-center justify-center w-full py-20 text-center">
-      <div className="w-6 h-6 border-2 border-highlight border-t-transparent rounded-full animate-spin mb-3"></div>
-      <p className="text-sm opacity-60 font-light">Loading...</p>
+    <div
+      role="status"
+      aria-live="polite"
+      className="flex w-full flex-col items-center justify-center py-20 text-center"
+    >
+      <div
+        aria-hidden="true"
+        className="mb-3 h-6 w-6 animate-spin rounded-full border-2 border-highlight border-t-transparent"
+      />
+      <p className="text-sm font-medium text-neutral-600 dark:text-neutral-400">
+        Loading...
+      </p>
     </div>
   );
 }

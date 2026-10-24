@@ -22,12 +22,14 @@ export default function DetailedBadge({
         height={24}
         className="mr-2 h-4 w-4"
       />
-      <p className="text-xs flex flex-row">
+      <span className="flex flex-row items-center text-xs">
         {name}
         {experience && (
-          <span className="opacity-60 ml-2 text-sm">{experience}</span>
+          <span className="ml-2 text-xs text-neutral-600 dark:text-neutral-400">
+            {experience}
+          </span>
         )}
-      </p>
+      </span>
     </div>
   );
 }

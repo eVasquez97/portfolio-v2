@@ -37,7 +37,7 @@ export default function About() {
       <Quote quote="In my experience, there’s no such thing as luck. - Obi Wan Kenobi" />
 
       {/* Community & Beyond Code + Pixel Scallop Photo Widget */}
-      <section className="flex flex-col-reverse items-center gap-6 md:grid md:grid-cols-2 md:items-center md:gap-8">
+      <section className="animate-fade-in stagger-1 flex flex-col-reverse items-center gap-6 md:grid md:grid-cols-2 md:items-center md:gap-8">
         <div className="w-full space-y-3">
           <Title
             text="Community & Beyond Code"
@@ -61,7 +61,7 @@ export default function About() {
         </div>
 
         <div className="flex w-full items-center justify-center">
-          <div className="relative h-72 w-72 flex-shrink-0 drop-shadow-sm transition-transform duration-300 hover:scale-[1.03] sm:h-80 sm:w-80">
+          <div className="animate-scale-in stagger-2 relative h-72 w-72 flex-shrink-0 drop-shadow-sm transition-transform duration-300 ease-out hover:scale-[1.03] sm:h-80 sm:w-80">
             <div
               className="relative h-full w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800"
               style={{
@@ -70,8 +70,8 @@ export default function About() {
               }}
             >
               <Image
-                src="/img/gallery/grad.jpg"
-                alt="Eduardo Vásquez"
+                src="/img/gallery/panacam.jpeg"
+                alt="Eduardo Vásquez at PANACAM"
                 fill
                 sizes="(max-width: 768px) 288px, 320px"
                 priority
@@ -83,7 +83,7 @@ export default function About() {
       </section>
 
       {/* Education & Academic Background */}
-      <section className="space-y-3">
+      <section className="animate-fade-in stagger-2 space-y-3">
         <Title
           text="Education & Academic Background"
           styles="text-lg sm:text-xl font-bold"
@@ -96,7 +96,7 @@ export default function About() {
               href="https://unicah.edu/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-neutral-900 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-highlight dark:text-neutral-100 dark:decoration-neutral-700"
+              className="focus-ring rounded-sm font-semibold text-neutral-900 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-highlight dark:text-neutral-100 dark:decoration-neutral-700"
             >
               Universidad Católica de Honduras
             </Link>{" "}
@@ -110,7 +110,7 @@ export default function About() {
               href="https://www.facebook.com/EBPHonduras/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-neutral-900 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-highlight dark:text-neutral-100 dark:decoration-neutral-700"
+              className="focus-ring rounded-sm font-semibold text-neutral-900 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-highlight dark:text-neutral-100 dark:decoration-neutral-700"
             >
               Escuela e Instituto Episcopal Bilingüe El Buen Pastor
             </Link>{" "}
@@ -121,7 +121,7 @@ export default function About() {
       </section>
 
       {/* Services Section moved to the base of About */}
-      <section className="space-y-4">
+      <section className="animate-fade-in stagger-3 space-y-4">
         <div>
           <Title text="Services" styles="text-lg sm:text-xl font-bold" />
           <p className="mt-2 text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
@@ -141,13 +141,17 @@ export default function About() {
               >
                 <div className="space-y-2.5">
                   <div className="flex items-center space-x-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl border border-highlight/20 bg-highlight/15 text-highlight">
+                    <div
+                      aria-hidden="true"
+                      className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl border border-highlight/20 bg-highlight/15 text-highlight"
+                    >
                       <svg
                         className="h-5 w-5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                         strokeWidth={1.8}
+                        aria-hidden="true"
                       >
                         <path
                           strokeLinecap="round"
@@ -167,19 +171,22 @@ export default function About() {
                 </div>
 
                 {sr.benefits && sr.benefits.length > 0 && (
-                  <div className="flex flex-col gap-1.5 border-t border-neutral-200/60 pt-3 dark:border-neutral-800/60">
+                  <ul className="flex flex-col gap-1.5 border-t border-neutral-200/60 pt-3 dark:border-neutral-800/60">
                     {sr.benefits.map((b) => (
-                      <div
+                      <li
                         key={b}
                         className="inline-flex items-start gap-2 text-xs font-medium text-neutral-700 dark:text-neutral-300"
                       >
-                        <span className="mt-0.5 text-xs font-bold leading-none text-highlight">
+                        <span
+                          aria-hidden="true"
+                          className="mt-0.5 text-xs font-bold leading-none text-highlight"
+                        >
                           ✓
                         </span>
                         <span>{b}</span>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 )}
               </article>
             );

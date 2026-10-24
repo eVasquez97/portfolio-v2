@@ -34,7 +34,7 @@ export default function KeyboardNav() {
   ];
 
   const socialBtnStyle =
-    "relative inline-flex items-center justify-center rounded-full p-2.5 text-neutral-700 dark:text-neutral-300 bg-neutral-100/80 dark:bg-neutral-800/80 hover:bg-highlight/15 hover:text-highlight dark:hover:bg-highlight/20 dark:hover:text-highlight transition-all duration-300 ease-out active:scale-95";
+    "focus-ring relative inline-flex items-center justify-center rounded-full p-2.5 text-neutral-700 dark:text-neutral-300 bg-neutral-100/80 dark:bg-neutral-800/80 hover:bg-highlight/15 hover:text-highlight dark:hover:bg-highlight/20 dark:hover:text-highlight transition-all duration-300 ease-out active:scale-95";
 
   return (
     <nav
@@ -48,7 +48,7 @@ export default function KeyboardNav() {
               type="button"
               onClick={() => router.back()}
               aria-label="Go back"
-              className="group flex flex-1 flex-col items-center justify-center gap-0.5 py-0.5 text-center sm:flex-initial sm:flex-row sm:gap-2"
+              className="focus-ring group flex flex-1 flex-col items-center justify-center gap-0.5 rounded-full py-0.5 text-center sm:flex-initial sm:flex-row sm:gap-2"
             >
               <span className="flex items-center justify-center rounded-full border border-neutral-200/80 bg-neutral-100/80 px-3 py-1.5 text-neutral-700 transition-all duration-300 ease-out group-hover:bg-highlight/10 group-hover:text-highlight dark:border-neutral-800/80 dark:bg-neutral-800/60 dark:text-neutral-300 dark:group-hover:bg-highlight/15 sm:px-3.5 sm:py-2">
                 <Icon
@@ -74,7 +74,7 @@ export default function KeyboardNav() {
                 key={item.name}
                 href={item.url}
                 aria-current={isActive ? "page" : undefined}
-                className="group flex flex-1 flex-col items-center justify-center gap-0.5 py-0.5 text-center sm:flex-initial sm:flex-row sm:gap-2"
+                className="focus-ring group flex flex-1 flex-col items-center justify-center gap-0.5 rounded-full py-0.5 text-center sm:flex-initial sm:flex-row sm:gap-2"
               >
                 <span
                   className={`flex items-center justify-center rounded-full px-3.5 py-1.5 transition-all duration-300 ease-out sm:px-4 sm:py-2 ${
