@@ -1,34 +1,79 @@
 import { Quote } from "@/components/organisms";
 import ProjectCard from "@/components/organisms/ProjectCard";
+import Image from "next/image";
 import Link from "next/link";
+import data from "../utils/data.json";
 import projects from "../utils/projects.json";
 
 export default function Home() {
-  const showCase = projects?.slice(0, 3);
+  const showCase = projects?.slice(0, 2);
+  const [coverBefore, coverAfter] = data.cover.split("Full Stack Engineer");
+
+  const numLobes = 12;
+  const baseRadius = 0.46;
+  const waveAmplitude = 0.028;
+  const numPoints = 360;
+  const scallopPolygon = `polygon(${Array.from(
+    { length: numPoints },
+    (_, i) => {
+      const theta = (2 * Math.PI * i) / numPoints;
+      const r =
+        baseRadius + waveAmplitude * Math.sin(numLobes * theta - Math.PI / 4);
+      const x = (0.5 + r * Math.cos(theta)) * 100;
+      const y = (0.5 + r * Math.sin(theta)) * 100;
+      return `${x.toFixed(3)}% ${y.toFixed(3)}%`;
+    },
+  ).join(", ")})`;
 
   return (
-    <section className="flex w-full flex-col space-y-4">
-      <Quote quote="This is the way. - Din Djarin" style="mb-1" />
+    <section className="flex w-full flex-col space-y-5 sm:space-y-5">
+      <Quote quote="This is the way. - Din Djarin" style="mb-0" />
 
-      <header className="space-y-2">
-        <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
-          Eduardo Vásquez — Fullstack Engineer
-        </h1>
-        <p className="text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
-          I&apos;m a{" "}
-          <Link className="app-link mx-0.5" href="/about">
-            Full Stack Engineer
-          </Link>{" "}
-          with 7+ years of experience building scalable web and mobile apps.
-          Skilled in modern frameworks and cloud platforms, with a focus on
-          real-time systems and clean architecture. Eager to learn, grow, and
-          contribute to impactful engineering teams.
-        </p>
+      <header className="flex flex-col-reverse items-center gap-4 md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8">
+        <div className="w-full space-y-2">
+          <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
+            Eduardo Vásquez — Fullstack Engineer
+          </h1>
+          <p className="text-base leading-relaxed text-neutral-700 dark:text-neutral-300">
+            {coverAfter !== undefined ? (
+              <>
+                {coverBefore}
+                <Link className="app-link mx-0.5" href="/about">
+                  Full Stack Engineer
+                </Link>
+                {coverAfter}
+              </>
+            ) : (
+              data.cover
+            )}
+          </p>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <div className="relative h-48 w-48 flex-shrink-0 drop-shadow-sm transition-transform duration-300 hover:scale-[1.03] sm:h-52 sm:w-52">
+            <div
+              className="relative h-full w-full overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+              style={{
+                clipPath: scallopPolygon,
+                WebkitClipPath: scallopPolygon,
+              }}
+            >
+              <Image
+                src="/perfil.JPG"
+                alt="Eduardo Vásquez"
+                fill
+                sizes="(max-width: 768px) 192px, 208px"
+                priority
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
       </header>
 
       <section
         aria-labelledby="featured-projects-heading"
-        className="space-y-3 pt-2"
+        className="space-y-5"
       >
         <div className="flex items-center justify-between">
           <h2

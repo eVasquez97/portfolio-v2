@@ -67,7 +67,7 @@ export default function ProjectCard({
               </span>
 
               {techStack && techStack.length > 0 && (
-                <div className="mt-3 flex flex-row flex-wrap gap-1.5">
+                <div className="mt-2.5 flex flex-row flex-wrap gap-1.5">
                   {techStack.map((ts) => {
                     const tech = techs.find(
                       (t) => t.name.toLowerCase() === ts.toLowerCase(),

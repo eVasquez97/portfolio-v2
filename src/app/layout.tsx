@@ -104,10 +104,8 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <div className="card-container animate-fade-in flex min-h-0 w-full flex-1 flex-col overflow-hidden rounded-[28px] border border-neutral-200/80 bg-white/95 shadow-2xl shadow-black/5 backdrop-blur-xl dark:border-neutral-800/80 dark:bg-neutral-900/95 dark:shadow-black/40">
-            <div className="flex-1 overflow-y-auto scroll-smooth p-4 sm:p-8">
-              <div className="pb-4 sm:pb-8">
-                <Suspense fallback={<Loading />}>{children}</Suspense>
-              </div>
+            <div className="flex-1 overflow-y-auto scroll-smooth p-4 sm:px-8 sm:py-6">
+              <Suspense fallback={<Loading />}>{children}</Suspense>
             </div>
           </div>
           <Analytics />

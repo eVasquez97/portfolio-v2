@@ -33,7 +33,7 @@ export default function About() {
   ).join(", ")})`;
 
   return (
-    <div className="flex w-full flex-col space-y-8 sm:space-y-10">
+    <div className="flex w-full flex-col space-y-8 pb-4 sm:space-y-10 sm:pb-8">
       <Quote quote="In my experience, there’s no such thing as luck. - Obi Wan Kenobi" />
 
       {/* Community & Beyond Code + Pixel Scallop Photo Widget */}
@@ -70,7 +70,7 @@ export default function About() {
               }}
             >
               <Image
-                src="/perfil.JPG"
+                src="/img/gallery/grad.jpg"
                 alt="Eduardo Vásquez"
                 fill
                 sizes="(max-width: 768px) 288px, 320px"

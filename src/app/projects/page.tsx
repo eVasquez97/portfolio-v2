@@ -52,7 +52,7 @@ export default function Projects() {
     "all" | "web" | "mobile"
   >("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4;
+  const itemsPerPage = 3;
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -120,8 +120,8 @@ export default function Projects() {
   };
 
   return (
-    <section className="flex w-full flex-col space-y-6">
-      <header className="space-y-1">
+    <section className="flex w-full flex-col space-y-5">
+      <header className="space-y-1.5">
         <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
           Projects &amp; Tech Stack
         </h1>
@@ -171,7 +171,7 @@ export default function Projects() {
           Project Directory
         </h2>
 
-        <div className="flex w-full flex-col items-stretch gap-2.5 sm:flex-row sm:items-center">
+        <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center">
           {/* Search Input */}
           <div className="relative flex-1">
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-neutral-400 dark:text-neutral-500">
@@ -274,7 +274,7 @@ export default function Projects() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-3 text-xs dark:border-neutral-800/80">
+          <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-3.5 text-xs dark:border-neutral-800/80">
             <span className="font-medium opacity-75">
               Page {currentPage} of {totalPages} ({filteredProjects.length}{" "}
               total)

@@ -72,7 +72,7 @@ export default function CoursesPage() {
   const { courses } = data;
   const [selectedProvider, setSelectedProvider] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 4;
 
   const providers = [
     "All",
@@ -97,11 +97,11 @@ export default function CoursesPage() {
   };
 
   return (
-    <div className="flex w-full flex-col space-y-5">
+    <div className="flex w-full flex-col space-y-6">
       <Quote quote="Do or do not, there is no try. - Yoda" />
 
-      <header className="space-y-3">
-        <div className="space-y-1">
+      <header className="space-y-4">
+        <div className="space-y-1.5">
           <h1 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-2xl">
             Courses &amp; Certifications
           </h1>
@@ -111,7 +111,7 @@ export default function CoursesPage() {
         </div>
 
         {/* Provider Filter Pills */}
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {providers.map((provider) => {
             const isSelected = selectedProvider === provider;
             return (
@@ -119,7 +119,7 @@ export default function CoursesPage() {
                 key={provider}
                 type="button"
                 onClick={() => handleProviderChange(provider)}
-                className={`rounded-full border px-3 py-1 text-xs font-semibold transition-all ${
+                className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all ${
                   isSelected
                     ? "border-highlight bg-highlight text-white"
                     : "border-neutral-200/80 bg-neutral-100/80 text-neutral-800 hover:bg-neutral-200/70 dark:border-neutral-800/80 dark:bg-neutral-800/50 dark:text-neutral-200 dark:hover:bg-neutral-800"
@@ -133,7 +133,7 @@ export default function CoursesPage() {
       </header>
 
       {/* 2-Column Credential Cards Grid */}
-      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {currentCourses.map((course) => {
           const config = providerConfigs[course.company] || defaultConfig;
 
@@ -145,8 +145,8 @@ export default function CoursesPage() {
               rel="noopener noreferrer"
               className="group block h-full"
             >
-              <article className="card-interactive flex h-full flex-col justify-between gap-3.5 p-4">
-                <div className="space-y-2.5">
+              <article className="card-interactive flex h-full flex-col justify-between gap-4 p-5">
+                <div className="space-y-3">
                   {/* Top Row: Provider Badge & Date */}
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
@@ -213,7 +213,7 @@ export default function CoursesPage() {
       </div>
 
       {totalPages > 1 && (
-        <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-3 text-xs dark:border-neutral-800/80">
+        <div className="flex w-full flex-row items-center justify-between border-t border-neutral-200/70 pt-4 text-xs dark:border-neutral-800/80">
           <span className="font-medium opacity-75">
             Page {currentPage} of {totalPages} ({filteredCourses.length} total)
           </span>
