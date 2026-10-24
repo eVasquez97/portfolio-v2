@@ -38,14 +38,14 @@ export default function ProjectCard({
       <article
         className={`card-interactive flex h-full flex-col justify-between p-4 ${style}`}
       >
-        <div className="flex flex-row items-start justify-between gap-3">
-          <div className="flex min-w-0 flex-1 flex-row items-start space-x-3.5">
-            <div className="relative h-11 w-11 flex-shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-0.5 dark:border-neutral-700/80 dark:bg-neutral-800">
+        <div className="flex flex-row items-center justify-between gap-3">
+          <div className="flex min-w-0 flex-1 flex-row items-center space-x-4">
+            <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-0.5 dark:border-neutral-700/80 dark:bg-neutral-800">
               <Image
                 src={logoSrc}
                 alt={company || name}
                 fill
-                sizes="44px"
+                sizes="64px"
                 className="rounded-xl object-cover transition-transform duration-200 group-hover:scale-105"
               />
             </div>
@@ -62,9 +62,9 @@ export default function ProjectCard({
                 )}
               </div>
 
-              <p className="mt-0.5 truncate text-xs capitalize text-neutral-600 dark:text-neutral-400">
+              <span className="mt-0.5 truncate text-xs capitalize text-neutral-600 dark:text-neutral-400">
                 {company} {jobType ? `· ${jobType}` : ""}
-              </p>
+              </span>
 
               {techStack && techStack.length > 0 && (
                 <div className="mt-3 flex flex-row flex-wrap gap-1.5">

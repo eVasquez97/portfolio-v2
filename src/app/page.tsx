@@ -4,7 +4,7 @@ import Link from "next/link";
 import projects from "../utils/projects.json";
 
 export default function Home() {
-  const showCase = projects?.slice(0, 4);
+  const showCase = projects?.slice(0, 3);
 
   return (
     <section className="flex w-full flex-col space-y-4">
@@ -45,7 +45,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3.5">
           {showCase.map((pro) => (
             <ProjectCard
               key={pro.id}

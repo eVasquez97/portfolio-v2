@@ -240,9 +240,9 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid: 1 col mobile (<640px), 2 cols desktop */}
+        {/* Projects Grid: Full width */}
         {currentProjects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3.5">
             {currentProjects.map((pro) => (
               <ProjectCard
                 key={pro.id}

@@ -1,5 +1,51 @@
 [
   {
+    "id": "moxielink_web",
+    "name": "MoxieLink",
+    "platform": "web",
+    "intro": "Post-acute care & clinical coordination platform.",
+    "techStack": ["React JS", "TypeScript", "Python", "Django", "MongoDB"],
+    "status": "live",
+    "jobType": "full time",
+    "company": "The Moxie Health Group",
+    "location": "Remote",
+    "role": "Full Stack Developer",
+    "time": "Nov. 2025 - present",
+    "responsibilities": [
+      "Develop and maintain full-stack features across the Python/Django backend and React + TypeScript web platform.",
+      "Build and maintain Dynamic Templates and the Corrections workflow within the Note Assist module.",
+      "Implement PointClickCare (PCC) EHR integration to synchronize clinical notes and patient data.",
+      "Develop and maintain the Census module to manage multi-facility patient admissions and rosters backed by MongoDB."
+    ],
+    "img": "/img/banners/moxielink.svg",
+    "url": "https://app.production.moxie-link.com/login",
+    "companyLogo": "/img/companies/moxie.jpeg",
+    "fullDesc": "MoxieLink is a clinical EMR and care coordination platform by The Moxie Health Group designed for post-acute and skilled nursing facilities. Working as a Full Stack Developer with Python, Django, React, TypeScript, and MongoDB, I have contributed to the Census and Note Assist modules—focusing on Dynamic Templates, the clinical note Corrections workflow, PointClickCare (PCC) integration, and multi-facility patient census management."
+  },
+  {
+    "id": "rpm_app",
+    "name": "RPM App",
+    "platform": "mobile",
+    "intro": "Mobile clinical documentation & patient care on the go.",
+    "techStack": ["React Native", "TypeScript", "MongoDB"],
+    "status": "off",
+    "jobType": "full time",
+    "company": "The Moxie Health Group",
+    "location": "Remote",
+    "role": "Full Stack & Mobile Developer",
+    "time": "Nov. 2025 - present",
+    "responsibilities": [
+      "Develop the Note Assist mobile module using React Native and TypeScript.",
+      "Implement Dynamic Templates and the Corrections workflow for clinical documentation on mobile.",
+      "Build Grace Period logic and UI handling for clinical note completion windows.",
+      "Integrate PointClickCare (PCC) workflows and MongoDB-backed REST APIs into the mobile experience."
+    ],
+    "img": "/img/banners/moxielink.svg",
+    "url": "",
+    "companyLogo": "/img/companies/moxie.jpeg",
+    "fullDesc": "RPM App is the companion mobile application for The Moxie Health Group's clinical ecosystem, currently in pre-release development. My work focuses on the Note Assist module in React Native and TypeScript—building Dynamic Templates, Grace Period handling, the Corrections workflow, and PointClickCare (PCC) integration so clinicians can complete and amend patient documentation directly from their mobile devices."
+  },
+  {
     "id": "barosa_app",
     "name": "Barosa",
     "platform": "mobile",
@@ -18,10 +64,10 @@
       "Aid in documenting new features and modules for the application",
       "Maintain and update the application."
     ],
-    "img": "/img/banners/mock-shop.png",
-    "url": "",
+    "img": "/img/banners/barosa.png",
+    "url": "https://apps.apple.com/us/app/barosa/id6470861551",
     "companyLogo": "/img/companies/puzzle.jpeg",
-    "fullDesc": "Barosa is my most recent project, it is like a social media platform for collectors, where they can share their collections, buy, sell, and trade items. The project is still in development and I am currently working on the Vouch, Groups, and Posts features. We're aiming for a soon release to the stores and also a web version of the app is planned for the future. Interesting fact: Barosa means trust."
+    "fullDesc": "Barosa is a social media and marketplace platform for collectors, where they can share their collections, buy, sell, and trade items. I worked on core modules including the Vouch, Groups, and Posts features before its official launch on the App Store. Interesting fact: Barosa means trust."
   },
   {
     "id": "portfolio_v3",
